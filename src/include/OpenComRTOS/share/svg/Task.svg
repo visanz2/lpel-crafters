@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   width="24"
+   height="24"
+   viewBox="0 0 14 14"
+   id="svg2517"
+   xml:space="preserve"><defs
+   id="defs2531" />
+	<linearGradient
+   x1="7.5005002"
+   y1="7.0005002"
+   x2="14.5"
+   y2="13.5"
+   id="background"
+   gradientUnits="userSpaceOnUse"
+   gradientTransform="matrix(0.9597606,0,0,1.0335882,-0.1982041,-0.2351179)">
+		<stop
+   style="stop-color:#ffffff;stop-opacity:1"
+   offset="0"
+   id="stop2520" />
+		<stop
+   style="stop-color:#d3e1f7;stop-opacity:1"
+   offset="1"
+   id="stop2522" />
+		<a:midPointStop
+   style="stop-color:#FFFFFF"
+   offset="0" />
+		<a:midPointStop
+   style="stop-color:#FFFFFF"
+   offset="0.5" />
+		<a:midPointStop
+   style="stop-color:#D3E1F7"
+   offset="1" />
+	</linearGradient>
+	<rect
+   width="13.436647"
+   height="13.436647"
+   x="0.28167632"
+   y="0.28167632"
+   style="fill:url(#background);stroke:#38516a;stroke-width:0.58333331;stroke-miterlimit:4;stroke-dasharray:none"
+   id="rect2524" /> 
+	
+
+<text
+   x="3.3349609"
+   y="11.08138"
+   style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#38516a;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Georgia"
+   id="text5077"
+   xml:space="preserve"><tspan
+     x="3.3349609"
+     y="11.08138"
+     id="tspan5079">T</tspan></text>
+
+
+</svg>

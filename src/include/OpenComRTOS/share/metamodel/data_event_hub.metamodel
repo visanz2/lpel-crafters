@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<metamodel version="1.4">
+    <entity name="dataEvent" svgPath="DataEvent.svg" iconPath="DataEvent.png" help="OpenVE::OpenComRTOS::DataEvent">
+        <attribute name="name" type="string" unique="entity"  regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+    </entity>
+
+    <!-- Data Event related services -->
+    <!-- <interaction name="L1_ClearDataEvent_W" subject="task" object="dataEvent" service="put"/> -->
+    <interaction name="L1_PostDataToDataEvent_W" subject="task" object="dataEvent" service="put"/>
+    <interaction name="L1_ReadDataFromDataEvent_W" subject="task" object="dataEvent" service="get"/>
+
+    <!--  <interaction name="L1_ClearDataEvent_WT" subject="task" object="dataEvent" service="put"/> -->
+    <interaction name="L1_PostDataToDataEvent_WT" subject="task" object="dataEvent" service="put"/>
+    <interaction name="L1_ReadDataFromDataEvent_WT" subject="task" object="dataEvent" service="get"/>
+
+    <interaction name="L1_ClearDataEvent_NW" subject="task" object="dataEvent" service="put"/>
+    <interaction name="L1_PostDataToDataEvent_NW" subject="task" object="dataEvent" service="put"/>
+    <interaction name="L1_ReadDataFromDataEvent_NW" subject="task" object="dataEvent" service="get"/>
+
+</metamodel>
+

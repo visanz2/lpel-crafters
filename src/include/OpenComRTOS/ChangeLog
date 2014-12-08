@@ -1,0 +1,1955 @@
+
+07.01.2009: bernhard.sputh@openlicensesociety.org
+    Added StdHostServer library as an additional utility.
+
+
+17.04.2009: bernhard.sputh@openlicensesociety.org
+	- L1_SleepTask_WT changes see #53
+
+20.04.2009: bernhard.sputh@openlicensesociety.org
+	- Changed the return code names: L1_RC_* to RC_* and L1_RC_FAIL_TO to RC_TO
+
+26.04.2009: bernhard.sputh@openlicensesociety.org
+	- Guarding the L1_enterISR() and L1_leaveISR() functions with a separate
+	  Mutex to prevent that two ISRs can interfere with each other.
+
+03.05.2009: bernhard.sputh@openlicensesociety.org
+	- Adding more API documentation, came until L1_RaiseEvent().
+	- Enabling ASYNC_SERVICES in the build system, careful this may break a lot of things.
+	- Renaming L1_allocatePacketService to L1_allocateKernelPoolPacketService and
+	  L1_deallocatePacketService to L1_deallocateKernelPoolPacketService
+	- Adding more API documentation, at the moment the following services are not documented:
+	  L1_ReceivePacket_(A,NW,W,WT) and L1_SendPacket(A,NW,W,WT)
+
+04.05.2009: oliver.faust@altreonic.com
+	- Leon3 kernel compiles SP and MP
+	- tests/leon3/Semaphore example works
+	- tests/leon3/Semaphore_WT example works
+	- tests/Heterogeneous/win32_leon3_sema example works
+	- Removed `src/platforms/leon3/driver/gettimeofday.c'
+	- Corrected `L1_enterCriticalSection()' in hal.c
+	- Corrected `L1_leaveCriticalSection()' in hal.c
+
+05.05.2009: bernhard.sputh@openlicensesociety.org
+	- Converted macros in L1_list_api.c and .h
+	- Moved the Task and Packet related list operations to the corresponding
+	  files, and converting them to inline functions.
+
+14.05.2009: bernhard.sputh@openlicensesociety.org
+	- Increased the default RxPacketPoolSize to 21.
+	- Corrections of Posix32UartDriver, had to enable Parity handling when having odd parity.
+	- Fixed GetInt problem with StdioHostService.
+
+26.05.2009 oliver.faust@altreonic.com
+	- Removed the stdlib from the Leon3 linking process. => Small code size
+
+22.09.2009 bernhard.sputh@openlicensesociety.org
+	- Removed both Graphical and Stdio Host Services from the Kernel build process,
+	  both these utilities are now maintained outside the kernel.
+
+29.09.2009 bernhard.sputh@openlicensesociety.org
+    - Added the latest Metamodels to the kernel
+    - Added the latest Codegens to the kernel.
+    - Tagging version 1.2-alpha-3
+
+30.09.2009 bernhard.sputh@openlicensesociety.org
+    - Corrected the application.metamodel: DrawString() instead of Drawstring(),
+      also added the functions Ghs_Lock() and Ghs_Unlock() to the model.
+    - Created two startup.c files for the ARM port, one for SP and one for MP
+      (Tickets #74 and #76), Still waiting for the corresponding Codegens.
+    - Added the declaration of stellarisUart_initClient() to the corresponding
+      include file.
+    - Latest Codegens were added by Alexander Keda
+    - Version 1.2.0.4
+
+01.10.2009 bernhard.sputh@openlicensesociety.org
+    - Corrected the application.metamodel, removed Ghs_Lock() and Ghs_Unlock() again.
+    - XSLTs now correct the correct number of preallocated packets when GHS and
+      SHS are present on the same node.
+    - Codegens now name the trace header files correctly.
+    - Version 1.2.0.5
+
+02.10.2009 bernhard.sputh@openlicensesociety.org
+    - Added a function to generate pseudo random numbers, interface defined in:
+      kernel/L1_prng.h
+    - Fixed problem with L1_getTimeOfDay() on Windows returning strange values,
+      depending on Processor speed.
+    - L1_getTimeOfDay() now always available, not only when tracing.
+    - Sockf library gets again built for win32, to use simply link against `sockf'.
+    - New codegens from Alexander, solving an issue with library inclusion.
+    - Version 1.2.0.6
+
+09.10.2009 bernhard.sputh@openlicensesociety.org
+    - All Applications are now by default built using the size optimised version
+      of the Kernel (-Os).
+    - Extended the number of Baudrates in the Win32 Metamodel
+    - Default Baudrate of the ARM Uart is now 921600 bps.
+    - ARM code now works with enabled optimisation switches. The problem was in
+      the initialisation routine of the UART driver. (Done by Dmitry Panfilov)
+    - Added a new build.xml file which will build all variants of OpenComRTOS
+      for a specific Platform. This script is based on the one used by the
+      StdioHostService.
+
+13.10.2009 bernhard.sputh@openlicensesociety.org
+    - Removed unnecessary entries from the link port metamodels for OpenVE
+    - Corrected implementation of Win32 wtimer driver. It should now wait the
+      correct amount of time.
+    - Added instrumentation to win32 timer driver.
+    - Version 1.2.1.0
+    - Discovered a problem in the win32 metamodel (Baudrate settings), fixed
+    - Version 1.2.1.1
+
+14.10.2009 bernhard.sputh@openlicensesociety.org
+    - Simplified the build scripts now the compile option O0 also appears in the file name.
+    - Stellaris UART now initialises rxCount and rxSize, this is no longer the task of the codegens.
+    - Version 1.2.1.2
+
+15.10.2009 bernhard.sputh@openlicensesociety.org
+    - Added file lm3s6965.h which contains the Baudrate division factors for the Stellaris UART.
+    - Stellaris Uart has now a configurable baud rate.
+    - Version 1.2.1.3
+
+20.10.2009 bernhard.sputh@openlicensesociety.org
+    - Added regular expressions to the so that OpenVE can perform better checking of inserted strings.
+    - Cleaned up Node Entry Point template for ARM-Cortex-M3.
+    - Set Default Compile Option to `s' in the the metamodels.
+    - Added the icons and svg files used by OpenVE to the kernel share directory.
+      This is for completeness, because the application metamodel refers to these
+      files.
+    - Version 1.2.1.4
+
+21.10.2009 bernhard.sputh@openlicensesociety.org
+    - Alexander provided new Codegenerators which now use the location of the
+      OpenVE project file (*.ove) as refernce point for relative pathes.
+    - Version 1.2.1.5
+
+21.10.2009 bernhard.sputh@openlicensesociety.org
+    - Some changes on the StdioHostService and Graphical Host Service.
+    - Version 1.2.1.6
+
+23.10.2009 bernhard.sputh@openlicensesociety.org
+    - Enabling Keyword Substitution.
+    - Version 1.2.3.0 Public Release
+
+29.10.2009 bernhard.sputh@openlicensesociety.org
+    - Alexander provided  new codeGens which produce more messages.
+    - Version 1.2.3.1 Public Release
+    - Adding my build scripts to build a complete Kernel image.
+
+29.10.2009 bernhard.sputh@openlicensesociety.org
+    - Alexander, enabled the option to set compiler options in the CMakeList.txt
+    - Corrected platform metamodels (arm-cortex-m3, posix32, win32) to enforce
+      the correct compiler options O0, O3, Os instead of 0, 3, s.
+    - Changed Application metamodel to allow undersores (_) in names.
+    - Changed Platform metamodels of arm-cortex-m3 and win32 to allow undersores (_) in names.
+    - Version 1.2.3.2 Public Release
+
+09.11.2009 bernhard.sputh@openlicensesociety.org
+	- Alexander contributes a Nodegen free Codegenerator toolchain.
+	- Corrected the installation of the posix32 platform.
+	- Removed unnecessary codegenerators from posix32 target.
+	- L1_IndexedList_remove(): Checking whether or not the element to
+	  be removed is part of a list, this should solve #79,
+	- Incremented Version Number.
+
+11.11.2009 bernhard.sputh@openlicensesociety.org
+  	- Corrected Posix32 XSLTs to link against pthread
+  	- Corrected Metamodel to contain the correct capitalisation of the images it refers to.
+    - Removed Debug Messages from Posix32 Socket LinkDriver.
+
+16.11.2009 bernhard.sputh@openlicensesociety.org
+	- Alexander added new codegens which should handle the tcp drivers correctly.
+
+17.11.2009 bernhard.sputh@openlicensesociety.org
+	- Checking for a NULL pointer in L1_awakeTaskService() and then terminating the processing.
+	  This is a workaround for ticket #80.
+	- Refined the implementation of L1_indexedList, to make it more user friendly.
+	- StellarisUart: Added volatiles to the pointers accessing the registers of the device.
+
+19.11.2009 bernhard.sputh@openlicensesociety.org
+	- Alexander added corrected codegens
+	- Fixed mistake in Posix32 codegens to link against the StdioHostServer library.
+	- Updated metamodels of Microblaze and Leon3 platforms to work with OpenVE 1.2.
+
+24.11.2009 bernhard.sputh@openlicensesociety.org
+    - Big change on the Metamodels and XML schema to change `CC' to `Compiler'
+    - Merged Xalan Nodegen branch with the trunk.
+
+25.11.2009 alexander.keda@openlicensesociety.org
+    - ProjectGen-win32 binary for supporting `Compiler' tag.
+    - ProjectGen linux binary for supporting `Compiler' tag.
+
+26.11.2009 bernhard.sputh@openlicensesociety.org
+    - Starting 1.3.0.0 :-)
+    - DebugOption 2 now only produces tracefiles, nothing else.
+    - Sequence Number generation now part of every packet that gets generated by
+      build and insert Packet. (Still Task specific)
+    - Sequence Number now Node specific, i.e. there is one counter for all
+      packets in one Node.
+
+02.12.2009 bernhard.sputh@openlicensesociety.org
+    - Added string library, which contains a simple itoa-function, but will be
+      extended in future to offer more string transformations.
+    - Simplifying L1_Trace() execution, first step avoid the use of the function L1_Trace_EnterTraceMode();
+    - Deleted kernel/L1_trace_api.c
+
+04.12.2009 bernhard.sputh@openlicensesociety.org
+    - New Functions for each Port relating to tracing:
+        * L1_UINT32 L1_Trace_getLowCounterFrequency(void);
+        * L1_UINT32 L1_Trace_getHighCounterFrequency(void);
+        * L1_Status L1_Trace_TimeStamp(L1_TraceEvent *pEvent);
+    - Win32 port: TCP_NODELAY now set for all sockets that get created.
+    - Microblaze port:
+        - Adjusted Uart driver to new driver model
+        - Added support for the new Tracing functions.
+    - Posix32 / 64 port:
+        - Adjusted Uart driver to new driver model
+        - Added support for the new Tracing functions.
+    - Leon3 port:
+        - Adjusted Uart driver to new driver model
+        - Added support for the new Tracing functions.
+        - Changed ptimer to count clock ticks instead of usecs.
+    - build.xml now expects the full path to the toolchain file to use
+
+06.12.2009 bernhard.sputh@openlicensesociety.org
+	- Enabling TCP_NODELAY for posix32 socket driver
+	- Fixed problem with non connecting nodes when using Sockets under Posix (ticket #81)
+
+12.12.2009 bernhard.sputh@openlicensesociety.org
+	- Made packet tracing depending on whether a packet goes off-node and on what a node
+	  does with the packet (sending, processing, routing).
+
+15.01.2010 bernhard.sputh@openlicensesociety.org
+	- Removed hton{16/32} ntoh{16/32} defined from L1_hal_api.h, also removed
+	  the different handling of ntoh and hton between MP and SP.
+
+25.01.2010 bernhard.sputh@openlicensesociety.org
+	- Trace-Event of type -6 now inserted in L1_returnToTask() function.
+
+03.02.2010 bernhard.sputh@openlicensesociety.org
+	- Making the posix32 port compliant to GLIBC 2.3.6. The drivers must use poll instead of ppoll.
+
+10.02.2010 bernhard.sputh@openlicensesociety.org
+	- Adjusted metamodel to reflect the API changes of the Graphical Host Service.
+
+12.02.2010 bernhard.sputh@openlicensesociety.org
+	- Adding the functionality of L1_PacketManipulation from the Ghs to the kernel.
+
+15.02.2010 bernhard.sputh@openlicensesociety.org
+	- Moving the tracing routines from the tracing host service into the kernel again.
+	- Corrected Posix32 Metamodel to reflect changes in the naming of the RS232 driver.
+
+15.02.2010 bernhard.sputh@openlicensesociety.org
+	- Introduced two new trace operations L1_TRACE_ISR_SAVE() and L1_INSERT_MARKER_ISR_SAFE()
+	  which are to be used inside ISRs or inside Critical Sections.
+	- Fixed the posixUart-RxISR, which did not switch to the Kernel-Task.
+
+18.02.2010 alexander.keda@openlicensesociety.org
+	- Changed XSLT tempaltes for correct generation TraceBufferSize
+
+26.02.2010 dmitry.panfilov@openlicensesociety.org
+	- uip branch merged
+	- version 1.3.1.0
+
+26.02.2010 bernhard.sputh@openlicensesociety.org
+	- Adjusted API of L1_strncpy() and L1_strlen() to use L1_BYTE instead of char*
+	- Working now on version 1.3.1.1
+
+27.02.2010 bernhard.sputh@openlicensesociety.org
+	- Added Ghs 0.2 API to the metamodel.
+
+28.02.2010 bernhard.sputh@openlicensesociety.org
+	- LinkDriver txTask now does not allocate packets from the KernelPacketPool, when using ASYNC_SERVICES. This is strictly not necessary.
+	- Removed locks from Posix32 UART driver. Decreased retry timeout for initClient().
+	- Posix33SocketCom driver now binds to the given IP address instead of always using localhost.
+	- Implemented stellarisUart_initServer() function, and corrected ARM metamodel
+	- Corrected win32 Metamodel to include initClient() function for UART driver.
+	- Setting Packet-DataSize to 0 for packets that got sent to a hub, after the data exchange. This avoids that the datapart has to travel back to the orginating task, and thus potentially over one or more links.
+
+06.03.2010 bernhard.sputh@openlicensesociety.org
+	- Using L1_TRACE_ISR_SAFE for tracing inside the Kernel-Task. This is possible because execution of an ISR will not result in the generation of a traceline and no other task will be run after an ISR, which interrupted the Kernel-Task, except the Kernel-Task.
+
+08.03.2010 bernhard.sputh@openlicensesociety.org
+	- Increasing Version number to 1.3.1.2
+
+08.03.2010 dmitry.panfilov@openlicensesociety.org
+	- implement retries during tcp/ip client initialization
+
+08.03.2010 alexander.keda@openlicensesociety.org
+	- impement correct generation of defines and entities file for OpenTracer (issue #97)
+
+08.03.2010 bernhard.sputh@openlicensesociety.org
+	- Tagged version 1.3.1.2
+	- Increasing Version number to 1.3.1.3
+
+09.03.2010 dmitry.panfilov@openlicensesociety.org
+	- initialize default gateway of uip stack
+
+08.03.2010 bernhard.sputh@openlicensesociety.org
+	- Added SHS 0.2 Application Metamodel
+
+09.03.2010 alexander.keda@openlicensesociety.org
+	- Added stopexec.bat file for correct stoping all executable nodes on windows platform
+
+10.03.2010 bernhard.sputh@openlicensesociety.org
+	- Tagged version 1.3.1.3
+	- Started to develop 1.3.1.4
+	- The Kernel image build script now uses a tag instead of the trunk to acquire the code for a HostService.
+	- Started to develop 1.3.1.5
+
+11.03.2010 bernhard.sputh@openlicensesociety.org
+	- Corrected API of L1_strlen(), L1_strncpy(), and L1_iota().
+
+13.03.2010 bernhard.sputh@openlicensesociety.org
+	- This will be version 1.3.1.5
+	- Starting work on 1.3.1.6
+
+17.03.2010 bernhard.sputh@openlicensesociety.org
+	- Integrating APIDOC generation into the build process.
+	- Including version 0.2.1.3 of the SHS and 0.2.1.3 of the GHS.
+	- Tagging this as version 1.3.1.6
+	- Starting work on 1.3.2.0 RC 0
+
+22.03.2010 alexander.keda@openlicensesociety.org
+	- Improvement in stopexec.bat file for correct killing processes under different version of MS Windows
+
+17.03.2010 bernhard.sputh@openlicensesociety.org
+	- Including version 0.2.3.0 of the SHS and 0.2.3.0 of the GHS.
+	- Tagging this as version 1.3.3.0
+	- Starting to work on 1.3.3.1
+
+07.04.2010 alexander.keda@openlicensesociety.org
+	- Codegens 0.2.3.3 execute binaries in Output/bin directory.
+
+08.04.2010 dmitry.panfilov@openlicensesociety.org
+	- Fully IRQ driven ARM UART driver added. This replaces the old driver.
+
+11.04.2010 bernhard.sputh@openlicensesociety.org
+	- Added L1_api_cleanup.h which contains a reworked API documentation and also a cleanup of the API.
+	- Reworked the Kernel Build process to install Kernel API Documentation.
+	- Development Kernel Images now contain the Date and Time of building in the file name. The new naming scheme is: OpenComRTOS_1.3_dev_%Y-%M-%D_%H-%M-%S.tar.gz.
+
+13.04.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.3.3.1
+	- Starting work on 1.3.3.2
+
+14.04.2010 bernhard.sputh@openlicensesociety.org
+	- Optimising trace data collection process, by using macros.
+
+15.04.2010 bernhard.sputh@openlicensesociety.org
+	- Introduced new Platform specific header file: L1_hal_trace.h which contains the Macro: L1_TRACE_TIME_STAMP(), which is used to avoid function calls.
+
+20.04.2010 bernhard.sputh@openlicensesociety.org
+	- Changing the meaning of the debug options:
+		- 0: No tracing or debugging support -> unchanged
+		- 1: Minimal tracing only to show scheduling, hub-interactions, and MP synchronisations -> No more Post Mortem Support
+		- 2: Full tracing as it is now.
+	- Adding new define: L1_TRACE_LEVEL_2, which is used to differentiate between base tracing (implicitly level 1) and advanced tracing (level 2). This enables tracelines being inserted using L1_TRACE_LEVEL2_ISR_SAFE() or L1_TRACE_LEVEL2().
+
+22.04.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.3.3.2
+	- Starting work on 1.3.3.3
+
+27.04.2010 bernhard.sputh@openlicensesociety.org
+	- This is the start of the 1.4 develoment branch
+	- This is version 1.4.0.0
+	- Added build.xml support for `Windows 7'
+	- Integrating Oliver's work on the XMOS port.
+
+08.05.2010 bernhard.sputh@openlicensesociety.org
+	- I think Interrupts work now. Problem was caused by not enclosing the assembly functions to be used for enabling and disabling the interrupts using ENTSP 0x1 and RETSP 0x1 instructions. This lead to the program counter having the wrong value.
+
+10.05.2010 bernhard.sputh@openlicensesociety.org
+	- Enabling Priority Inheritance by default.
+	- Adding Files necessary to allow to compile with tracing support enabled. Still need to adjust these files to correct values.
+
+11.05.2010 bernhard.sputh@openlicensesociety.org
+	- Reworked the Timer Periphial of the XMOS port. It is now not using any global variables.
+	- L1_kernel_data.h has been adjusted to use pointers instead of unbounded arrays. This is cleaner, and was necessary in order to achieve Multiple instances of OCR to run on XMOS. (Not yet working as expected).
+
+15.05.2010 dmitry.panfilov@openlicensesociety.org
+	- changed L1_exitISR_asm: now it set L1_ScheduleRequest only of kernel task was interrupted
+
+16.05.2010 bernhard.sputh@openlicensesociety.org
+	- Corrected the Offset used to access the Context within the ISR
+	- Careful notice to everyone -> The kernel will in its current shape not work with normal generated code, due to the changes for MultiCore XMOS.
+
+17.05.2010 bernhard.sputh@openlicensesociety.org
+	- Fixing the Multilinks Issue, which is caused by using L1_injectXferPacket() with enabled interrupts. Now providing two versions of the function:
+ 	-- L1_injectXferPacket() which is protecting the access to global data structures using Critical Sections. This function should be used when injecting an XferPacket in Tasks or from ISRs that could be nested.
+ 	-- L1_injectXferPacket_NestedIsrSafe() which is the same as L1_injectXferPacket().
+ 	-- L1_injectXferPacket_IsrSafe() which does not use Critical Sections, but is meant to be used when Interrupts are disabled already -> Inside ISRs (non nested). This has the implication that there is now also a function L1_releasePacket_IsrSafe() which does not use a critical section.
+ 	-- L1_injectPacketInKernel() has been replaced by the direct operation, thus avoiding a function call.
+ 	- Modified the following drivers:
+ 	-- ARM Uart Driver to use _IsrSafe() version.
+ 	-- Microblaze UartLite Driver to use _IsrSafe() version.
+ 	-- Leon3 Uart driver to use _IsrSafe() version.
+ 	-- Posix32/64 support nested ISRs, thus the L1_injectXferPacket_NestedIsrSafe() version is used, in UART and Socket drives.
+ 	-- Win32 support nested ISRs, thus the L1_injectXferPacket_NestedIsrSafe() version is used, in UART and Socket drives.
+
+ 	- Added in global variables necesary for Multicore XMOS to work into the XMOS Port.
+
+18.05.2010 bernhard.sputh@openlicensesociety.org
+ 	- Adding XS1G4.h to include/bsp of XMOS port. Here all functions necessary to start a four core XMOS core are included.
+ 	- Adding the files xc_helper.c/h which allow to place channel ends into arrays.
+ 	- Added the files c_helper.xc/h which allow to access channel ends from within C.
+ 	- Reworked how pTimer works, example is adjusted.
+ 	- ISR mechanism has now been generalised on XMOS, a pointer to a structure containing Parameter and ISR must now be passed. This change was necessary to allow the use of one L1_enterISR written in Assembler for all C-ISRs.
+
+20.05.2010 bernhard.sputh@openlicensesociety.org
+ 	- Refining XMOS port:
+ 	-- merged ptimer_control.xc and ptimer_periferal.xc. Renamed the resulting file XmosTimer.xc
+ 	-- Corrected high frequency in L1_trace.c
+
+21.05.2010 bernhard.sputh@openlicensesociety.org
+ 	- Refining XMOS port:
+ 	-- Introduced the use of stdint.h instead of xmos_types.h as types to be uesd by the xmos components.
+
+31.05.2010 alexander.keda@openlicensesociety.org
+ 	- Adding ProjectGen with support of component aproach.
+ 	- Adding separated XSLT templates.
+ 	- XSLT templates for creating Makefiles.
+
+02.06.2010 bernhard.sputh@openlicensesociety.org
+	- Added the file L1_hal_trace.h to the posix32 port.
+	- Refactoring the XmosUartDevice
+
+03.06.2010 bernhard.sputh@openlicensesociety.org
+	- Completed the Refactoring of the XmosUartDevice and the XmosUartDriver, now they must be tested.
+
+04.06.2010 bernhard.sputh@openlicensesociety.org
+	- XmosTimer device 1ms timeout corrected
+	- Win32SocketCom Client Initialisation Trace message corrected, it incorrectly stated that it was generated by the initServer function instead of the initClient function.
+
+07.06.2010 alexander.keda@openlicensesociety.org
+	- New codegens binaries and XSLT template for support ocrGlobalLib and globalLib tags.
+
+07.06.2010 bernhard.sputh@openlicensesociety.org
+	- Removed superfluous Packet Sequence Number increment in L1_buildAndInsertPacket();
+
+08.06.2010 bernhard.sputh@openlicensesociety.org
+	- Removed SHS and GHS entries from the metamodels and the icons and svgs.
+	- Adjusted buildLocalDevelopmentKernelImage.sh to use the 1.4 trunk of SHS and GHS
+
+09.06.2010 alexander.keda@openlicensesociety.org
+	- Adjusted XML Schema and XSLT for support ocrLib, ocrGlobalLib, globalLib, lib.
+
+09.06.2010 bernhard.sputh@openlicensesociety.org
+	- Removed volatile from the global variables in L1_kernel_data.h
+	- L1_KernelPacketPoolID is now also a global variable and not any longer a constant as previously.
+	- L1_RxPacketPoolID  is now also a global variable and not any longer a constant as previously.
+
+10.06.2010 bernhard.sputh@openlicensesociety.org
+	- Added `#pragma stackfunction 100' before L1_runOpenComRTOS to assist XMOS toolchain.
+	- Added `.globl Xmos_hookChannelIsr.nstackwords .linkset Xmos_hookChannelIsr.nstackwords, 1' to tell XMOS toolchain that the function Xmos_hookChannelIsr() uses 1 DWORD of statck space.
+
+11.06.2010 bernhard.sputh@openlicensesociety.org
+	- Fixed XMOS Uart initalisation code, now it synchronises, and performs the semaphore loop.
+
+
+14.06.2010 bernhard.sputh@openlicensesociety.org
+	- Developed the Xlink LinkDriver which is meant for usage with XMOS Xlinks. Currently testing it.
+	- Added BSP header for XS1G2, which is the two core version of XMOS
+
+15.06.2010 bernhard.sputh@openlicensesociety.org
+	- Cleaned warnings at:
+	-- L1_kernel_anypacket_service.c: 41
+	-- L1_packetmngt_api.c: 95, 131, 169
+	-- L1_kernel_packetpool_service.c: 88, 95
+
+16.06.2010 bernhard.sputh@openlicensesociety.org
+	- Integrated the TaskLevelDebugger into the Kernel Image build process.
+
+17.06.2010 bernhard.sputh@openlicensesociety.org
+	- Renamed L1_UartXferPacket to L1_XferPacket.
+	- Renamed L1_copyToUartXferPacket() to L1_copyToXferPacket().
+	- Renamed L1_copyFromUartXferPacket() to L1_copyFromXferPacket().
+	- Adjusted all platforms except arm-cortex-m3, because this platform is owned by Dmitry Panfilov.
+
+21.06.2010 bernhard.sputh@openlicensesociety.org
+	- Reworked the Timer-Packet-Service
+	-- Removed L1_TimerFreeList and its management code, which represented a pool of L1_Timer structures which are used in the queue that represents the timeout.
+	-- Renamed the type L1_Timer to L1_TimerTimeout because it represents a timeout on a specific timer.
+	-- Removed the field timer in L1_Packet and replaced it with the field TimeoutTimer of type L1_TimerTimeout. This makes the pool management code obsolete.
+
+22.06.2010 bernhard.sputh@openlicensesociety.org
+	- Working on Timeout Problem, cleaning up API:
+	-- L1_StartTimer(L1_Timeout ticks) becomes L1_Timer_setTimeout (L1_Timeout ticks, L1_UINT32 id);
+	-- L1_stopTimer(void) becomes extern void L1_Timer_cancelTimeout(void);
+
+23.06.2010 bernhard.sputh@openlicensesociety.org
+	- Working on Timeout Problem, cleaning up API:
+	-- L1_Timeout L1_currentTime(void) becomes L1_Timeout L1_getExpiredTimeoutTicks(void);
+	-- New function L1_Timeout L1_getRemainingTimeoutTicks(void), which could be a replacement for L1_getExpiredTimeoutTicks(void);
+	-- New function L1_Time L1_Timer_getCurrentTime(void), which returns the number of ticks since system startup.
+	-- New function L1_Status L1_Timer_getTimeStamp(L1_UINT32 * pHighFreqCount, L1_UINT32 * pLowFreqCount); This is used when tracing.
+	-- New function L1_UINT32 L1_Timer_getLowCounterFrequency(void) -- This replaces the function L1_Trace_getLowCounterFrequency(void);
+	-- New function L1_UINT32 L1_Timer_getHighCounterFrequency(void) -- This replaces the function L1_Trace_getHighCounterFrequency(void);
+	- Renamed ptimer.c on XMOS to XmosTimerDriver.c and ptimer.h to XmosTimerDriver.h, correspondingly teh XmosTimer.xc/h have been renamed to XmosTimerDevice.xc/h.
+	- Introduced a new Header file (L1_timer_api.h) which contains all the timer function to be also permitted to the user, i.e. Timestamp generation.
+
+24.06.2010 bernhard.sputh@openlicensesociety.org
+	- Adjusted the Timer implementation on win32, to the new API.
+
+25.06.2010 bernhard.sputh@openlicensesociety.org
+	- Adjusted the Timer implementation on posix32, to the new API.
+	- Reworked the adjustment of head element of timerlist to expired time, it now used L1_Timer_getRemainingTimeoutTicks().
+	- Marked the functions: void L1_InsertTimer(L1_TimerList* List, struct _struct_L1_Timer_* Timer) and void L1_RemoveTimer(struct _struct_L1_Timer_* Timer) as deprecated. These functions are only call one other function before returning, thus they can be replaced.
+	- Implemented the ID generation based on the current time and the requested timeout.
+	- Implemented the checking of the Timeout-Id, now early timeouts should not be able to occur any longer.
+
+28.06.2010 bernhard.sputh@openlicensesociety.org
+	- Introducing the XmosTickerDevice.xc, which is meant to generate every 1ms an interrupt to the main system.
+	- Working on pTimer driver for the XmosTickerDevice -> XmosTickerDriver
+
+01.07.2010 bernhard.sputh@openlicensesociety.org
+    - Fixed the XMOS Context switch to work correctly even if interrupts occur.
+    - Introducing a standard way to tell the Kernel about the existence of an ISR stack, currently only used by XMOS. For this purpose the following two variables get used: L1_BYTE * L1_hal_IsrStackEndPtr, and L1_UINT32 L1_hal_IsrStackSize.
+
+01.07.2010 bernhard.sputh@openlicensesociety.org
+    - Updated Timer API documentation.
+    - Removed debug code from XmosTickerDriver.
+
+06.07.2010 bernhard.sputh@openlicensesociety.org
+    - Corrected the XmosUartDriver and XmosXlinkDriver implementation to use the L1_InjectXferPacket_IsrSafe() function to avoid accidental enabling of interrupts within the ISRs
+    - Found and fixed a problem in L1_InjectXferPacket_IsrSafe(), which used the function L1_getRxPacket(), which caused accidental enabling of interrupts. Introduced a new function L1_getRxPacket_IsrSafe() which does not cause this problem.
+
+08.07.2010 bernhard.sputh@openlicensesociety.org
+    - Added XMOS Codesize on SP project.
+    - Closing the Timeout branch, merging it with the trunk.
+
+09.07.2010 bernhard.sputh@openlicensesociety.org
+    - Merged Timeout branch with trunk. No work to be doen on the Timeout branch in future.
+    - Removed ptimer_configure() from XmostTimerDriver implementation.
+    - Cleaned most compiler warnings in XMOS port.
+    - Tagging this version as 1.4.0.1
+    - Starting to develop version 1.4.0.2
+
+12.07.2010 bernhard.sputh@openlicensesociety.org
+    - Implemented a Multlink capable XmosUart driver called XmosUartDriver_ML.
+
+13.07.2010 bernhard.sputh@openlicensesociety.org
+    - Implemented a Multlink capable XmosXlink driver called XmosXlinkDriver_ML.
+
+14.07.2010 bernhard.sputh@openlicensesociety.org
+	- Marked the following platforms as dormant: Leon3, Microblaze, MLX16, Posix64
+	- Converted PosixUart driver to Multilinks model, metamodel must still be adjusted.
+
+14.07.2010 bernhard.sputh@openlicensesociety.org
+	- Converted PosixSocketCom driver to Multilinks model
+	- Renamed PosixSocketCom driver to PosixSocket
+	- Converted the metamodel of Posix32 port.
+
+06.08.2010 bernhard.sputh@openlicensesociety.org
+	- Merged Multilink branch into trunk. Ran into some problems due to deleted and then again added files in the branch. Tried to correct them manually.
+
+09.08.2010: bernhard.sputh@openlicensesociety.org
+	- Started with NXP Coolflux evaluation, and corrected the datatypes for this 24bit CPU.
+	- Added Codesize example or NXP Coolflux
+
+
+11.08.2010 bernhard.sputh@openlicensesociety.org
+    - Cleaned warnings for XMOS and win32 using the slightly dated compilers under windows.
+    - Warnings cleaned for Win32 when compiling under linux (mingw-gcc 4.4.4)
+    - Posix32 warnings cleaned.
+    - Changed the datatype of L1_Packet->ServiceID from L1_ServiceID to L1_UINT16.
+    - Moved ntoh and hton functions to the header file to avoid a warning.
+
+16.08.2010 alexander.keda@openlicensesociety.org
+    - applied changes for support XMOS platform.
+
+18.08.2010 bernhard.sputh@openlicensesociety.org
+    - XMOS port now installs the file L1_hal_trace.h which was previously forgotten.
+	- Win32 port: made hton and htoh function non inline again, after linker errors where discovered.
+
+19.08.2010 alexander.keda@openlicensesociety.org
+    - Improvements in XSLT for XMOS.
+    - Updated XML schema.
+    - Updated metamodel for XMOS.
+
+19.08.2010 bernhard.sputh@openlicensesociety.org
+	- XMOS: Enabling debug messages in the UART_ML driver.
+	- Win32: Enabling debug messages in the UART driver.
+
+20.08.2010 alexander.keda@openlicensesociety.org
+    - Changes in XSLT for XMOS:
+	- corrected generation of RxPacketPoolId and KernelPacketPoolId.
+	- improvements in generation code of alignment for data structure.
+
+20.08.2010: bernhard.sputh@openlicensesociety.org
+	- [Coolflux] Experimental mapping of L1_UINT32 and L1_INT32 to 24bit integers, so reduce memory footprint
+	- [Coolflux] Corrected L1_UINT16 data type, which was previously a 32bit integer.
+
+23.08.2010 bernhard.sputh@openlicensesociety.org
+	- XMOS: Removing the debug messages in the UART_ML driver, as this issue has been solved.
+	- Win32: Disabling debug messages in the UART driver.
+	- Preparing to tag this as version 1.4.0.2
+	- Starting work on 1.4.0.3
+
+24.08.2010 bernhard.sputh@openlicensesociety.org
+	- Replaced all references to L1_ServiceID with L1_UINT16 in all function related to building a request packet.
+	- Changed a return value in L1_txDriverLoop from -1 to L1_FALSE.
+	- Changed a return value in posixUartInit from L1_TRUE to RC_OK.
+
+25.08.2010 bernhard.sputh@openlicensesociety.org
+	- Making the IDLE task entry point part of the user project. This allows the user to use a custom idle task implementation for instance to enable power saving mechanisms.
+	- Node-File template tag in the platform metaodels now has the attribute extension which defines which file extension to use.
+
+26.08.2010 alexander.keda@openlicensesociety.org
+    - Applied changes for avoid unnecessary debug info in L1_node_config.c files.
+    - Improvements in makefile generation.
+
+
+26.08.2010: bernhard.sputh@openlicensesociety.org
+	- Merged in the latest changes of the trunk with the coolflux adjustements.
+
+27.08.2010 alexander.keda@openlicensesociety.org
+    - ProjectGen 0.8.1.0:
+	- solved issue when on some topologies can be built project with unconnected nodes (#110).
+	- added checking for unconnected link ports.
+
+27.08.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.0.3
+	- Starting to work on 1.4.0.4
+	- Adding the Stellaris CAN Driver developed by Artem Sundukovs team to the ARM port.
+
+31.08.2010: bernhard.sputh@openlicensesociety.org
+	- [Coolflux] Coolflux context switch work is progressing. Can now load a preconfigured context. Saving is broken still.
+
+02.09.2010: bernhard.sputh@openlicensesociety.org
+	- [Coolflux] The Context switch now works, the problem was in the user application used to test.
+	- [Coolflux] Working on the ISR saving and restoring part. Moving context switch definion form header file into L1_hal.c
+
+03.09.2010: bernhard.sputh@openlicensesociety.org
+	- [Coolflux] Implemented a simple Save and Restore for ISRs on Coolflux. This is not yet switching into the Kernel afterwards, but that should be easy to accomplish.
+	- [Coolflux] L1_exitISR() switches now always to the Kernel.
+
+
+03.09.2010 alexander.keda@openlicensesociety.org
+	- ProjectGen 0.8.1.1:
+		- generate correct run target in makefiles for SP project.
+	- Clean up generated code for SP variants.
+
+03.09.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.0.4
+	- Starting to work on version 1.4.0.5
+
+06.09.2010: bernhard.sputh@openlicensesociety.org
+	- [Coolflux] Now saving the loop registers.
+	- [Coolflux] Implemented a pTimer emulation.
+	- [Coolflux] added the file pTimer.h which defines the structure pTimerDevice, to be used by the codegens.
+	- Now enabling interrupts when a Task gets started in L1_runTask();
+
+07.09.2010 bernhard.sputh@openlicensesociety.org
+	- Disabled the compiler flag WERROR
+	- This is version 1.4.0.5
+	- Starting to work on version 1.4.0.6
+	- [Coolflux] Setting the svn keywords for the Coolflux platform.
+
+08.09.2010: bernhard.sputh@openlicensesociety.org
+	- Removed the union L1_HubState, from OpenComRTOS. There are multiple reasons for this move:
+		1.) Problems with the Coolflux compilers to correctly initialize variables of this type in the L1_node_config.c
+		2.) All hubs allocated the same amount of memory independent of whether or not the Hub required this space.
+		3.) The last platform dependent element outside the platforms directory.
+		4.) This step was necessary to really support user defined hubs.
+
+09.09.2010: bernhard.sputh@openlicensesociety.org
+    - Changed API of L1_Status L1_AllocateMemoryBlock(L1_HubID MemID, void **Memory, L1_UINT16 Size, L1_Timeout Timeout); to
+      L1_Status L1_AllocateMemoryBlock(L1_HubID MemID, L1_BYTE **Memory, L1_UINT16 Size, L1_Timeout Timeout);
+
+10.09.2010: bernhard.sputh@openlicensesociety.org
+    - [Coolflux] Optimised the Context Switch. Separated saving of ISR and Normal Context.
+
+13.09.2010: bernhard.sputh@openlicensesociety.org
+	- Merged coolflux_merged branch with the trunk.
+	- This is version 1.4.0.6
+	- Starting to work on version 1.4.0.7
+
+14.09.2010: bernhard.sputh@openlicensesociety.org
+    - Corrected the API of L1_DeallocateMemoryBlock_W(), after the CoolFlux compiler tripped over the pointer discrepancy.
+
+20.09.2010: bernhard.sputh@openlicensesociety.org
+	- Removing all references to L1_getTimeOfDay() function, it has been replaced by L1_getCurrentTime();
+	- This is version 1.4.0.7
+	- Starting work on 1.4.0.8
+
+22.09.2010 alexander.keda@openlicensesociety.org
+	- ProjectGen 0.8.1.4:
+		- generate correct run target in makefiles for MP project.
+		- implemented checking of device drivers and link ports with the same name.
+		- implemented support of special node type for Safe Virtual Machine.
+	- Adjusted XSLT templates for working with SVM platform.
+
+22.09.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.0.8
+	- Starting to work on version 1.4.0.9
+
+30.09.2010 alexander.keda@openlicensesociety.org
+	- ProjectGen 0.8.1.5:
+    - changes for separating in intermediate XML file compilerEnvironment directory from script name.
+	- Adjusted XSLT templates for correct running compilerEnvironment script.
+
+
+30.09.2010 bernhard.sputh@openlicensesociety.org
+	- [xmos] Simplified Metamodel.
+	- [posix32] Added missing include to L1_trace.c.
+	- Added constants that specify the minimum and maximum values for all integer data types, to L1_types.h
+	- Moved the timer-api related functions from L1_hal_api.h to L1_timer_api.h
+	- Added a new function L1_BOOL L1_Timer_hasTimeExpired(L1_Time baseTime, L1_UINT32 timeInMs); which is meant to be used in drivers that want to perform an operation until a certain amount of time has pased.
+	- Enabled SVN keyword substitution for the headers in the complete kernel tree.
+
+04.10.2010 alexander.keda@openlicensesociety.org
+	- changes in XSLT for XMOS for correct generation of code for node without device drivers.
+
+05.10.2010 alexander.keda@openlicensesociety.org
+	- Added to XML Schema definition of `version' attribute.
+
+06.10.2010 alexander.keda@openlicensesociety.org
+	- For XMOS platform added generation of L1_idleTask in L1_core0_config.c file.
+
+06.10.2010 bernhard.sputh@openlicensesociety.org
+    - [XMOS] Adjusted BSPs to comply with the current single core implementation.
+    - [XMOS] Adjusted metamodel to exclude generation of L1_idleTask(...) in the Node-File.
+    - L1_types.h has been reworked, the constant variables get now placed into the new file kernel/L1_types.c.
+    - [XMOS][CoolFlux][Posix32] added the string `version="1.4"' to the metamodel.
+    - Eliminated embedded structure declaration of L1_MemoryBlockHeader.
+    - Removed the functions: void L1_InsertTimer(L1_TimerList* List, struct _struct_L1_Timer_* Timer) and void L1_RemoveTimer(struct _struct_L1_Timer_* Timer).
+
+07.10.2010 alexander.keda@openlicensesociety.org
+	- ProjectGen v.0.8.1.6.
+
+07.10.2010 bernhard.sputh@openlicensesociety.org
+	- [XMOS] Renamed timer_pheripheral to XmosTimer_Device.
+	- [XMOS] Corrected metamodel to include support for both the wTimer and the pTimer.
+
+08.10.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.1.0 the first Beta of 1.4
+	- Starting work on verion 1.4.1.1
+
+11.10.2010 alexander.keda@openlicensesociety.org
+	- Adjusted XML Schema for support `property' tag for component.
+
+11.10.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.1.1 the second Beta of 1.4
+	- Starting work on verion 1.4.1.2
+
+12.10.2010 bernhard.sputh@openlicensesociety.org
+	- [XMOS] Metamodel UART pins have been corrected.
+	- [XMOS] Removed the unused Drivers for UART and Channels (these have been replaced by their Multilink counterparts).
+	- [win32] Added tracing messages to debug UART startup problem.
+	- [XMOS] Added tracing messages to debug UART startup problem.
+	- This is version 1.4.1.2
+	- Starting work on verion 1.4.1.3
+
+12.10.2010 alexander.keda@openlicensesociety.org
+	- ProjectGen v.0.8.1.7:
+		- cleaned up code.
+
+13.10.2010 alexander.keda@openlicensesociety.org
+	- Corrected toolchain generation for ARM support of asm.
+
+13.10.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.1.3
+	- Starting work on verion 1.4.1.4
+
+14.10.2010 bernhard.sputh@openlicensesociety.org
+	- [posix32] Platform metamodel corrected, after receiving a problem report from Artem Barmin, and a fix from Anatoliy Konovalenko.
+
+15.10.2010 bernhard.sputh@openlicensesociety.org
+    - [xmos] Corrected the L1_leaveIsr function, I forgot to set L1_ScheduleRequest to L1_TRUE, causing incorrect scheduling.
+
+15.10.2010 bernhard.sputh@openlicensesociety.org
+    - [xmos] Tracebuffer was adjusted to the XMOS specialities.
+
+16.10.2010 alexander.keda@openlicensesociety.org
+    - [xmos] Corrected generation of trace buffer.
+
+17.10.2010 alexander.keda@openlicensesociety.org
+    - ProjectGen v.0.8.1.8:
+	- solved issue with crashes during parsing comments into structure element.
+    - [posix32] Adjusted XSLT for 1.4 release.
+
+17.10.2010 bernhard.sputh@openlicensesociety.org
+ 	- [posix32] implemented corrections to the platform metamodel highlighted by Alexander Keda.
+
+17.10.2010 alexander.keda@openlicensesociety.org
+    - [posix32] Changes in XSLT: linking pthread for all projects.
+
+17.10.2010 bernhard.sputh@openlicensesociety.org
+	- This is Version 1.4.1.4 of OpenComRTOS
+	- Starting work on version 1.4.1.5
+
+18.10.2010 bernhard.sputh@openlicensesociety.org
+	- [xmos] Tracing Timestamp generation fixed.
+	- This is version 1.4.1.5
+
+27.10.2010 alexander.keda@openlicensesociety.org
+    - [xmos] Small fixes in XSLT for debug mode.
+
+27.10.2010 bernhard.sputh@openlicensesociety.org
+	- Starting to work on version 1.4.1.6
+	- [xmos] Tracing swapped the low and high frequency values placed into the tracing timestamp.
+	- [posix32] Tracing Timestamp generation corrected.
+	- [win32] Tracing Timestamp generation corrected.
+	- This is version 1.4.1.6
+	- Starting work on version 1.4.1.7
+
+30.10.2010 alexander.keda@openlicensesociety.org
+    - Added to XSLT templates support of compilerArgument tag.
+
+01.11.2010 alexander.keda@openlicensesociety.org
+    - ProjectGen v.0.8.1.9: solve issue #160 for OpenVE.
+
+01.11.2010 bernhard.sputh@openlicensesociety.org
+  	- [xmos] Implemented non-routed links, however, these are still untested.
+
+03.11.2010 alexander.keda@openlicensesociety.org
+    - Added support of `target' attribute.
+
+03.11.2010 bernhard.sputh@openlicensesociety.org
+	- [posix32] Corrected UART and Socket linkdrivers and the corresponding metamodel, to have RX-ISR again.
+
+04.11.2010 alexander.keda@openlicensesociety.org
+    - Generation of code for isr now platform dependable.
+    - ProjectGen v.0.8.1.10:
+	- solve issue with crash of projectgen for projects with 1 usual node and svm node.
+
+04.11.2010 bernhard.sputh@openlicensesociety.org
+	- [posix32] renaming of field `isrFunction' to `entryPoint' in the ISR structure.
+	- [posix32] Socket Driver has been corrected, there were a number of serious issues introduced during the restructuring. Need to be more careful in the future.
+
+04.11.2010 alexander.keda@openlicensesociety.org
+	- Added a static linked linux version of ProjectGen.
+
+04.11.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.1.7
+
+05.11.2010 bernhard.sputh@openlicensesociety.org
+	- Starting work on version 1.4.1.8
+
+17.11.2010 bernhard.sputh@openlicensesociety.org
+	- Moving towards the release candidate phase of 1.4
+	- This is version 1.4.2.0
+	- Starting work on version 1.4.2.1
+
+17.11.2010 alexander.keda@openlicensesociety.org
+	- [win32] Adjusted metamodel part which describe L1_idleTask.
+
+18.11.2010 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.2.1
+	- Starting work on 1.4.2.2
+
+30.11.2010 bernhard.sputh@openlicensesociety.org
+    - [xmos] Implemented non routed link driver for the L-Series.
+
+03.12.2010 bernhard.sputh@openlicensesociety.org
+    - This is version 1.4.3.0
+    - Starting work on 1.4.3.1
+
+15.12.2010 bernhard.sputh@openlicensesociety.org
+    - Reworked the Resource Implementation to support Priority Inheritance. This involved changes at:
+        - L1_hub_api.h : Simplification of the Resource Hubstate structure.
+        - L1_kernel_data.h : Inculsion of two global variables, which are used to initialise the Pool of Elements for the Keyed List.
+        - L1_keylist_api.h : API correction as now two functions are allowed to fail.
+        - L1_task_api.h : Code formatting changed to increase readability.
+        - L1_kernel_hub_service.c : Correcting the Prioirty Inheritance relevant code, and allowing the Sync-Condition function to send back a failure code.
+        - L1_kernel_loop.c : Changed what happens when a lock or unlock request is seen being processed.
+        - L1_keylist_api.c : API change of the functions L1_KeyedList_removeKey() and L1_KeyedList_changeKeyPriority(), both functions are now allowed to fail if no element is found in the list. Modification of the function L1_KeyedList_changeKeyPriority(), it now always modifies the priority not only if the priority increases.
+        - L1_kernel_return_service.c Changed what happens when a lock or unlock request is being processed.
+    - Resource-Hub now remembers that task that owns it and refuses to release the resource if another Task tries to do this.
+    - Node specific arrays of Key-List-Elements, to be allocated by the code generator phase.
+
+17.12.2010 alexander.keda@openlicensesociety.org
+	- Codegens with changed priority inheritance support.
+
+20.12.2010 bernhard.sputh@openlicensesociety.org
+    - Extended the L1_Packet with a field that points to the Pool the Packet originates from. RxPacketPool, KernelPacketPool and PacketPool set this field already during their initialsiation.
+
+21.12.2010 bernhard.sputh@openlicensesociety.org
+    - Now using the OwnerPool to relase packets instead of knowing that the packet comes from the RxPool. This means we can now use the KernelPacketPool as well.
+    - Removed API to allocate Packets from the Kernel Packet Pool:
+        - L1_AllocateKernelPoolPacket_{W|WT|NW}();
+        - L1_DeallocateKernelPoolPacket_W();
+    - Implemented the Delayed Request Queue. Modified the Kernel to utilise it.
+
+22.12.2010 bernhard.sputh@openlicensesociety.org
+    - Adjusted the boostPriority Implementation to utilise the Delayed Request Queue, including cancelling requests when synchronisation happens before the request was processed.
+    - Renamed the Delayed Request Queue to `Pending Requests Queue'
+
+23.12.2010 alexander.keda@openlicensesociety.org
+    - Changed name of fields in L1_Packet in generated code.
+
+25.12.2010 bernhard.sputh@openlicensesociety.org
+    - Renamed the files that implement the Pending Request Queue accordingly.
+    - Implemented the L1_changePacketPriorityService, which allows to boost the priority of a RequestPacket that is located on another Node.
+
+07.01.2011 bernhard.sputh@openlicensesociety.org
+    - Fixed some incorrect include file names, which I overlooked during the renaming of L1_delayed_request_queue to the L1_pending_request_queue.
+    - [ARM] Removed a superfluous #endif from stellarisEthernet driver, leftover from refactoring.
+
+08.01.2011 dmitry.panfilov@openlicensesociety.org
+    - use static allocated packet in stellarisEthernet driver
+
+08.01.2011 bernhard.sputh@openlicensesociety.org
+    - Correcting Priority Inheritance implementation for MP, some instances used wrong IDs.
+    - Changed the behaviour of LockResource, if a Task tries to lock a Resource it already owns, it will get RC_FAIL are return value.
+
+13.01.2011 bernhard.sputh@openlicensesociety.org
+    - Implemented a Ceiling Priority for the Resource.
+    - Implemented checking whether or not it necessary to boost the priority of a Task, this should reduce the number of Boost-Packets that travel in the system.
+
+14.01.2011 alexander.keda@openlicensesociety.org
+    - New codegens binaries for generation CeilingPriority field in resource structure.
+    - Updated metamodel for OpenVE (ceilingPriority field added to resource).
+
+14.01.2011 bernhard.sputh@openlicensesociety.org
+    - Implemented priority inhertiance handling, if Task-2 that is currently wating to claim Resource-2,
+      gets its priority boosted. In this case the priority of the task that is currently holds Resource-2
+      must be boosted if it is lower than the new Priority of Task-2 and the CeilingPriority.
+    - Did an intense review of the code related to Priority Inheritance, fixed a potential packet hole.
+      Also enhanced implementation a little bit.
+
+17.01.2011 bernhard.sputh@openlicensesociety.org
+    - Fixed a potential issue with boosting the priority of a packet. The problem is that depending
+      on where it is called the function must not always return the packe to the pool. Therefore I
+      created two new functions which act as entry points, one which keeps the packet and the other
+      which releases it: boostPacketPriorityRemotelyAndKeepPacket(),
+      boostPacketPriorityRemotelyAndReleasePacket()
+    - Fixed the Problem that made the PI-S8 test crash. The problem was that the Kernel tries to
+      find a Packet in a non existing Hub. The problem was that the Packet was used to start a Task
+      with an ID larger than the largest ID than the availalbe Hubs. Now the function
+      L1_isTaskRequestPacketInAHubWaitingList() checks first whether or not the packet can be inside
+      a Hub-Waiting-List before the Kernel tries to boost the priority of the Packet.
+
+17.01.2011 alexander.keda@openlicensesociety.org
+    - New codegens binaries which prevent unpredictable behavior in multi node projects without links.
+
+18.01.2011 bernhard.sputh@openlicensesociety.org
+    - In case of a Timeout happening and the Packet also being on the PendingRequestsQueue, it will
+      now be removed from the PRQ as well.
+    - Adding a request to a PendingRequestQueue (PRQ), now copies the priority of the Packet to the list element used to add the request to the PRQ.
+    - Added tracing of BoostPriority and BoostPacketPriority packets.
+
+19.01.2011 bernhard.sputh@openlicensesociety.org
+    - Fixed the implementation of L1_isTaskRequestPacketInAHubWaitingList() it did not correctly handle the ServiceID.
+
+20.01.2011 bernhard.sputh@openlicensesociety.org
+    - Resource code now compiles again also without Priority Inheritance.
+    - boostPacketPriorityRemotely: Set RequestingTaskID incorrectly, Priority of the Packet that is beeing sent set to one lower than the Priority of the RequestPacket.
+    - Simplified the code that handles the returning of a Packet to a Task.
+
+21.01.2011 bernhard.sputh@openlicensesociety.org
+    - This is version 1.4.3.1
+    - Starting work on 1.4.3.2
+
+26.01.2011 alexander.keda@openlicensesociety.org
+    - Linking user specified libraries for SVM.
+
+04.02.2011 alexander.keda@openlicensesociety.org
+    - [XSLT] In all sorting selections added sorting by number type attribute.
+
+07.02.2011 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.3.2
+    - Starting work on 1.4.3.3
+
+08.03.2011 alexander.keda@openlicensesociety.org
+    - [XSLT] Corrected generation of fifo hub structure.
+
+09.03.2011 alexander.keda@openlicensesociety.org
+    - Changes in ProjectGen: avoid application build in run target.
+
+11.03.2011 alexander.keda@openlicensesociety.org
+    - [XSLT] HubControlFunction for memory pool updated.
+
+13.03.2011 bernhard.sputh@openlicensesociety.org
+    - [OCR-4] Memory Pool implementation not working:
+    -- Separated PacketPool and MemoryPool implementations. This is a
+       preparation to implement a full MemoryPool. New files introduced:
+    --- L1_memorypool_api.h This provides the data structure for the HubState, and the functions to allocate and deallocate memory.
+    --- L1_kernel_memorypool_service.c The memory pool hub implementation
+    --- L1_memorymngt_api.c The implementation of the allocate and deallocate functions.
+    --- New L1_pool_request_service.c, and L1_pool_request_api.h introduced, these provide the functions:
+    ---- L1_buildAllocateRequest(), which is a general form of buildAllocateRequest(), that can be used both for the packet-pool and the memory-pool
+    ---- L1_buildDeallocatedRequest_W(), which is a general form of buildDeallocateRequest(), that can be used for both the packet-pool and the memory-pool.
+    -- Added a new type of L1_ServiceType, called L1_MEMORYPOOL.
+
+13.03.2011 alexander.keda@openlicensesociety.org
+    - [XSLT] MemoryPool generation changed.
+
+14.03.2011 alexander.keda@openlicensesociety.org
+    - Application metamodel adjusted for support help attribute for entities.
+    - [XSLT] Minor correction in data structure generation for memory pool.
+
+14.03.2011 bernhard.sputh@openlicensesociety.org
+    - Memory Pool Update function now checks whether or not it is allowed to
+      deallocate a memory block. This is meant to prevent that people deallocate
+      a memory block twice.
+
+15.03.2011 bernhard.sputh@openlicensesociety.org
+    - Enabling LaTeX output format for the API document generation.
+
+16.03.2011 bernhard.sputh@openlicensesociety.org
+    - Updated API documentation of the memory pool.
+
+18.03.2011 bernhard.sputh@openlicensesociety.org
+    - [OCR-7] Added the help attribute to the platforms of: arm-cortex-m3, coolflux, posix32, win32, and xmos.
+    - [OCRS-11] Improved API documentation, added documentation to the base types.
+    - [OCR-8] Fixed the problem with the FIFO, it was a one off error caused by incorrect use of a temporary variable. Reworked the code to not use temporary variables.
+
+23.03.2011 bernhard.sputh@openlicensesociety.org
+	- This is version 1.4.3.3
+    - Starting work on 1.4.3.4
+
+12.04.2011 bernhard.sputh@openlicensesociety.org
+	- Corrected XMOS L1_hal.c, it now provides the variables necessary for Priority Inheritance.
+
+12.04.2011 alexander.keda@openlicensesociety.org
+    - [XSLT] Adjusted code generation regarding Priority Inheritance for XMOS.
+
+13.05.2011 bernhard.sputh@openlicensesociety.org
+    - Fixed a race condition in the priority inheritance implementation. Which could occur if the boostPriority service was triggered but the Task did not hold the resource any longer.
+
+18.05.2011 bernhard.sputh@openlicensesociety.org
+    - [OCR-11] Discovered that boosting the priority of a Packet could result in an endless recursion crashing the system. This has been fixed.
+
+19.05.2011 bernhard.sputh@openlicensesociety.org
+    - [OCR-11] Detected and fixed a problem with the Pending Requests Queue getRequest implementation, caused by an incorrect typecast.
+    - Renamed L1_api_cleanup.h to L1_api_apidoc.h.
+
+23.05.2011 bernhard.sputh@openlicensesociety.org
+  	- This is version 1.4.3.4
+    - Starting work on 1.4.3.5
+
+03.06.2011 alexander.keda@openlicensesociety.org
+    - ProjectGen v.0.8.3.5:
+   	-- [OCR-15] For tcp link server port copied on the client.
+
+15.06.2011 bernhard.sputh@openlicensesociety.org
+    - Adding Design document / Architectural description of OpenComRTOS
+    - This is version 1.4.3.5
+    - Starting work on 1.4.3.6
+
+25.06.2011 bernhard.sputh@openlicensesociety.org
+    - L1_trace_api.h had been changed to include  L1_hal_trace.h, which can define macros to be used instead of functions for tracing.
+    - Updated the Generic platform to compile with the current Kernel
+    - Added the powerpc_e600 platform, which is currently equivalent to the Generic platform
+
+27.06.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] Added an the codesize measurement test, adjusted to OpenComRTOS 1.4.
+
+27.06.2011 bernhard.sputh@openlicensesociety.org
+    - [arm-cortex-m3] Added an the codesize measurement test, adjusted to OpenComRTOS 1.4.
+    - [xmos] Added an the codesize measurement test, adjusted to OpenComRTOS 1.4.
+
+06.07.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] Enabling and disabling of interrupts has been implemented. Also a test example has been developed.
+
+07.07.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] Worked out the cooperative context of the PowerPC (ALU only). L1_startTasks() runs now.
+
+08.07.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] Loading of cooperative ALU + FPU context of the PowerPC.
+    - [powerpc_e600] Saving of cooperative ALU + FPU context has been implemented
+    - [powerpc_e600] L1_switchContext() has been implemented.
+    - [powerpc_e600] Added a semaphore loop example for to test powerpc_e600. It loops now.
+    - [powerpc_e600] Saving the Altivec registers now as well.
+
+11.07.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] L1_initializePlatform() now disables the Exception Prefix.
+
+12.07.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] Added test SemaphoreLoop_WT, to test IRQ handling.
+    - [powerpc_e600] Added the directory `s' which contains the file InterruptVectors.S. This file has to be assembled and linked agains in order to install the interrupt handling routines.
+    - [powerpc_e600] Added the directory `linker_scripts' which contains the file sim_oea.ld. This file places the section .interrupt_vector at the correct location in the binary.
+    - [powerpc_e600] Working on _systemcall as testbed for the interrupt handling.
+
+13.07.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] Now saving the modified Stack Pointer of the interrupted task, and switch to the ISR stack, then returning to the interrupted task again.
+
+14.07.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] Extended Context Flags, there are now flags highlighting whether or not the context contains FPU and ALTIVEC contexts.
+    - [powerpc_e600] Full Preemptive Context now saved when switching to the Kernel.
+    - [powerpc_e600] Added the argument switchToKernel to the function L1_leaveISR(). This argument instructs L1_leaveISR to switch to the Kernel-Task if TRUE, otherwise control is returned to the interrupts Task. The full function signature is void L1_leaveISR(L1_BOOL switchToKernel);
+
+15.07.2011 bernhard.sputh@openlicensesociety.org
+    - Removed the argument from L1_leaveISR() again, to avoid breaking the other ports. Instead adding two new functions:
+    -- void L1_leaveIsrReturnToInterruptedTask(void);
+    -- void L1_leaveIsrSwitchToKernelTask(void);
+    - [powerpc_e600] Removed dead and unecessary assembly code, reducing the .text-segment-size of the SemaphoreLoop_WT from 33168 to 32144 Bytes.
+
+15.07.2011: alexander.keda@openlicensesociety.org
+    - Updated XML Schema for support Linker_Script tag for powerpc_e600 platform.
+    - XSLT templates for powerpc_e600.
+
+15.07.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] Added SemaphoreLoop_benchmark Project to measure the time it takes to perform a semaphore loop. on the PPC_e600 core.
+
+19.07.2011 bernhard.sputh@openlicensesociety.org
+    - [powerpc_e600] Added toolchain test project.
+    - [tidsp_c6000] Added toolchain test project, which includes files to make CMake 2.6 ready for the toolchain.
+    - [Build System] Added the folder Platform to the folder CMakeScripts. This folder contains the toolchain specific settings, to simplify the defintion of the Macros: OpenComRTOS_Application and OpenComRTOS_CompilerOptions.
+    - [tidsp_c6000] Created the Platform folder, populated it with the contents of the generic folder.
+    - Introducing new #define C99_STRUCTURE_INIT which marks that the compiler accepts the .fieldname notation when initialising structures. This replaces the the #define COOLFLUX which meant the opposite.
+    - [tidsp_c6000] is now able to link a static library.
+    - [tidsp_c6000] Added codesize example, converted it to non C99 style structure initialisation. It compiles but does not link yet.
+    - [tidsp_c6000] Codesize example now links and produces results.
+
+20.07.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Updated the CMakeExtensions.
+    - [Build System] Renamed folder `Platform' to `toolchain'.
+    - [tidsp_c6000] Enabled assembly compilation, renamed L1_hal_asm.S -> L1_hal_asm.asm
+    - [tidsp_c6000] Implemented enabling and disabling of Interrupts.
+    - [tidsp_c6000] Added the file TIDSP_C6000_Context.inc, which contains the Context configuration.
+
+21.07.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Created the folder testing/tidsp_c6000 and added a bringup example for testing purposes there.
+    - [tidsp_c6000] Corrected the implementation of enabling and disabling of Interrupts, it now returns to the caller.
+    - [tidsp_c6000] Implemented L1_initializeContextOfTask;
+    - [tidsp_c6000] Implemented TiDSP_C6000_loadContext;
+    - [tidsp_c6000] Implemented TiDSP_C6000_switchContext;
+    - [tidsp_c6000] Testing TiDSP_C6000_switchContext using a Semaphore Loop, not yet working as expected.
+    - [tidsp_c6000] Starting to work with the TI-DSS to figure out what is going on in my SemaphoreLoop
+
+22.07.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Fixed the semaphore loop, it was a problem with the initialisation of the RequestPackets. With Compiler Option Os the simulator reports 5720 cycles per loop.
+    - Addressed most of the MISRA remarks the TI-DSP compiler highlighted.
+
+25.07.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Extended the CMake scripts to set the following defines:
+    -- SLOOP_SUPPORTED: Means that the CPU has the registers ILC and RILC
+    -- 32REGS_PER_BANK: Means that the CPU has 32 instead of only 16 regisers in the A and B banks.
+    - [tidsp_c6000] Context Switch has been adjusted to save the ILC and RILC registers if present.
+    - [tidsp_c6000] Added inthook example, which will be used to experiment with hooking an interrupt.
+
+26.07.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] I'm now able to install an interrupt vector table. Need to rework this to make it easier to use.
+    - [tidsp_c6000] Moved the interrupt vector table inside the Kernel again, no need to bother the user with it.
+    - [tidsp_c6000] Added Marker to Context.
+    - [tidsp_c6000] Saving the full context in the IRQ Dispatcher routine.
+    - [tidsp_c6000] Started to work on the restore routine.
+
+27.07.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Adjusting L1_SwitchContext, to support Preemptive Contexts (B IRP).
+    - [tidsp_c6000] L1_SwitchContext has been adjusted.
+    - [tidsp_c6000] The port is able to save a preemptive context, and then switch to the Kernel-Task.
+    - [tidsp_c6000] Handling the SAT bit and the SSR registers correctly when saving and restoring the Cooperative Context.
+    - [tidsp_c6000] Can now handle a hardware interrupt. The problem with triggereing them was that the bit IER(NMIE) has to be set to 1.
+
+28.07.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Reorganising the port, bundling the interrupt handling code in the intc-driver.
+    - [tidsp_c6000] Implemented interrupt controller driver intc. It works, but will have to be optimised at one point.
+    - [tidsp_c6000] intc now uses a separate interrupt stack, must be defined as: IsrStack;
+    - [tidsp_c6000] Introducing inta, a flexible controller implementation which allows to perform minimal context saving. Not yet working.
+
+29.07.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Interrupt controller inta now works.
+    - [tidsp_c6000] Linker now generates a mapfile by default.
+
+01.08.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Moved CMake_Extensions to the platform.
+    - [tidsp_c6000] Added a readme which explains the utilisation of the port.
+    - [build system] GNU linker will now produce a Mapfile automatically.
+
+02.08.2011 bernhard.sputh@openlicensesociety.org
+    - [Codesize] The ARM, PPC, C6000, and XMOS codesize measurements now also build a baseline binary (just a main) which allows to see how much code the bringup takes.
+    - [powerpc_e600] Added Interrupt Latency Measurement test project, which will now be implemented.
+    - [powerpc_e600] Interrup Latency Measurement has been implemented.
+
+03.08.2011 alexander.keda@openlicensesociety.org
+    - [tidsp_c6000] First implementation of codegens for this platform.
+
+04.08.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Set default SiliconVersion to 6600 which is what we currently build the kernel images for.
+    - File L1_memcpy.c gets split into string/L1_strlen.c and string/L1_strncpy.c to prevent unused functions to be linked in.
+    - Added the Performance Figures Document.
+    - [tidsp_c6000] Removed unused code from L1_hal_asm.asm
+    - [tidsp_c6000] Now supports the datatypes L1_UINT64, L1_INT64.
+    - [tidsp_c6000] Added a new driver to utilise the built in timestamp counter.
+    - Updated Report on Codesizes.
+
+04.08.2011 alexander.keda@openlicensesociety.org
+    - Adjust XSLT template for generation fields in the order in PreallocatedPacket structure like in definition.
+
+05.08.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Corrected Restoring of full preemptive context in intc, inta, and swithContext. Accidentially decrementeg instead of incremented the Stack.
+
+08.08.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Converted all near variable accesses to far accesses.
+
+09.08.2011 bernhard.sputh@openlicensesociety.org
+    - L1_List_headElement(List) has been replaced with a Macro.
+    - L1_List_isEmpty(List) has been replaced with a Macro.
+    - L1_List_getSentinel(List) has been replaced with a Macro.
+    - L1_List_isInAList(ListElement) has been replaced with a Macro.
+    - L1_getRxPacket_IsrSafe() and L1_getRxPacket() have been inlined in L1_linkDriver.c the only place where they were used.
+    - L1_PendingRequestsQueue_cancelRequest() has been converted to a Marco.
+    - L1_List_removeTask() and L1_List_insertTask() have been converted to Macros.
+    - L1_List_insertPacket() and L1_List_removePacket() have been converted to Macros.
+    - [tidsp_c6000] L1_restoreStatusRegister(), L1_enterCriticalSection(), L1_leaveCriticalSection(), are now assembly macros.
+    - [tidsp_c6000] L1_saveStatusRegister(), is now using inline assembly
+    - L1_Reschedule() is now a Macro.
+
+10.08.2011 bernhard.sputh@openlicensesociety.org
+    - [tidsp_c6000] Reestablished the correct behaviour of the compile switches.
+    - [tidsp_c6000] Optimised the code to enable and disable Interrupts. Commented ouf the corresponding code in the asm file due to it being replaced with inline macros.
+    - [powerpc_e600] Inlined the enabling and disabling of interrupts code in L1_hal.c
+    - [tidsp_c6000] Added saving and restoring of registers for the inline macros.
+    - [tidsp_c6000] Added Interrupt Latency Measurement example.
+    - Performance Figures of PPC and TI-C6000 have been updated.
+
+11.08.2011 alexander.keda@openlicensesociety.org
+    - Solve issue with incorrect initialization of TimeoutTimer field for Preallocated Packet.
+
+11.08.2011 bernhard.sputh@openlicensesociety.org
+    - [arm-cortex-m3] Added SP_1.4_PO codesize example for ARM.
+    - [arm-cortex-m3] Added Semaphore Loop Performance measurement example.
+    - [arm-cortex-m3] Inlined the functions L1_saveStatusRegister and L1_restoreStatusRegister.
+    - [tidsp_c6000] L1_saveStatusRegister(), has been converted to an inline function.
+    - [powerpc_e600] L1_saveStatusRegister(), has been converted to a Macro.
+    - Performance Figures of ARM-Cortex-M3, PPC, and TI-C6000 have been updated.
+    - [arm-cortex-m3] Added Interrupt Latency Measurement example.
+
+12.08.2011 bernhard.sputh@openlicensesociety.org
+    - [OCR-21] Sorting fields of the structure L1_TaskControlRecord. All fileds that are always present move to the beginning.
+    - [tidsp_c6000][OCR-21] Inta has been adjusted to the new Task Control Record, as well as the examples.
+    - [tidsp_c6000] The inthook example has been removed.
+    - [tidsp_c6000][OCR-21] Codegen has been adjusted.
+    - [powerpc_e600][OCR-21] The code of the port has been adjusted.  No changes to the Codegens have been done yet, due to .field initialisation being used there is no immediate need.
+    - [OCR-21][ARM-Cortex-M3][Win32][Posix32] require no modifications to their code.
+    - [ARM-Cortex-M3] examples / tests have been updated to use the kernel target directory.
+    - [xmos][OCR-21] the code has been adjusted.
+    - [xmos] The functions L1_saveStatusRegister and L1_restoreStatusRegister, L1_saveStatusRegister() have been converted to Macros.
+    - [xmos] Added an Semaphore Loop benchmark to the tests.
+    - [xmos] removed unused functions.
+    - [xmos] Port Only codesize measurement added.
+    - [xmos] Context size adjusted, which was off by one element
+    - [xmos] Optimising the context switch by not saving caller save registers: r0, r1, r2, r3, and r11 when doing a cooperative context switch, i.e. L1_switchContext.
+    - [xmos] Added Interrupt Latency Measurement benchmark.
+
+15.08.2011 bernhard.sputh@openlicensesociety.org
+    - [xmos] Finalised the measurements of the Interrupt Latency.
+
+01.09.2011 bernhard.sputh@openlicensesociety.org
+    - [OCR-24] The problem has been identified as being caused by not initialising the fields for the PendingRequestsQueue in the L1_Packets retrieved from a Pool. To solve this problem the following snippet has been inserted in all functions that provide Packets from a PacketPool: L1_getRxPacket(), L1_getRxPacket_IsrSafe(), PacketPoolUpdate() and L1_KernelPacketPool_getPacket()
+        #ifdef PENDING_REQUESTS_QUEUE
+            Packet->PendingRequestListElement.Next = NULL;
+            Packet->PendingRequestListElement.Prev = NULL;
+            Packet->PendingRequestHandler = NULL;
+        #endif /* PENDING_REQUESTS_QUEUE */
+        with `Packet' being a pointer to the L1_Packet to be returned to the caller.
+
+28.09.2011: alexander.keda@openlicensesociety.org
+    - Adjusted codegens for making device name part of generated structures names.
+
+21.10.2011 bernhard.sputh@openlicensesociety.org
+	- [posix32] Fixed the problem with posixUart and posixSocket not compiling due to sigset_t unknown. The include of sys/epoll.h is now necessary.     >>>>>>> .r2696
+
+15.01.2012 bernhard.sputh@openlicensesociety.org:
+    - Adjusted the build.xml file to correctly pass file and paths parameters to CMake 2.8.5
+    - [win32][OCR-31] Socket-LinkDriver will now stop trying to read from a link if the link has been disconnected.
+    - [win32][OCR-31] Socket-LinkDriver will now try to reestablish lost links. This is still experimental!
+
+18.01.2012 bernhard.sputh@openlicensesociety.org:
+    - Adding the directory src/components for additional components of the kernel, the first component to be added here is the Open System Inspector.
+    - Added an external dependency at the folder components/OSI to link with http://intranet.altreonic.com/projects/OpenComRTOS/svn/OpenSystemInspector/Service/trunk
+
+23.01.2012 bernhard.sputh@openlicensesociety.org:
+    - Adjusted the build system to not build the components at the moment, these are for the next version.
+
+25.01.2012 bernhard.sputh@openlicensesociety.org:
+    - This is version 1.4.3.6
+    - Starting work on 1.4.3.7
+
+25.01.2012: alexander.keda@openlicensesociety.org
+    - [win32] Adjusted toolchain with specify CMAKE_AR for support CMake 2.8.
+
+26.01.2012 bernhard.sputh@openlicensesociety.org:
+    - [win32] Modifed the metamodel to allow the creation of winsock driver instances: eth0, eth1, ..., eth9
+    - This is version 1.4.3.7
+    - Starting work on 1.4.3.8
+
+27.01.2012 bernhard.sputh@openlicensesociety.org:
+    - [kernel] Reenabled the function L1_List_isMember() since this is used by some examples
+    - [arm-cortex-m3] Reactivated the function L1_Trace_TimeStamp().
+    - This is version 1.4.3.8
+    - Starting work on 1.4.3.9
+
+08.02.2012  bernhard.sputh@openlicensesociety.org
+    - [win32][win32SocketCom.c] Corrected spelling mistake in trace message.
+    - [xmos][XmosUartDriver_ML.h] Added missing underscore to #ifndef XMOS_UART_DRIVER_H_, thanks Andrew for highlighting this to me.
+
+09.08.2012 bernhard.sputh@altreonic.com
+	-[unit_tests] Adding the unit tests that were developed by Anatoliy Konovalenko to the Kernel tree.
+
+27.08.2012 bernhard.sputh@altreonic.com
+	-[win32][OCR-40] Added the prefix "\\.\" to the COM-Port names to allow the use of COM10 and above.
+
+29.08.2012 bernhard.sputh@altreonic.com
+    -[win32][OCR-41] Adjusted the win32.metamodel to use the correct name for the include file
+    -[posix32] Added a script to build the port.
+
+29.08.2012 bernhard.sputh@altreonic.com
+    - [OCG-2] Updated the file makefile_generator.xslt to use a relative path for the toolchain file.
+    - [OCG-3] Added the new node attribute `RC_COMPILER' to the schema, and modified the win32-toolchain generation xslt to use it. Also updated the win32 metamodel.
+
+12.09.2012 bernhard.sputh@altreonic.com
+    - Updated codegens to set include and library pathes.
+    - Preparing the XSLT files to be usable by xsltproc.
+
+18.09.2012 bernhard.sputh@altreonic.com
+    -[win32][OCR-41] Adjusted the win32.metamodel to fix the problem that was introduced again.
+
+21.09.2012 bernhard.sputh@altreonic.com
+    - Corrected the makefile under linux to point correctly to the toolchain file.
+
+22.09.2012 bernhard.sputh@altreonic.com
+    - [OCR-43][posix32] The issue of SIGALRM not being caught while processing the second timeout has been fixed by making the registration of the signal hanlder part of the timeout function.
+
+23.09.2012 bernhard.sputh@altreonic.com
+    - [OCR-45][win32][posix32] It has been implemeted for win32 and posix32 platforms.
+
+24.09.2012 bernhard.sputh@altreonic.com
+    - [kernel] Moved the generic Hub definition to the file kernel/hubs/L1_hub.h.
+    - [OCR-44][kernel] Implemented the Black Board Hub and the corresponding Unit Tests.
+    - [OCR-44][OCG-7] Adjusted the XSLT files and version 1.4.3.1 of ProjectGen for posix32.
+    - [OCR-44] Added the Black Board Hub to the application metamodel and added the images to represent it in OpenVE.
+
+25.09.2012 bernhard.sputh@altreonic.com
+    - [OCR-44] Forgot to add the icons previously.
+    - [OCR-44] Now the black board hub releases all waiting Tasks when a message gets published.
+
+03.10.2012 bernhard.sputh@altreonic.com
+    - [OCR-44] Black Board Hub now fully implemented with new API.
+    - [OCR-44] Black Board Hub Unit tests have been updated to reflect the behaviour change.
+    - [OCR-47] Updated the Codegens to version 1.4.3.2, which support the Black Board Hub, as well as CFLAGS.
+
+04.10.2012 bernhard.sputh@altreonic.com
+    - API documentation for the Black Board Hub gets now generated.
+    - [OCR-48] Has been implemented.
+
+09.10.2012 bernhard.sputh@altreonic.com
+    - Adding Kernel Image independent Unit Tests.
+    - Adding behavior based test example, which will build a complete project to test the real behavior of the system.
+
+15.10.2012 bernhard.sputh@altreonic.com
+    - Correcting of new FIFO API implementation.
+
+23.10.2012 bernhard.sputh@altreonic.com
+    - Increased the packet payload size to 1024 bytes.
+
+30.10.2012 bernhard.sputh@altreonic.com
+    - [OCR-50][posix32] The issue was that the incorrect number of remaining timer ticks was returned by the wtimer implementation. The cause of this was a misinterpretation of the underlying API.
+
+31.10.2012 bernhard.sputh@altreonic.com
+    - [OCR-50][win32] There was also an irregularity in the wtimer of win32, it would stop generating ticks. The implementatoin has been replaced with a classical pTimer.
+
+08.11.2012 bernhard.sputh@altreonic.com
+    - Added missing definition of the function L1_EnqueueFIFO_WT(), to L1_api.h.
+    - [posix32] Removed trace messages from wtimer.
+
+11.11.2012 bernhard.sputh@altreonic.com
+    - [OCR-51][posix32] The cause of the second timeouts was the incorrect use of the sleep(1) function, to allow scheduling. In fact this is not necessary at all.
+    - [win32] The underlying timer implementation has been changed to use a Timer Queue, instead of a Waitable Timer, after precission issues were discovered with the waitable timer.
+
+13.11.2012 bernhard.sputh@altreonic.com
+    - [kernel][timer] Code review identified a potential race, which has been resolved now.
+
+15.11.2012 bernhard.sputh@altreonic.com
+    - [kernel][timer] Prevented another race between the timer ISR and the Kernel. New Timer function added for this:
+    - [OCR-52][posix32] Refactored bits of the L1_hal.c and the timer implementation to make it easier to read.
+    - [OCR-52][posix32] Introduced a Mutex around the calls L1_enterISR() and L1_leaveISR().
+
+16.11.2012 bernhard.sputh@altreonic.com
+    - [OCR-52][posix32] Replaced all Semaphores with pthread conditional variables for signalling.
+    - [posix32] Incorporated fixes to issues highlighted by the Coverity toolchain.
+
+18.11.2012 bernhard.sputh@altreonic.com
+    - [posix32] Incorporated fixes to issues highlighted by the Coverity toolchain.
+
+19.11.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183] Initial commit of the BSP.
+    - [drivers] Initial commit of the different driver classes.
+
+26.11.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-5] Interrupt Handler issues with switching to kernel were solved.
+    - [powerpc_e600][cwv183][DLSCWV-7] Marvell Timer driver ticks.
+    - [powerpc_e600][cwv183][DLSCWV-8] pTimer based on Marvell Timer-0 ticks.
+
+27.11.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-17] First bus scan code integrated, does not resolve BAR's (Base Address Registers) yet, does ignore bridges.
+    - [powerpc_e600][cwv183][DLSCWV-17] Test program added, to check the PCI scan in the debugger.
+    - [powerpc_e600][cwv183][DLSCWV-17] Updated the implementation, it now returns the BAR's and also scans over bridges. It finds the same devices and functions as the Foundation Firmware.
+
+28.11.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-17] Corrected the function  mvCtrlModelGet() and the define MV64460_DEV_ID to match the values returned by the MV64460 system controller on our board.
+
+29.11.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183] Added missing include files to the repository.
+    - [powerpc_e600][cwv183][DLSCWV-9] Real Time clock can be set (time and date), and read (time and date).
+
+30.11.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-21] Watch Dog Timer driver implementation tested, it generates the desired interrupt.
+    - [powerpc_e600][cwv183][DLSCWV-8] Added support for generating timestamps for tracing.
+    - [powerpc_e600][cwv183][DLSCWV-21] Added the DLS BSP abstraction layer for the Watch Dog Timer.
+
+04.12.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-28] First bootloader example, which does generates an S-Record file as output, and initialises the MMU correctly.
+    - [powerpc_e600][cwv183][DLSCWV-5] Interrupt Handler now also works with L1 D- and I-caches enabled.
+    - [powerpc_e600][cwv183][DLSCWV-28] The bootloader example, now installs the exception vectors, which made the debugger work again.
+
+06.12.2012 radu.vadana@altreonic.com
+	- [powerpc_e600][cwv183][DLSCWV-22] Integrated the I2C driver.
+
+06.12.2012 bernhard.sputh@altreonic.com
+	- [powerpc_e600][cwv183][DLSCWV-28] Integrated first bootloader called `boot_base'.
+	- [powerpc_e600][cwv183][DLSCWV-28] Adding two linker scripts: boot_flash.ld to generate an image for flash-booting, and boot_jtag.ld to boot using JTAG.
+	- [powerpc_e600][cwv183][DLSCWV-28] Example 28_01 generates a flash bootable image now.
+
+07.12.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-28] Corrected the jtag-booting linker script, and the boot loader disables interrupts and address translation during startup. This is necessary in order to be able to boot correctly.
+
+09.12.2012 bernhard.sputh@altreonic.com
+	- [powerpc_e600] Compiled under Linux and fixed capitalisation of files.
+	- [powerpc_e600] Added a toolchain file and build script for linux (2011.03 version of the toolchain).
+	- [powerpc_e600][cwv183][DLSCWV-28] Reenabled clearing the bss segment, it was disabled to avoid excessive stepping during debugging.
+
+10.12.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-28] Added reg_def.h to the repository, which was missing earlier.
+	- [powerpc_e600][cwv183][DLSCWV-28] Default bootloader now blinks the leds after booting.
+    - [powerpc_e600][cwv183][DLSCWV-9]  Integrated the DLS BSP Abstraction layer for the RTC driver.
+    - [powerpc_e600][cwv183] Adding all files of the BSP abstraction layer from DLS.
+
+13.12.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-17] Fixed the function Pci_findDevice() which mixed up the product and vendor IDs.
+    - [powerpc_e600][cwv183][DLSCWV-17] Removed dependencies on glibC
+    - [powerpc_e600][cwv183][DLSCWV-28] Bootloader modified to call interrupt Controller code again. Second bootloader added for OpenComRTOS less booting.
+    - [powerpc_e600][cwv183][DLSCWV-28] Base Address Translation definitions extended with MPC7448 specific page sizes (512MB -- 4GB)
+    - [powerpc_e600][cwv183][DLSCWV-17] Adding example that accesses the Exar Device.
+    - [powerpc_e600] Workaround a bug in PowerPC-gcc when using -Os.
+    - [powerpc_e600][cwv183][DLSCWV-28] Bootloader now fully configures the 4GB of address space for the CW-183 using the extended BATs of the MPC7448.
+    - [powerpc_e600][cwv183] DLS RTC abstraction now builds.
+
+17.12.2012 bernhard.sputh@altreonic.com
+    - [kernel] back ported the L1_memset() function.
+    - [powerpc_e600][cwv183] DLS Timer abstraction adjusted to OpenComRTOS.
+    - [powerpc_e600][cwv183][DLSCWV-7] mvTimer API extended to suite the needs of the DLS Timer abstraction.
+    - [powerpc_e600][cwv183][DLSCWV-15] Adding project to convert the IP-206 / VME-209 drivers.
+
+21.12.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-15] Adjusted the FpgaDIO driver to have the standard names for the functions.
+    - [powerpc_e600][cwv183][DLSCWV-15] BSP abstraction has been adjusted to use the OCR provided FpgaDIO functions.
+
+28.12.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-25] Integrated Driver for the UniverseII VME-PCI bridge. At the same time concentrating all VME related defines in the driver files.
+
+30.12.2012 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-4] Adding BSP specific XSLT folder and a base set of xslt files.
+
+03.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-30] DLS provided VxPoint driver integrated.
+
+04.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-4] XSLT files adjusted to obey the node attribute `csp'.
+
+05.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-4] Bootloader JTAG codegens integrated.
+    - [powerpc_e600][cwv183][OCR-45] CW-183 Core0 now generates the L1_node_id_mapping.h
+    - [powerpc_e600][cwv183][DLSCWV-4] Bootloader Flash codegens integrated.
+
+06.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-23] Added Thermal driver to BSP and defined the four available sensors.
+    - [powerpc_e600][cwv183][DLSCWV-24] Added I2C Eeprom driver to the BSP and defined the two available banks.
+    - [powerpc_e600][cwv183][DLSCWV-16] Added the NvRam driver to the BSP including the DLS abstraction.
+    - [powerpc_e600] Added the functions L1_hal_invalidateCache() and L1_hal_flushCache() which allow easy flushing and invalidate the cache for memory regions.
+
+07.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-28] Modified the BAT for the RAM to operate in write through mode. L2 Chache is now enable.
+    - [powerpc_e600][cwv183][DLSCWV-11] Example modified to initialise the CUNIT.
+
+08.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183] Added the classUtils.c and .h files from the Customers BSP abstraction.
+    - [powerpc_e600][cwv183][DLSCWV-28] Bootloader linker scripts modified to allow the use of libgcc.
+
+09.01.2013 bernhard.sputh@altreonic.com
+    - [OCR-44][kernel] Extended the API documentation of the Black Board Hub.
+
+
+13.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-4] Bootloader version 2 now integrated, this version does allow linking against standard libs (newlib). The Codegens have been adjusted to use it.
+
+16.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][DLSCWV-5] Added additional space to the ISR Stack (decrementing it by 8 in L1_enterISR) to comply with the EABI Calling Conventions.
+    - [powerpc_e600][cwv183][DLSCWV-6] Fixed the fpgaTimer implementation.
+    - [powerpc_e600][cwv183][DLSCWV-28] Linker scripts now avoid overlapping of .rodata and .data sections when doing their offset calculations.
+    - [powerpc_e600][cwv183][DLSCWV-28] Bootloader with Newlib support now works correctly also when flashing. Previously there was a mistake in the linker script.
+
+17.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-28] Added comments to the newlib linker scripts.
+    - [tidsp_C6000][win32][posix32][coolflux][arm-cortex-m3][generic][xmos][OCR-34] Introduced the types L1_UINT8 and L1_INT8.
+    - [powerpc_e600][cwv183][DLSCWV-4][DLSCWV-5] Moved ISR-Stack to the 1GB mark, i.e. 0x40000000. The Node-Metamodel has been adjusted as well.
+    - [powerpc_e600][cwv183][DLSCWV-3] Basic board init now done in main(), before starting the kernel.
+
+18.01.2013 bernhard.sputh@altreonic.com
+    - [kernel][driver] Starting to make the use of packets from ISRs easier and safer to use.
+
+20.01.2013 bernhard.sputh@altreonic.com
+    - [kernel][driver] Adding helper functions to make it safe and easy to interact with ISRs.
+    - [APIDOC] Image folder added, and ASYNC_SERVICES enabled to be documented as these are used when dealing with ISRs.
+
+21.01.2013 bernhard.sputh@altreonic.com
+    - [driver][testing] Adding Lockless Ring Buffer code and the first Unit Test.
+
+22.01.2013 bernhard.sputh@altreonic.com
+    - [driver] Lockless Ring Buffer added to the driver support functions.
+    - [driver] Lockless Ring Buffer Unit Tests and corrections to the implementation.
+
+23.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-4] Now linking against the math library, thus sin / cos functions can be used.
+    - [powerpc_e600][cwv183][DLSCWV-32] Basic fpgaUartLinkDriver has been implemented.
+
+24.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-32] fpgaUartLinkDriver Metamodel has been written, codgens adjusted to include the device header file.
+    - [codegens] Corrected the testing for the return value of the initDevice function it was L1_FALSE instead of RC_FAIL.
+
+25.01.2013 bernhard.sputh@altreonic.com
+    - [driver] New TX-Driver Loop added which does not allocate the L1_XferPacket on the stack, but uses one provided by the caller.
+    - [powerpc_e600][cwv183][DLSCWV-32] fpgaUartLinkDriver has been modified to use the new TX-Driver Loop.
+    - [powerpc_e600][cwv183] Setting SVN Properties for the BSP files.
+    - [powerpc_e600][cwv183][DLSCWV-4] Moved the toolchain.xslt file to the core specific folder.
+    - [powerpc_e600][cwv183][DLSCWV-12] Integrating the first version of the exar octal UART driver.
+    - [powerpc_e600][cwv183][DLSCWV-12] Integrated the exar octal UART driver, and adjusted it where necessary.
+    - [powerpc_e600][cwv183] Cleanup the braced group warning, by replacing the macros with inline functions.
+    - [powerpc_e600][cwv183] Cleaned up a few more warnings.
+
+27.01.2013 bernhard.sputh@altreonic.com
+    - [driver] Corrected the calculation of the DataSize field when transforming an L1_XferPacket to an L1_Packet.
+    - [powerpc_e600][cwv183][DLSCWV-7] Implemented function to read out the current counter value from a Marvell Timer.
+    - [powerpc_e600][cwv183] BSP has now a version number 1.0 Alpha 1.
+
+28.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-11] Integrated the driver for the Marvell MPSC Uart device.
+
+29.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600] Setting the L1_ScheduleRequest flag in the PPC_E600 interrupt controller now.
+
+30.01.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600] Setting the L1_ScheduleRequest flag in L1_leaveISR() instead of the PPC_E600 interrupt controller.
+    - [driver][uart] Defining datatypes describing an UART connection.
+    - [powerpc_e600][cwv183][DLSCWV-12] Marvell UART modified to use an LRB also for TX.
+
+01.02.2013 bernhard.sputh@altreonic.com
+    - [codegens] Updated the ProjectGen for Windows to version 1.4.3.3.
+
+03.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-1] L2 Prefetch Engines are now enabled in the bootloader.
+    - [powerpc_e600][cwv183][DLSCWV-33] UART Host Service integrated.
+    - [powerpc_e600][cwv183][DLSCWV-33] UART FpgaUart Server integrated, including the Metamodel.
+    - [powerpc_e600][cwv183][DLSCWV-33] UART Exar XR17D158 Server integrated.
+    - [codegens] New element `array' for components added.
+
+04.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-33] UART MPSC server added. UHS improved.
+
+05.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183] FpgaPtimer now provides timestamps.
+    - [powerpc_e600][cwv183][DLSCWV-4] Bootloader now configures the main memory as write back, instead of write through.
+
+06.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-18][DLSCWV-19] Integration of the work done together with Luc.
+    - [powerpc_e600][cwv183][DLSCWV-18][DLSCWV-19] The SATA driver can now be configured to different SATA Host Controllers and also different Interrupt Controllers. A Task Entry Point has been added which takes care of the initialisation of the device.
+
+08.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-18][DLSCWV-19] Updated the fat_fs implementation from version 0.7 to 0.9.
+    - [powerpc_e600][cwv183][DLSCWV-18][DLSCWV-19] Started to work on the Fat32Service, which will offer OpenComRTOS style interactions with the File System.
+    - [posix32][GHS-3] All posix32 nodes now link against the library `gtk-x11-2.0' and have the additional linker flag `--no-as-needed' set, to avoid problems when linking on Ubuntu 12.04.1.
+
+10.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183] Optimised context switch and interrupt handling.
+    - [powerpc_e600][cwv183][DLSCWV-18][DLSCWV-19] Fat32-Service base functionality is now implemented but not yet tested.
+
+13.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183] BSP specific Icon and SVG folders added.
+    - [powerpc_e600][cwv183][DLSCWV-27] Metamodel has been written for the TCPIP-Service.
+    - [powerpc_e600][cwv183][DLSCWV-19] Fat32-Service API documentation added.
+    - [powerpc_e600][cwv183][DLSCWV-19] Fat32-Service Metamodel added.
+
+14.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-29] Integrating the refactored version of the PMC214 CAN driver.
+    - [powerpc_e600][cwv183][DLSCWV-29] Added the metamodel for the PMC214 driver.
+
+18.02.2013 bernhard.sputh@altreonic.com
+    - Removing deprecated files and folders.
+    - Integrating the IP-206 driver.
+
+25.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183][DLSCWV-34] Output configuration and mode selection integrated in MPSC UART.
+    - [powerpc_e600][cwv183][DLSCWV-19] Fat32-Service correction of client which tried to read from the wrong port.
+
+27.02.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600] Cache Flushing and Invalidation now works correctly.
+
+03.03.2013 bernhard.sputh@altreonic.com
+    - [async] Identified and fixed the issue that cause the L1_WaitForPacket() to fail if previously a failing synchronous interaction took place.
+
+07.03.2013 bernhard.sputh@altreonic.com
+    - This is version 1.4.3.9
+    - Starting work on 1.4.3.10
+    - Removed the CW183 BSP from the build system.
+    - Exposing the Kernel version number in the CMake variable `OCR_VERSION'.
+
+08.03.2013 bernhard.sputh@altreonic.com
+    - Removed warnings in lockless ring buffer implementation, and the powerpc_e600 hal.
+
+14.03.2013 bernhard.sputh@altreonic.com
+    - [driver] Adding PCI-Bus driver class, which is to be used by future versions of the BSP.
+    - [powerpc_e600][cwv183][DLSCWV-20] Integrated the header files and libraries for the PMC704 board graphics use.
+    - [powerpc_e600][cwv183][DLSCWV-20] Adding OpenVE Project to demonstrate the PMC704 driver.
+    - This is version 1.4.3.10
+    - [win32][posix32] Added missing datatype L1_UINT64
+    - This is version 1.4.3.11
+    - Starting to work on version 1.4.3.12.
+
+19.03.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183] Not building the internal BSP anylonger, use the external BSP project for this.
+    - [powerpc_e600] Added the macro IO_SYNC to the file L1_hal_asm.h so it can be easily used by all BSPs.
+    - [posix32][sockf] Corrected the includes that prevented the building of sockf on Ubuntu 12.04.1.
+
+24.03.2013 bernhard.sputh@altreonic.com
+    - [posix32] Modified the codegens to ensure that only 32bit binaries get built even on 64bit machines.
+
+26.03.2013 bernhard.sputh@altreonic.com
+    - [powerpc_e600][cwv183] Removed the BSP from the powerpc_e600 platform.
+    - [powerpc_e600][cwv183] Removed the development projects for the CW183 BSP.
+    - Renamed `Tests' to `UnitTests'.
+    - Made buildOTL.sh independent of the other build-scripts.
+
+03.04.2013 bernhard.sputh@altreonic.com
+    - This is version 1.4.3.12
+    - Starting to work on version 1.4.3.13.
+
+05.04.2013 bernhard.sputh@altreonic.com
+    - [win32] All win32 nodes now link against thw wsock32 library to allo the Open System Inspector Service to work.
+
+12.04.2013  bernhard.sputh@altreonic.com
+    - [arm-cortex-m3] Added L1_UINT64 and L1_INT64 data types.
+    - [powerpc_e600] Stack-Space utilisation measurement routines added for OSI
+    - [powerpc_e600] Task context initialisation modified to take into account the need for additional stack-space by the PowerPC-EABI.
+
+17.04.2013  bernhard.sputh@altreonic.com
+    - [OCR-55] Implemented the monitoring of the RX- and Kernel-Packet-Pools.
+
+17.04.2013  antonio.ramos@altreonic.com
+    - Renamed event unit test functions to indicate that they test that the values are not modified wrongly.
+    - Added 4 test cases for the return value of the EventSyncCondition function.
+    - Updated CMakeLists.txt to execute the new test cases.
+    - Corrected the initial conditions of the tests to the EventUpdate function.
+
+17.04.2013  bernhard.sputh@altreonic.com
+    - [arm-cortex-m3] pTimer adjusted to the new interface.
+    - Starting to work on version 1.6.0.0
+    - Added 1.4 branch revisions 3647 -- 3694 to the 1.6 branch.
+
+18.04.2013  bernhard.sputh@altreonic.com
+    - [powerpc_e600] Adding OSI code.
+    - [OCR-58] Split L1_api.h into separate Hub specific files.
+    - [OCR-58] eleminated the need for the _apidoc.h files, which have been deleted.
+    - [OCR-58] Split L1_hub_api.h into separate Hub specific files.
+    - [OCR-57] Eleminated the define `SP_TINY'
+    - [OCR-57] Eleminated the define `L1_SERVICES'
+
+19.04.2013  bernhard.sputh@altreonic.com
+    - [OCR-57] Eleminated the define `NOWAIT_SERVICES'
+
+22.04.2013  bernhard.sputh@altreonic.com
+    - [OCR-57] Fixed the problem that caused the behaviour tests to fail.
+    - [posix64] Removed this platform.
+
+08.05.2013  bernhard.sputh@altreonic.com
+    - [OCR-57] Eleminated the define WT_SERVICES, NO_L1_KERNELPACKETPOOL, NO_SENDRCV, and L1_MOVEDATA
+    - [OCR-57] Eleminated the define NO_STOP
+    - [OCR-57] Eleminated the define NO_SUSPEND
+    - [OCR-57] Eleminated the define L1_DBG_END_PROC
+
+22.05.2013  bernhard.sputh@altreonic.com
+    - Added the neccessary functions to calculate the current workload of the CPU.
+
+24.05.2013  bernhard.sputh@altreonic.com
+    - [OCR-59] Added the first part of the new Ethernet MAC API.
+    - [OCR-59] Added the second part of the new Ethernet MAC API.
+
+26.05.2013  bernhard.sputh@altreonic.com
+    - [SFII-9] Implemented a basic SPI-API.
+
+27.05.2013  antonio.ramos@altreonic.com
+    - [SFII-9] Corrected the L1_Drv_SPI_setBusSpeed macro. Removed some references to Ethernet MAC driver.
+    - [win32] UART Driver now uses timeouts in win32Uart_initServer function when waiting for data from the client, to resolve an issue with the Smart Fusion II Uart implementation.
+
+28.05.2012  antonio.ramos@altreonic.com
+    - Corrected some of the test cases of the semaphore.
+
+28.05.2013  bernhard.sputh@altreonic.com
+    - [OCR-61] Adjusted the function L1_Debug_PlatformAssert() in all platforms, to loop forever once an assertion failed.
+    - [OCR-57] Removed all trace messages from the Kernel and the Platforms.
+    - [OCR-57] Removed deprecated Stack checking code from the Kernel and the Platforms.
+    - Adjusted the Unit-Tests to not raise warnings.
+    - Introduced new internal debug options 3 (assertations), 4 (post-mortem), and 5 (assertations + post-mortem)
+
+31.05.2013  bernhard.sputh@altreonic.com
+    - This is version 1.6.0.0
+    - Starting to work on version 1.6.0.1
+
+02.06.2013  bernhard.sputh@altreonic.com
+    - [arm-cortex-m3] Initial import of a generic NVIC driver.
+    - [arm-cortex-m3] Adding instruction set manual and core errata-sheet.
+
+10.06.2013  bernhard.sputh@altreonic.com
+    - [arm-cortex-m3] Added prototypes for L1_saveStatusRegister() and L1_restoreStatusRegister().
+
+
+03.06.2013  bernhard.sputh@altreonic.com
+    - [arm-cortex-m3] Basic NVIC support has been implemented, but not yet tested.
+    - [arm-cortex-m3] NVIC has been tested using the LM3S6965 SysTickTimer.
+
+11.06.2013  radu.vadana@altreonic.com
+    - [arm-cortex-m3] Fixed the signature of "ethmac_api_phy_reg_read(..)". The "pValue" parameter is now passed by reference.
+
+11.06.2013  bernhard.sputh@altreonic.com
+    - [INTC-API] Extended the API with following new functions: clearPendingIrq(), triggerIrq(),  and setIrqPriority().
+    - [arm-cortex-m3] NVIC driver has been extended to support these new functions.
+
+12.06.2013  bernhard.sputh@altreonic.com
+    - [ETH_MAC-API] Adding missing return codes for put and getFrame operations.
+
+13.06.2013  antonio.ramos@altreonic.com
+    - Adding missing  API documentation for multiple files.
+    - Added port functional tests.
+
+13.06.2013  bernhard.sputh@altreonic.com
+    - Added missing API documentation to L1_kernel_api.h and L1_scheduler_api.h.
+    - Additional Doxygen file for the internal API-Documentation.
+
+29.06.2013  bernhard.sputh@altreonic.com
+    - [arm-cortex-m3] Corrected the NVIC-ISR code which did not set the value of `L1_CurrentTaskCR' correctly when switching to the Kernel-Task.
+
+18.07.2013 radu.vadana@altreonic.com
+	- [arm-cortex-m3] Modified the basic SPI API after its first implementation, for the SmartFusion2.
+
+21.07.2013 radu.vadana@altreonic.com
+	- [arm-cortex-m3] Extended the basic SPI API with "spi_api_transferBlock(..)" for block transfers.
+
+23.07.2013  bernhard.sputh@altreonic.com
+	- [macosx] Started a Mac OS-X port of OpenComRTOS, presently a carbon copy of the posix32 port.
+	- [macosx] Added Mac OS-X compiled codegen to the support tools.
+	- [xslt] Reworked the XSLT processing to allow easy adjustments to command line tools.
+	- [macosx] Codegens now work, using xsltproc instead of Xalan.
+
+25.07.2013  bernhard.sputh@altreonic.com
+	- [macosx] Codegens adjusted to delete old generated files before generating the new set. This is meant to overcome a shortcoming when using xsltproc.
+	- [macosx] Correction of datatypes to match the definition.
+	- [macosx] First test of socket link driver, the system hangs, not sure why this is the case.
+
+02.08.2013  bernhard.sputh@altreonic.com
+    -[arm-cortex-m4f] Adding a new platform which supports the ARM-Cortex-M4F line of MCUs.
+
+03.08.2013  bernhard.sputh@altreonic.com
+    - Transformed Macros to inline functions for the Pending Request Queue implementation.
+
+04.08.2013  bernhard.sputh@altreonic.com
+    - Fixed an issue with the makefile generator xslt which was incorrectly adjusted when adding macosx support.
+    - [arm-cortex-m4f] Added a bsp-template which contains the basic files for a BSP and provides a sysTickTimer driver.
+    - [arm-cortex-m4f] Worked on a Floating Point capabable context switch.
+
+05.08.2013  bernhard.sputh@altreonic.com
+    - [arm-cortex-m4f] Context switch now works.
+    - [arm-cortex-m4f] SysTick Timer adjusted to the 80MHz of the development board.
+
+11.08.2013  bernhard.sputh@altreonic.com
+    - [arm-cortex-m4f] Bootloader fixed to work when compiled with optimisations.
+
+09.09.2013  bernhard.sputh@altreonic.com
+    - [OCR-69][powerpc_e600] Altivec context code revisited and adjusted the second register of the stvx and lvx instructions.
+    - [DLSCWV-62] Modifed the VME-Bridge driver class interface.
+    - Added helper API for L1_TimeStamp handling (difference, and isLater).
+    - L1_Drv_Isr_buildAndInsertPacket_NW() now sets the inUse-flag with interrupts disabled.
+    - L1_Drv_Isr_EnqueueFifo_NW() has been added for the VxWorks-Abstraction-Layer.
+    - [powerpc_e600] Watchpoint setting code has beed added as debugging aid.
+
+10.09.2013  bernhard.sputh@altreonic.com
+    - [kernel] The field IntrinsicPriority of the structure L1_TaskControlRecord has been made non constant for the VxWorks Abstraction Layer.
+    - UART Device driver class from 1.4 brought forward.
+    - [codegens] New hub-element now gets processed, except for the Hub-State.
+    - [codegens] New hub-element has now also support for structures defined in the Hub-State.
+
+11.09.2013  bernhard.sputh@altreonic.com
+    - [OCG-10] sourceFile, includeFile, lib, ocrLib, globalLib, and ocrGlobalLib now get added automatically at the correct places.
+
+16.09.2013  bernhard.sputh@altreonic.com
+    - [OCG-10] changed the attribute `value' to `name' in the elements that describe the callback functions.
+
+18.09.2013  bernhard.sputh@altreonic.com
+    - [OCG-10] New ProjectGen binary for win32 has been added.
+    - [Hub] The HubControlFunction now has the L1_Packet that issued the request in the parameter list.
+    - [ISR] Added L1_Drv_Isr_IOCTL_NW() for Device Driver Hubs.
+    - Corrected timestamp difference implementation.
+
+29.09.2013 bernhard.sputh@altreonic.com
+    - Corrected the Unit-Test-Harness to comply with the changes done for the User Defined Hubs.
+    - Implemented Unit Tests for the Timestamp functions.
+
+06.10.2013 bernhard.sputh@altreonic.com
+    - Extending the Unit-Tests for the Timer implementation.
+
+11.10.2013 bernhard.sputh@altreonic.com
+    - L1_List_remove() now does work also if the element is not in a List.
+    - Additional Timer Tests have been developed, to test against potential race conditions.
+    - Removed deprecated API from L1_timer_api.h.
+    - Adding ProjectGen 1.6.0.1, for win32.
+
+14.10.2013 bernhard.sputh@altreonic.com
+    - [arm-cortex-m4f] SystickTimer driver now allows to set the CPU frequency.
+
+15.10.2013 bernhard.sputh@altreonic.com
+    - [UT] L1_prng functions now get tested.
+    - [UT] Introducing the define `L1_UNIT_TEST' in the Kernel to allow access to static variables in Unit-Tests
+    - [UT] L1_initFreeKeyList()
+    - [UT] L1_List_isMember()
+    - [apidoc] L1_Keylist_api.h macros are now static inline functions and include doxygen comments.
+    - [apidoc] Adding all kernel and driver header files to doxygen.
+    - [apidoc] All Hub functions and data structures now have API documentation, including the internal API.
+    - [hubs] Made all fields of the L1_Hub data structure, except the `WaitingList', constant to avoid accidential modification by the user.
+    - [apidoc] Cleaned doxygen warnings.
+
+16.10.2013 bernhard.sputh@altreonic.com
+    - [OCR-74] Renamed L1_yield() to L1_Yield_W().
+
+16.10.2013 antonio.ramos@altreonic.com
+    - Corrected minor problems in timer test functions.
+    - Added doxygen documentation to test functions.
+
+16.10.2013 bernhard.sputh@altreonic.com
+    - [apidoc] Worked on API documentation of our kernel header files.
+    - [UT] Additional Unit tests for the static inline functions of the Hubs have been added.
+
+17.10.2013 bernhard.sputh@altreonic.com
+    - [tracer] Added the human readable version of the serviceIDs to the file L1_trace.c.
+
+18.10.2013 bernhard.sputh@altreonic.com
+    - [win32] Disabling the TCP-Naggle algorithm correctly now.
+
+22.10.2013 bernhard.sputh@altreonic.com
+    - [OCR-75] Renamed L1_BlackBoard to L1_BlackBoard_Board to avoid potential clashes with the C++ layer.
+    - [OCR-75] Renamed L1_Port to L1_InputPort and adjusted the code. This also affected the code generators.
+
+06.11.2013 bernhard.sputh@altreonic.com
+    - [OCR-76] Added support for the DataEvent-Hub.
+    - [OCR-76] Adding Unit-Tests for the DataEvent-Hub
+    
+07.11.2013 marina.gutierrez@altreonic.com
+    - [OCR-75] Added C++ wrappers for all of the Hubs.
+    - [OCR-75] Added UnitTests for Hubs using the C++ interface.
+    
+07.11.2013 bernhard.sputh@altreonic.com
+    - [OCR-76] Updated ProjectGen for Win32, which supports the DataHub.
+    - Removal of obsolete files, due to them being moved into BSPs.
+    - [OCR-76] Adding the icons 
+    - [OCR-76] Updated ProjectGen.linux for Linux, which supports the DataHub.
+    
+11.12.2013 marina.gutierrez@altreonic.com
+    - Removal of CPP folder from the top level include, erroneously placed there before.
+    
+13.12.2013 marina.gutierrez@altreonic.com
+    - Added toolchain and build file for the arc-v2.
+    
+22.12.2013 bernhard.sputh@altreonic.com
+    - Adjusted the Version Number to reflect the swap of patchlevel and status.
+    - [tidsp_c6000] Merged changes from the 1.5 branch into the 1.6 branch.
+    - [leon3] Corrected the toolchain file to also support the C++ Compiler.
+
+26.12.2013 bernhard.sputh@altreonic.com
+    - Fixed a problem with LINK_OCR_LIB().
+    
+10.01.2014 marina.gutierrez@altreonic.com
+    - [arc-v2] Added disable/enable interrupts and context switch features.
+    - [arc-v2][arc600] arc-v2 renamed to arc600. Added testing example.
+
+10.01.2014 bernhard.sputh@altreonic.com
+    - [arc600] OpenVE-Metamodel added.
+    - [arc600] Codegens added and adjusted
+    - [kernel] Extended the use of the template `platform_name' when generating global data structures in L1_node_config.c.
+    
+10.01.2014 marina.gutierrez@altreonic.com
+    - [arc600] Added first steps into ISR handling.
+
+25.01.2014 bernhard.sputh@altreonic.com
+    - [kernel] Packet Payload increased to 1024 bytes.
+    - [driver] Integrated the UART-Service developed as part of the CW183 BSP. 
+    - [posix32] Adding a Posix32 UART driver which can be used with the UART-Service.  
+    
+30.01.2014 marina.gutierrez@altreonic.com
+    - [arc600] Interrupt controller driver and Timer driver
+
+30.01.2014 bernhard.sputh@altreonic.com
+    - [win32] Fixed the toolchain file for compilation under MS-Windows.
+    
+05.02.2014 marina.gutierrez@altreonic.com
+    - [OCR-75] Fixed errors in the header files.
+    - [arc600] Fixed errors in the interrupt handling.
+    - [arc600] Added first measurements. 
+
+10.02.2014 bernhard.sputh@altreonic.com
+    - [OCR-87] The definitoin of the Hub-Ioctl callback has been chagned to use L1_BYTE instead of the enumeration L1_HubControlType. 
+    - [arc600]  UartService now compiles with Metaware C compiler. Problem was mainly the use of `inline' instead of `__inline__' -> Compiler problem.
+    - [UT] Functional Tests have been executed again, and the code has been adjusted to take into account the changes done to 1.6.
+    
+11.02.2014 bernhard.sputh@altreonic.com
+    - [XSD] Corrected the order of the elements in the System.xsd to ensure that the Behavior Unit-Test work again. 
+    - [win32] Adjusted the toolchain file template to ensure that C++ Projects can be built. CMake requires that we call the compiler `gcc' otherwise it will not detect the C++ compiler correctly.
+    - [win32] Adjusted the metamodel to use `c:\Mingw\bin\gcc.exe' as compiler.
+    - [CodeGen] MemoryPool now generates a correct L1_node_config.c entry again, after replacing `.DataSize' with `.BlockSize', this change originates from the MBQ.
+    - [powerpc_e600] Fixed build issues.
+    - [driver] Added the L1_Drv_I2C.h to allow CW183-BSP to build.
+    
+14.02.2014 marina.gutierrez@altreonic.com
+    - [arc600] Added linker script and change interrupt vector table location.
+    - [arc600] Several fixes and improvements.
+    - [arc600] Performance and codesizes completed.
+    
+17.02.2014 marina.gutierrez@altreonic.com
+    - [arc600] Added some missing files.
+    
+27.02.2014 marina.gutierrez@altreonic.com
+	- [posix32] Added a new link driver using pipes.
+	- [arc600] Added link driver using pipes.
+	- [arc600] Added README file with the current status.
+	
+09.03.2014 bernhard.sputh@altreonic.com
+	- [arm-cortex-r4] Starting to develop a platform for the TI-RM42 (ARM-Cortex-R4 Core).
+	- [arm-cortex-r4] Bootloader for the Launchpad board is now working.
+	
+20.03.2014 antonio.ramos@altreonic.com
+    - [OCR-89] Applied fixes to the defects found in conde review meeting for L1_memcpy, and L1_workload_monitoring
+
+24.03.2014 bernhard.sputh@altreonic.com
+    - [OCR-90] Preventing the Semaphore-Count from wrapping around.
+    - [posix32] Removed of compiler warnings. 
+    - Added declaration for the function L1_wlm_idleTask() which was missing previously.
+
+25.03.2014 bernhard.sputh@altreonic.com
+    - This is version 1.6.0.1
+    - Starting to work on version 1.6.1.0
+    - [OCR-92] UART-Service has been freed of L1_memcpy().    
+    - [OCR-92] L1_xfer_packet.c has been freed of L1_memcpy().
+    - [OCR-92] LRB has been freed of L1_memcpy().
+    - Reenabled all functional unit tests, Semaphore-Hub unit test adjusted to link against L1_types.c
+    - [OCR-92] Removed the use of L1_memcpy from the Hubs and the platforms.
+    
+26.03.2014 antonio.ramos@altreonic.com
+    - [OCR-91] Replaced L1 services API from macros to static inline functions.
+    - Removed L1_DBG_PLATFORM_ASSERT that were using an undeclared variable.
+    - Changed the Module name inside of ppc_e600_intc.h.
+
+26.03.2014 bernhard.sputh@altreonic.com
+    - [OCR-93] Applied all changes mention in the ticket. Moved all string related functions into the library string.
+    - [OCR-92] L1_memcpy() and L1_memset() are now static inline functions which can be used by the components.
+    - [OCR-92] The files L1_memcpy.c and L1_memset.c have been deleted, the unit-tests have been adjusted to not require them any longer.
+    - [OCR-92] Removed L1_memset() from C6000 EDMA3 driver.

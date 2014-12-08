@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<system version="1.6.0" rtosDir="../../src/include/OpenComRTOS">
+    <node type="posix32" name="posixnode">
+        <compiler value="gcc"/>
+        <rxPacketPoolSize value="21"/>
+        <kernelPacketPoolSize value="2"/>
+        <traceBufferSize value="1024"/>
+        <debugopt value="2"/>
+        <compilerOptions value="Os"/>
+        <properties/>
+        <sourceFile value="Source/posixnode/posixnode.c"/>
+        <CFLAGS/>
+        <LDFLAGS/>
+        <lib name="rt"/>
+        <lib name="lpel_hrc"/>
+        <lib name="lpel_mon"/>
+        <task name="MainTask">
+            <status value="L1_STARTED"/>
+            <priority value="128"/>
+            <arguments value="NULL"/>
+            <stackSize value="1024"/>
+            <entrypoint value="MainEP"/>
+            <sourceFile value="Source/matrix.c"/>
+        </task>
+        <component componentType="PthreadAbstractionLayerComponent" name="threadpool">
+            <property value="32" name="CeilingPriority"/>
+            <includeFile name="PthreadAbstractionLayer/Pth_Types.h"/>
+            <structure type="Pth_ThreadPool" label="">
+                <field type="integer" value="4" name="nbrOfThreads"/>
+                <field type="integer" value="{threadpool_task_0, threadpool_task_1, threadpool_task_2, threadpool_task_3}" name="tasks"/>
+                <field type="integer" value="{threadpool_event_0, threadpool_event_1, threadpool_event_2, threadpool_event_3}" name="events"/>
+                <field type="integer" value="{{0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xd;&#xa;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xd;&#xa;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0},&#xd;&#xa;                 {0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xd;&#xa;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xd;&#xa;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0},&#xd;&#xa;             {0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xd;&#xa;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xd;&#xa;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0},&#xd;&#xa;                 {0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xd;&#xa;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xd;&#xa;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0}}" name="pthreads"/>
+            </structure>
+            <structure type="Pth_MutexPool" label="">
+                <field type="integer" value="4" name="nbrOfResources"/>
+                <field type="integer" value="{threadpool_resource_0, threadpool_resource_1, threadpool_resource_2, threadpool_resource_3}" name="resources"/>
+                <field type="integer" value="{{0,L1_FALSE,0,L1_FALSE},{0,L1_FALSE,0,L1_FALSE},{0,L1_FALSE,0,L1_FALSE},{0,L1_FALSE,0,L1_FALSE}}" name="mutexes"/>
+            </structure>
+            <structure type="Pth_CondPool" label="">
+                <field type="integer" value="4" name="nbrOfSemaphores"/>
+                <field type="integer" value="{threadpool_sem_0, threadpool_sem_1, threadpool_sem_2, threadpool_sem_3}" name="semaphores"/>
+                <field type="integer" value="{{0,L1_FALSE,0,0,0},{0,L1_FALSE,0,0,0},{0,L1_FALSE,0,0,0},{0,L1_FALSE,0,0,0}}" name="condVariables"/>
+            </structure>
+            <structure type="Pth_KeyPool" label="">
+                <field type="integer" value="4" name="nbrOfKeys"/>
+                <field type="integer" value="{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0}}" name="keys"/>
+            </structure>
+            <ocrLib name="PthreadAbstractionLayer"/>
+            <task name="threadpool_task_0">
+                <status value="L1_INACTIVE"/>
+                <priority value="128"/>
+                <arguments value="0"/>
+                <stackSize value="2048"/>
+                <entrypoint value="pthreadEP"/>
+                <sourceFile value=""/>
+            </task>
+            <task name="threadpool_task_1">
+                <status value="L1_INACTIVE"/>
+                <priority value="128"/>
+                <arguments value="1"/>
+                <stackSize value="2048"/>
+                <entrypoint value="pthreadEP"/>
+                <sourceFile value=""/>
+            </task>
+            <task name="threadpool_task_2">
+                <status value="L1_INACTIVE"/>
+                <priority value="128"/>
+                <arguments value="2"/>
+                <stackSize value="2048"/>
+                <entrypoint value="pthreadEP"/>
+                <sourceFile value=""/>
+            </task>
+            <task name="threadpool_task_3">
+                <status value="L1_INACTIVE"/>
+                <priority value="128"/>
+                <arguments value="3"/>
+                <stackSize value="2048"/>
+                <entrypoint value="pthreadEP"/>
+                <sourceFile value=""/>
+            </task>
+            <dataEvent name="threadpool_event_0"/>
+            <dataEvent name="threadpool_event_1"/>
+            <dataEvent name="threadpool_event_2"/>
+            <dataEvent name="threadpool_event_3"/>
+            <resource name="threadpool_resource_0">
+                <ceilingPriority value="32"/>
+            </resource>
+            <resource name="threadpool_resource_1">
+                <ceilingPriority value="32"/>
+            </resource>
+            <resource name="threadpool_resource_2">
+                <ceilingPriority value="32"/>
+            </resource>
+            <resource name="threadpool_resource_3">
+                <ceilingPriority value="32"/>
+            </resource>
+            <semaphore name="threadpool_sem_0"/>
+            <semaphore name="threadpool_sem_1"/>
+            <semaphore name="threadpool_sem_2"/>
+            <semaphore name="threadpool_sem_3"/>
+        </component>
+    </node>
+</system>

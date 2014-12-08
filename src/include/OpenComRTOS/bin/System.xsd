@@ -1,0 +1,854 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:annotation>
+        <xs:documentation>
+            This is version 1.6.1 of the System.xml.
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:element name="system">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="node" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element ref="netLink" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="rtosDir" type="xs:string" />
+            <xs:attribute name="version" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        This should be set to 1.4.1, by tools that use the new elements:
+                        -
+                        <includePath path="" />
+                        -
+                        <libraryPath path="" />
+                        Version 1.4.2 provides the following extra elements for Nodes:
+                        - CFLAGS
+                        <cflags>
+                            <cflag>FOO</cflag>
+                            <cflag>BAR</cflag>
+                        </cflags>
+                        - LDFLGAS
+                        Version 1.6.1 provides support for the following hub:
+                        - <dataEvent name="FOO"/>
+                        Version 1.6.2 provides support for the following three node attributes:
+                        <c-compiler value="FOO"/>
+                        <cpp-compiler value="FOO"/>
+                        <asm-compiler value="FOO"/>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="node" type="nodeType" />
+    <xs:element name="core" type="nodeType" />
+
+    <xs:element name="task">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="entrypoint" />
+                    <xs:element ref="sourceFile" />
+                    <xs:element ref="status" />
+                    <xs:element ref="arguments" />
+                    <xs:element ref="priority" />
+                    <xs:element ref="stackSize" />
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute ref="type" />
+        </xs:complexType>
+    </xs:element>
+<!--
+    <xs:element name="property">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        The name of the property.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="value" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                       The value of the property.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+-->
+    <!-- Types used for  the localHubEntry -->
+
+    <xs:complexType name="nameType">
+        <xs:attribute name="name" type="xs:string" />
+    </xs:complexType>
+
+    <xs:element name="localHubEntry">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="hubType" type="valueType" minOccurs="1" maxOccurs="1" />
+                <xs:element name="updateFunction" type="nameType" minOccurs="1" maxOccurs="1" />
+                <xs:element name="synchronizeFunction" type="nameType" minOccurs="1" maxOccurs="1" />
+                <xs:element name="controlFunction" type="nameType" minOccurs="1" maxOccurs="1" />
+                <xs:element name="state" type="valueType" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="hubState">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="structure" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="properties">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="property" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="client">
+        <xs:annotation>
+            <xs:documentation>
+            Every library or C-File listed in a client block, will be linked against on every Node in the system.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="lib" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="ocrLib" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="sourceFile"  minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="server">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="includeFile" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="lib" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="ocrLib" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="sourceFile"  minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="hub">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element ref="properties" minOccurs="1" maxOccurs="1" />
+                <xs:element ref="hubState" minOccurs="1" maxOccurs="1" />
+                <xs:element ref="localHubEntry" minOccurs="1" maxOccurs="1" />
+                <xs:element ref="server" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="client" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        The name of the Hub, i.e. it's identifier.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="type" type="xs:string" use="required">
+	            <xs:annotation>
+	                <xs:documentation>
+	                   The type of the Hub, i.e. whether it is a Semaphore or a Port.
+	                </xs:documentation>
+	            </xs:annotation>
+	        </xs:attribute>
+            <xs:attribute name="version" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                       The version of the Hub-Metamodel.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the Hub has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+
+    </xs:element>
+
+    <xs:element name="port">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="serverType" type="xs:string" />
+            <xs:attribute ref="type" />
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the semaphore has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="event">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="label" type="xs:string" />
+            <xs:attribute name="serverType" type="xs:string" />
+            <xs:attribute ref="type" />
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the event has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="dataEvent">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string"/>
+            <xs:attribute name="label" type="xs:string"/>
+            <xs:attribute name="serverType" type="xs:string"/>
+            <xs:attribute ref="type"/>
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the entity has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="semaphore">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="serverType" type="xs:string" />
+            <xs:attribute ref="type" />
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the semaphore has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ceilingPriority" minOccurs="0"
+                    maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="serverType" type="xs:string" />
+            <xs:attribute ref="type" />
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the resource has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="fifo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="size" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="serverType" type="xs:string" />
+            <xs:attribute ref="type" />
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the fifo has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="memoryPool">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="numOfBlocks" />
+                <xs:element ref="sizeOfBlocks" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="serverType" type="xs:string" />
+            <xs:attribute ref="type" />
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the memory has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="blackBoard">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="serverType" type="xs:string" />
+            <xs:attribute ref="type" />
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the blackboard has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="component">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="property" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="isr" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="sourceFile" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="includeFile" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="structure" minOccurs="0" maxOccurs="unbounded" />
+
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="lib" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="ocrGlobalLib" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="globalLib" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="ocrLib" minOccurs="0" maxOccurs="unbounded" />
+
+                    <xs:element ref="task" />
+                    <xs:element ref="port" />
+                    <xs:element ref="event" />
+                    <xs:element ref="dataEvent"/>
+                    <xs:element ref="semaphore" />
+                    <xs:element ref="resource" />
+                    <xs:element ref="fifo" />
+                    <xs:element ref="memoryPool" />
+                    <xs:element ref="component" />
+                    <xs:element ref="packetPool" />
+                    <xs:element ref="blackBoard" />
+                </xs:choice>
+            </xs:sequence>
+
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="componentType" type="xs:string" />
+            <xs:attribute ref="type" />
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the component has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="packetPool">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="size" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute ref="type" />
+            <xs:attribute name="node" type="xs:string" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                       The Node onto which the packetpool has been mapped to.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="priority">
+        <xs:complexType>
+            <xs:attribute name="value">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:maxInclusive value="254" />
+                        <xs:minInclusive value="2" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="arguments">
+        <xs:complexType>
+            <xs:attribute name="value" type="xs:string" />
+            <xs:attribute name="reference" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="argument">
+        <xs:complexType>
+            <xs:attribute name="ref" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="status">
+        <xs:complexType>
+            <xs:attribute name="value">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="L1_STARTED" />
+                        <xs:enumeration value="L1_INACTIVE" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="stackSize">
+        <xs:complexType>
+            <xs:attribute name="value" type="xs:positiveInteger" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="entrypoint" type="valueType" />
+    <xs:element name="sourceFile" type="valueType" />
+
+    <xs:element name="CFLAGS">
+        <xs:annotation>
+            <xs:documentation>
+                This encapsulates a set of flags for the C-Compiler. It is used in
+                the following way:
+                <CFLAGS>
+                    <CFLAG>foo</CFLAG>
+                </CFLAGS>
+                .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CFLAG" type="xs:string" minOccurs="0"
+                    maxOccurs="unbounded">
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="LDFLAGS">
+        <xs:annotation>
+            <xs:documentation>
+                This encapsulates a set of flags for the C-Compiler. It is used in
+                the following way:
+                <LDFLAGS>
+                    <LDFLAG>foo</LDFLAG>
+                </LDFLAGS>
+                .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="LDFLAG" type="xs:string" minOccurs="0"
+                    maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="size">
+        <xs:complexType>
+            <xs:attribute name="value" type="xs:positiveInteger"
+                default="1" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ceilingPriority">
+        <xs:complexType>
+            <xs:attribute name="value" type="xs:nonNegativeInteger"
+                default="32" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="numOfBlocks">
+        <xs:complexType>
+            <xs:attribute name="value" type="xs:positiveInteger"
+                default="1" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="sizeOfBlocks">
+        <xs:complexType>
+            <xs:attribute name="value" type="xs:positiveInteger"
+                default="1024" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="deviceDriver">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="includeFile" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="isr" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="structure" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="device" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="initFunction" minOccurs="0" maxOccurs="1" />
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="lib" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="ocrGlobalLib" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="globalLib" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="ocrLib" minOccurs="0" maxOccurs="unbounded" />
+
+                    <xs:element ref="task" />
+                    <xs:element ref="port" />
+                    <xs:element ref="event" />
+                    <xs:element ref="dataEvent"/>
+                    <xs:element ref="semaphore" />
+                    <xs:element ref="resource" />
+                    <xs:element ref="fifo" />
+                    <xs:element ref="memoryPool" />
+                    <xs:element ref="packetPool" />
+                    <xs:element ref="blackBoard" />
+                </xs:choice>
+
+                <xs:element ref="initFunctionDevice" minOccurs="0"
+                    maxOccurs="1" />
+                <xs:element ref="linkPort" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="type" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="channel" type="attributeType" />
+    <xs:element name="attribute" type="attributeType" />
+    <xs:element name="property" type="attributeType" />
+    <xs:element name="device">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="includeFile" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="initFunction" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="linkPort">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="includeFile" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="isr" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="structure" minOccurs="0" maxOccurs="unbounded" />
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="lib" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="ocrGlobalLib" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="globalLib" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="ocrLib" minOccurs="0" maxOccurs="unbounded" />
+
+                    <xs:element ref="task" />
+                    <xs:element ref="port" />
+                    <xs:element ref="event" />
+                    <xs:element ref="dataEvent"/>
+                    <xs:element ref="semaphore" />
+                    <xs:element ref="resource" />
+                    <xs:element ref="fifo" />
+                    <xs:element ref="memoryPool" />
+                    <xs:element ref="packetPool" />
+                    <xs:element ref="blackBoard" />
+                </xs:choice>
+
+                <xs:element ref="initFunctionServer" minOccurs="0"
+                    maxOccurs="1" />
+                <xs:element ref="initFunctionClient" minOccurs="0"
+                    maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="type" type="xs:string" />
+            <xs:attribute name="driver" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="includeFile">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="isr">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="arguments" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="orderNum" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="structure">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="field" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="type" type="xs:string" />
+            <xs:attribute name="label" type="xs:string" />
+            <xs:attribute name="location" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="libraryPath">
+        <xs:complexType>
+            <xs:attribute name="path" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="includePath">
+        <xs:complexType>
+            <xs:attribute name="path" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="lib">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="globalLib">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ocrLib">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ocrGlobalLib">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="initFunctionServer">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="initFunctionClient">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="initFunctionDevice">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="initFunction">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="channel" />
+                    <xs:element ref="attribute" />
+                </xs:choice>
+
+                <xs:element ref="argument" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="location" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="field">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="value" type="xs:string" />
+            <xs:attribute name="ref" type="xs:string" />
+            <xs:attribute name="min" type="xs:integer" />
+            <xs:attribute name="max" type="xs:integer" />
+            <xs:attribute name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="integer" />
+                        <xs:enumeration value="string" />
+                        <xs:enumeration value="enum" />
+                        <xs:enumeration value="HubID" />
+                        <xs:enumeration value="array" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="netLink">
+        <xs:complexType>
+            <xs:attribute name="target" type="xs:string" />
+            <xs:attribute name="source" type="xs:string" />
+            <xs:attribute name="targetPort" type="xs:string" />
+            <xs:attribute name="sourcePort" type="xs:string" />
+            <xs:attribute name="weight" type="xs:positiveInteger" />
+            <xs:attribute name="kind">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="bidirectional" />
+                        <xs:enumeration value="unidirectional" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="variable">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="value" type="xs:string" />
+            <xs:attribute name="min" type="xs:integer" />
+            <xs:attribute name="max" type="xs:integer" />
+            <xs:attribute name="userType" type="xs:string" />
+            <xs:attribute name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="integer" />
+                        <xs:enumeration value="string" />
+                        <xs:enumeration value="enum" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="compiler" type="valueType" />
+    <xs:element name="c-compiler" type="valueType" />
+    <xs:element name="cpp-compiler" type="valueType" />
+    <xs:element name="asm-compiler" type="valueType" />
+    <xs:element name="RC_COMPILER" type="valueType" />
+    <xs:element name="OSIServer" type="valueType" />
+    <xs:element name="platformConfiguration">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="includeFile" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="variable" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="structure" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="compilerEnvironment" type="valueType" />
+    <xs:element name="KernelTask_StackSize" type="valueType" />
+    <xs:element name="IdleTask_StackSize" type="valueType" />
+    <xs:element name="ISR_StackSize" type="valueType" />
+    <xs:element name="Linker_Script" type="valueType" />
+    <xs:element name="traceBufferSize" type="valueType" />
+    <xs:element name="kernelPacketPoolSize" type="valueType" />
+    <xs:element name="rxPacketPoolSize" type="valueType" />
+    <xs:element name="compilerOptions" type="valueType" />
+    <xs:element name="compilerArgument" type="valueType" />
+    <xs:element name="target" type="valueType" />
+
+    <xs:element name="MISRA_ADVISORY" type="valueType" />
+    <xs:element name="MISRA_REQUIRED" type="valueType" />
+    <xs:element name="C_FLAGS" type="valueType" />
+    <xs:element name="Silicon_Version" type="valueType" />
+
+    <xs:element name="debugopt">
+        <xs:complexType>
+            <xs:attribute name="value" type="debugType" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="debugType">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:maxInclusive value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="valueType">
+        <xs:attribute name="value" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="nodeType">
+        <xs:sequence>
+            <!-- Begin of the block of possible `Properties -->
+            <xs:element ref="compiler" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="c-compiler" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="cpp-compiler" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="asm-compiler" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="rxPacketPoolSize" minOccurs="1" maxOccurs="1" /> 
+            <xs:element ref="compilerOptions" minOccurs="0" maxOccurs="1" /> <!-- Duplication to ensure that old Unit-Test still work. TODO: Remove at one point.-->
+            <xs:element ref="kernelPacketPoolSize" minOccurs="1" maxOccurs="1" />
+            <xs:element ref="traceBufferSize" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="debugopt" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="compilerOptions" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="KernelTask_StackSize" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="IdleTask_StackSize" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="ISR_StackSize" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="MISRA_ADVISORY" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="MISRA_REQUIRED" minOccurs="0" maxOccurs="1" />
+
+            <xs:element ref="OSIServer" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="platformConfiguration" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="Linker_Script" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="target" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="RC_COMPILER" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="Silicon_Version" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="compilerArgument" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="compilerEnvironment" minOccurs="0" maxOccurs="1" />
+            <!-- End of the block of possible `Properties -->
+            <xs:element ref="properties" minOccurs="0" maxOccurs="1" /> <!-- To select a specific property: <xsl:value-of select="//system/node/properties/property[@name='foo']/@value"/> -->
+            <xs:element ref="sourceFile" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element ref="core" minOccurs="0" maxOccurs="unbounded" />
+            
+            <xs:element ref="CFLAGS" minOccurs="0" maxOccurs="1" />
+            <xs:element ref="LDFLAGS" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="includePath" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="libraryPath" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="lib" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="ocrGlobalLib" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="globalLib" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="ocrLib" minOccurs="0" maxOccurs="unbounded" />
+
+                <xs:element ref="task" />
+                <xs:element ref="port" />
+                <xs:element ref="event" />
+                <xs:element ref="dataEvent"/>
+                <xs:element ref="semaphore" />
+                <xs:element ref="resource" />
+                <xs:element ref="fifo" />
+                <xs:element ref="memoryPool" />
+                <xs:element ref="component" />
+                <xs:element ref="packetPool" />
+                <xs:element ref="blackBoard" />
+                <xs:element ref="hub" />
+            </xs:choice>
+            <xs:element ref="deviceDriver" minOccurs="0" maxOccurs="unbounded" />
+
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    This is the name of the Node in the System. It must be a system wide
+                    unique value.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="type" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    The type of this node. This actually refers to the platform of the CPU
+                    (powerpc_e600, posix32, arm-cortex-m3).
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="csp" type="xs:string" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    The optional attribute "csp" (Core Support Package) tells the
+                    codegens which XSLT files to use for this node.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+
+    </xs:complexType>
+
+    <xs:complexType name="attributeType">
+        <xs:attribute name="name" type="xs:string" />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+        <xs:attribute name="type" type="xs:string" />
+        <xs:attribute name="location" type="xs:string" />
+    </xs:complexType>
+
+    <xs:attribute name="type">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="user" />
+                <xs:enumeration value="system" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+</xs:schema>

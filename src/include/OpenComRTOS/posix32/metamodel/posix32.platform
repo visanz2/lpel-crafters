@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<platform name="posix32" svgPath="linux.svg" version="1.4" help="OpenVE::OpenComRTOS::Node">
+	<attribute name="name" type="string" unique="node" notEmpty="true"/>	
+	<attribute name="compiler" type="filePath" notEmpty="true"/>	
+
+	<attribute name="rxPacketPoolSize" type="integer" min="4" max="100" defaultValue="21" notEmpty="true"/>	
+	<attribute name="kernelPacketPoolSize" type="integer" min="2" max="100" defaultValue="2" notEmpty="true"/>	
+	<attribute name="traceBufferSize" type="integer" min="1" max="8096" defaultValue="1024" notEmpty="true"/>
+	<attribute name="debugopt" type="integer" min="0" max="2" defaultValue="0" notEmpty="true"/>
+    <attribute name="compilerOptions" type="string" regexp="O[03s]" defaultValue="Os" notEmpty="true"/>
+
+  <deviceDriver name="PosixUart">
+    <includeFile name="driver/posixUart.h"/>
+    <structure type="PosixUartDriver" label="dev">
+      <attribute name="name" type="string" defaultValue="Uart0" regexp="[A-Za-z0-9_]+"/>	
+	  <attribute name="DeviceName" type="string" defaultValue="/dev/ttyUSB0" notEmpty="true"/>    
+      <attribute name="BaudRate" type="enum" values="B110:B300:B600:B1200:B2400:B4800:B9600:B14400:B19200:B38400:B57600:B115200:B128000:B256000" defaultValue="B38400" notEmpty="true"/>	
+      <attribute name="BitsPerByte" type="enum" values="CS5:CS6:CS7:CS8" defaultValue="CS8" notEmpty="true"/>	
+	  <attribute name="NbrOfStopBits" type="enum" values="1:2" defaultValue="1" notEmpty="true"/>	
+	  <attribute name="Parity" type="enum" values="None:Even:Odd" defaultValue="None" notEmpty="true"/> <!-- other possible values: N, I, E -->	
+      <attribute name="HwFlowControl"type="enum" values="L1_TRUE:L1_FALSE" defaultValue="L1_TRUE" notEmpty="true"/>
+    </structure>
+    <task name="txTask">
+      <entrypoint value="posixUartDriver_EntryPoint"/> 
+      <sourceFile value=""/>
+      <status value="L1_STARTED"/> 
+      <arguments reference="dev"/> 
+      <priority value="3"/> 
+      <stackSize value="1024"/> 
+    </task>    
+    <initFunctionDevice name="posixUartDriver_init"/>
+    <linkPort name="rs232">
+      <isr name="posixUartLinkPort_RxIsrHandler">
+     	<arguments reference="uart"/> 
+      </isr>
+      <structure type="PosixUartLinkPort" label="uart">
+		<attribute name="name" type="string" defaultValue="Uart0" regexp="[A-Za-z0-9_]+"/>	
+      </structure>
+      <initFunctionServer name="posixUartLinkPort_initServer"/>
+      <initFunctionClient name="posixUartLinkPort_initClient"/>    
+    </linkPort>
+  </deviceDriver>
+  
+  <deviceDriver name="PipeLink">
+    <includeFile name="driver/pipeLinkDriver.h"/>
+    <structure type="PipeLinkDriver" label="dev">
+      <attribute name="name" type="string" defaultValue="Pipe0" regexp="[A-Za-z0-9_]+"/>	
+	  <attribute name="OutputPipePath" type="string" defaultValue="./output" notEmpty="true"/>    
+	  <attribute name="InputPipePath" type="string" defaultValue="./input" notEmpty="true"/> 
+    </structure>
+    <task name="txTask">
+      <entrypoint value="pipeLinkDriver_EntryPoint"/> 
+      <sourceFile value=""/>
+      <status value="L1_STARTED"/> 
+      <arguments reference="dev"/> 
+      <priority value="3"/> 
+      <stackSize value="1024"/> 
+    </task>    
+    <initFunctionDevice name="pipeLinkDriver_init"/>
+    <linkPort name="rs232">
+      <isr name="pipeLinkPort_RxIsrHandler">
+     	<arguments reference="pipe"/> 
+      </isr>
+      <structure type="PipeLinkPort" label="pipe">
+		<attribute name="name" type="string" defaultValue="Pipe0" regexp="[A-Za-z0-9_]+"/>	
+      </structure>
+      <initFunctionServer name="pipeLinkPort_initServer"/>
+      <initFunctionClient name="pipeLinkPort_initClient"/>    
+    </linkPort>
+  </deviceDriver>
+	
+	
+	
+<!-- Need to write guidelines which fields get swapped in the linkPort configuration by the tools, names and types --> 
+  <deviceDriver name="PosixSocket">
+    <includeFile name="driver/posixSocket.h"/>
+    <structure type="PosixSocketDriver" label="dev">
+      <attribute name="name" type="string" regexp="[A-Za-z0-9_]+" defaultValue="eth0" unique="deviceDriver"/> <!-- This is illogical because this attribute is not part of the structure-->
+      <attribute name="host" type="string" regexp="([0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])(\.([0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])){3}"/>
+    </structure>
+    <task name="txTask">
+      <entrypoint value="posixSocketDriver_EntryPoint"/>
+      <sourceFile value=""/>
+      <status value="L1_STARTED"/>
+      <arguments reference="dev"/>
+      <priority value="3"/>
+      <stackSize value="1024"/>
+    </task>
+    <initFunctionDevice name="posixSocketDriver_init"/>
+    <linkPort name="tcp">
+      <isr name="posixSocket_LinkPort_RxIsr">
+     	<arguments reference="socket"/> 
+      </isr>
+      <structure type="PosixSocketLinkPort" label="socket">
+		<attribute name="name" type="string" regexp="[A-Za-z0-9_]+"/> <!-- This is illogical because this attribute is not part of the structure-->	
+		<attribute name="portNumber" defaultValue="3000" type="integer" unique="linkport"/> <!-- is this name fixed? -->
+		<!-- mentioning of the host attribute missing -->
+      </structure>	    
+      <initFunctionServer name="posixSocketLinkPort_initServer"/>
+      <initFunctionClient name="posixSocketLinkPort_initClient"/>    
+    </linkPort>
+  </deviceDriver>
+
+
+	<template extension="c">
+<![CDATA[/* Created %1 */
+#include <L1_api.h>
+#include <L1_node_config.h>
+int main(void)
+{ 
+  return L1_runOpenComRTOS(L1_NODE_NUMBER_OF_TASKS,L1_NODE_NUMBER_OF_HUBS);
+}
+
+/*
+ * Modify this to send the CPU into a specific sleep mode
+ */
+void L1_idleTask( L1_TaskArguments Arguments) 
+{
+	while (1) 
+	{
+	}
+}
+]]>
+	</template>
+
+</platform>

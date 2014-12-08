@@ -1,0 +1,63 @@
+
+Bootstrap
+=========
+
+To generate the configure script and related build-tools, run
+
+  ./build-aux/bootstrap
+
+You are required to have fairly recent versions of the GNU buildtools
+(autoconf, automake, libtool) installed.
+
+
+
+
+Building
+========
+
+If you want to use libpcl context switching (suggested),
+you need to install
+
+libpcl - GNU Portable Coroutine Library, currently v1.12
+
+available at
+
+http://www.xmailserver.org/libpcl.html
+
+
+If you cannot do a system-wide install, you need to specify the
+installation directory of pcl for the configure script.
+
+
+Run configure with following parameters:
+
+./configure --with-pcl=<pcl_install_dir> --prefix=<your_lpel_install_dir>
+
+and
+
+make
+make install
+
+In order to build the LPEL backend for the S-Net runtime system,
+you'll need to specify the directories where to find the LPEL library and
+includes.
+
+./configure --with-lpel-includes=<lpel_include_dir> \
+            --with-lpel-libs=<lpel_lib_dir>
+
+/usr/include/x86_64-linux-gnu/
+
+
+
+Example
+-------
+
+I have installed pcl in the local subdirectory of my home directory.
+To build LPEL, I use
+
+./configure --with-pcl=$HOME/local/ --prefix=$HOME/local/
+make
+make install
+
+
+

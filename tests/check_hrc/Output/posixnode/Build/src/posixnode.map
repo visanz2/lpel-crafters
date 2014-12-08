@@ -1,0 +1,1265 @@
+Archive member included to satisfy reference by file (symbol)
+
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+                              CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj (L1_runOpenComRTOS)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj) (L1_initFreeKeyList)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj) (L1_KernelLoop)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj) (L1_List_getHeadElement)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (L1_genericHubControl)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+                              CMakeFiles/posixnode.dir/L1_node_config.c.obj (SemaphoreUpdate)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+                              CMakeFiles/posixnode.dir/L1_node_config.c.obj (ResourceUpdate)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (tracingDisabled)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj) (L1_UINT16_MAX)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+                              CMakeFiles/posixnode.dir/L1_node_config.c.obj (DataEventHub_Update)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj) (L1_ISRNesting)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (L1_changeTaskPriority)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (L1_DescheduleKernel)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (L1_startTaskService)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (L1_stopTaskService)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (L1_suspendTaskService)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (L1_resumeTaskService)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (inputPortService)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj) (L1_setTimer)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj) (L1_TimerList_isEmpty)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj) (L1_initializeContextOfTask)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj) (L1_Trace_TimeStamp)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj) (L1_Timer_getHighCounterFrequency)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+                              /lib/../lib/liblpel_hrc.so (ocr_pthread_create)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+                              /lib/../lib/liblpel_hrc.so (ocr_pthread_mutex_init)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+                              /lib/../lib/liblpel_hrc.so (ocr_pthread_cond_init)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj) (L1_buildAndInsertPacket)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj) (L1_runTask)
+/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+                              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj) (L1_PutDataToHub)
+/usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+                              /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o (__libc_csu_init)
+
+Allocating common symbols
+Common symbol       size              file
+
+L1_ScheduleRequest  0x1               /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+L1_Posix32_tracebufferMutexAttr
+                    0x4               /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+L1_KeyListElements  0x40              CMakeFiles/posixnode.dir/L1_node_config.c.obj
+L1_ISRNesting       0x2               /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+L1_Posix32_tracebufferMutex
+                    0x18              /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+L1_Trace_TraceBuffer
+                    0x4000            CMakeFiles/posixnode.dir/L1_node_config.c.obj
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+ .gnu_debuglink
+                0x0000000000000000        0xc /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o
+ .gnu_debuglink
+                0x0000000000000000        0xc /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+ .note.GNU-stack
+                0x0000000000000000        0x0 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+ .note.GNU-stack
+                0x0000000000000000        0x0 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+ .group         0x0000000000000000        0x8 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .text.__x86.get_pc_thunk.bx
+                0x0000000000000000        0x4 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+ .gnu_debuglink
+                0x0000000000000000        0xc /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+LOAD CMakeFiles/posixnode.dir/L1_node_config.c.obj
+LOAD CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+LOAD CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+START GROUP
+LOAD /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a
+LOAD /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Driver.a
+LOAD /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a
+LOAD /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/libpthread.so
+START GROUP
+LOAD /lib/i386-linux-gnu/libpthread.so.0
+LOAD /usr/lib/i386-linux-gnu/libpthread_nonshared.a
+END GROUP
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/librt.so
+LOAD /lib/../lib/liblpel_hrc.so
+LOAD /lib/../lib/liblpel_mon.so
+LOAD /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a
+END GROUP
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/libgcc.a
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/libgcc_s.so
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/libc.so
+START GROUP
+LOAD /lib/i386-linux-gnu/libc.so.6
+LOAD /usr/lib/i386-linux-gnu/libc_nonshared.a
+LOAD /lib/i386-linux-gnu/ld-linux.so.2
+END GROUP
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/libgcc.a
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/libgcc_s.so
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o
+LOAD /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+                0x0000000008048000                PROVIDE (__executable_start, 0x8048000)
+                0x0000000008048154                . = (0x8048000 + SIZEOF_HEADERS)
+
+.interp         0x0000000008048154       0x13
+ *(.interp)
+ .interp        0x0000000008048154       0x13 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.note.ABI-tag   0x0000000008048168       0x20
+ .note.ABI-tag  0x0000000008048168       0x20 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.note.gnu.build-id
+                0x0000000008048188       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x0000000008048188       0x24 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.hash
+ *(.hash)
+
+.gnu.hash       0x00000000080481ac       0xac
+ *(.gnu.hash)
+ .gnu.hash      0x00000000080481ac       0xac /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.dynsym         0x0000000008048258      0x4a0
+ *(.dynsym)
+ .dynsym        0x0000000008048258      0x4a0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.dynstr         0x00000000080486f8      0x3e7
+ *(.dynstr)
+ .dynstr        0x00000000080486f8      0x3e7 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.gnu.version    0x0000000008048ae0       0x94
+ *(.gnu.version)
+ .gnu.version   0x0000000008048ae0       0x94 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.gnu.version_d  0x0000000008048b74        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.gnu.version_r  0x0000000008048b74       0x70
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000008048b74       0x70 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.rel.dyn        0x0000000008048be4       0x10
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ .rel.text      0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+ .rel.text.startup
+                0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro .rel.data.rel.ro.* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ .rel.data      0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x0000000008048be4        0x8 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x0000000008048bec        0x8 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+ *(.rel.ifunc)
+
+.rel.plt        0x0000000008048bf4      0x1a0
+ *(.rel.plt)
+ .rel.plt       0x0000000008048bf4      0x1a0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x0000000008048d94                PROVIDE (__rel_iplt_start, .)
+ *(.rel.iplt)
+ .rel.iplt      0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x0000000008048d94                PROVIDE (__rel_iplt_end, .)
+
+.init           0x0000000008048d94       0x23
+ *(SORT(.init))
+ .init          0x0000000008048d94       0x1e /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o
+                0x0000000008048d94                _init
+ .init          0x0000000008048db2        0x5 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+
+.plt            0x0000000008048dc0      0x350
+ *(.plt)
+ .plt           0x0000000008048dc0      0x350 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x0000000008048dd0                pthread_mutex_unlock@@GLIBC_2.0
+                0x0000000008048de0                LpelTaskStart
+                0x0000000008048df0                setitimer@@GLIBC_2.0
+                0x0000000008048e00                pthread_attr_init@@GLIBC_2.1
+                0x0000000008048e10                pthread_mutexattr_init@@GLIBC_2.0
+                0x0000000008048e20                strcmp@@GLIBC_2.0
+                0x0000000008048e30                pthread_mutex_destroy@@GLIBC_2.0
+                0x0000000008048e40                LpelStreamClose
+                0x0000000008048e50                free@@GLIBC_2.0
+                0x0000000008048e60                pthread_self@@GLIBC_2.0
+                0x0000000008048e70                LpelInit
+                0x0000000008048e80                fgets@@GLIBC_2.0
+                0x0000000008048e90                pthread_mutex_init@@GLIBC_2.0
+                0x0000000008048ea0                pthread_cond_wait@@GLIBC_2.3.2
+                0x0000000008048eb0                sigwait@@GLIBC_2.0
+                0x0000000008048ec0                LpelStreamRead
+                0x0000000008048ed0                gettimeofday@@GLIBC_2.0
+                0x0000000008048ee0                sleep@@GLIBC_2.0
+                0x0000000008048ef0                LpelStreamOpen
+                0x0000000008048f00                pthread_equal@@GLIBC_2.0
+                0x0000000008048f10                getitimer@@GLIBC_2.0
+                0x0000000008048f20                pthread_mutex_lock@@GLIBC_2.0
+                0x0000000008048f30                LpelCleanup
+                0x0000000008048f40                LpelTaskSetRecLimit
+                0x0000000008048f50                pthread_sigmask@@GLIBC_2.0
+                0x0000000008048f60                sched_yield@@GLIBC_2.0
+                0x0000000008048f70                LpelStreamCreate
+                0x0000000008048f80                LpelStreamWrite
+                0x0000000008048f90                pthread_cond_signal@@GLIBC_2.3.2
+                0x0000000008048fa0                malloc@@GLIBC_2.0
+                0x0000000008048fb0                puts@@GLIBC_2.0
+                0x0000000008048fd0                exit@@GLIBC_2.0
+                0x0000000008048fe0                __libc_start_main@@GLIBC_2.0
+                0x0000000008048ff0                pthread_cond_init@@GLIBC_2.3.2
+                0x0000000008049000                sigaddset@@GLIBC_2.0
+                0x0000000008049010                sigfillset@@GLIBC_2.0
+                0x0000000008049020                pthread_cancel@@GLIBC_2.0
+                0x0000000008049030                LpelStreamGetId
+                0x0000000008049040                pthread_kill@@GLIBC_2.0
+                0x0000000008049050                __strcpy_chk@@GLIBC_2.3.4
+                0x0000000008049060                __printf_chk@@GLIBC_2.3.4
+                0x0000000008049070                LpelTaskCreate
+                0x0000000008049080                sigemptyset@@GLIBC_2.0
+                0x0000000008049090                pthread_cond_destroy@@GLIBC_2.3.2
+                0x00000000080490a0                LpelStop
+                0x00000000080490b0                pthread_create@@GLIBC_2.1
+                0x00000000080490c0                LpelStart
+                0x00000000080490d0                sigaction@@GLIBC_2.0
+                0x00000000080490e0                pthread_detach@@GLIBC_2.0
+                0x00000000080490f0                __assert_fail@@GLIBC_2.0
+                0x0000000008049100                calloc@@GLIBC_2.0
+ *(.iplt)
+ .iplt          0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.text           0x0000000008049110     0x30f2
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ .text.startup  0x0000000008049110       0x22 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+                0x0000000008049110                main
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000008049132       0x22 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x0000000008049132                _start
+ .text          0x0000000008049154        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o
+ *fill*         0x0000000008049154        0xc 
+ .gnu.linkonce.t.__x86.get_pc_thunk.bx
+                0x0000000008049160        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o
+                0x0000000008049160                __x86.get_pc_thunk.bx
+ *fill*         0x0000000008049164        0xc 
+ .text          0x0000000008049170       0xbd /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+ .text          0x000000000804922d        0x0 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+ .text          0x000000000804922d        0x5 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+                0x000000000804922d                L1_idleTask
+ .text          0x0000000008049232      0x409 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+                0x0000000008049232                Relay
+                0x00000000080494da                PipeElement
+                0x000000000804954a                MainEP
+ *fill*         0x000000000804963b        0x1 
+ .text          0x000000000804963c       0xc5 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+                0x000000000804963c                L1_runOpenComRTOS
+                0x00000000080496f0                L1_KernelEntryPoint
+ *fill*         0x0000000008049701        0x3 
+ .text          0x0000000008049704      0x137 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+                0x0000000008049704                L1_KeyedList_findKey
+                0x000000000804971d                L1_initFreeKeyList
+                0x0000000008049767                L1_KeyedList_insertKeyWithPriority
+                0x00000000080497a7                L1_KeyedList_removeKey
+                0x00000000080497f2                L1_KeyedList_changeKeyPriority
+ *fill*         0x000000000804983b        0x1 
+ .text          0x000000000804983c      0x270 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+                0x00000000080498ba                L1_returnToTask
+                0x0000000008049995                L1_KernelLoop
+ .text          0x0000000008049aac       0xa5 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+                0x0000000008049aac                L1_List_getHeadElement
+                0x0000000008049ad4                L1_List_insert
+                0x0000000008049b0b                L1_List_remove
+                0x0000000008049b35                L1_List_isMember
+ *fill*         0x0000000008049b51        0x3 
+ .text          0x0000000008049b54      0x359 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+                0x0000000008049b54                L1_genericHubControl
+                0x0000000008049b8e                L1_changePacketPriorityLocally
+                0x0000000008049cb0                L1_genericHubService
+ *fill*         0x0000000008049ead        0x3 
+ .text          0x0000000008049eb0       0x43 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+                0x0000000008049eb0                SemaphoreUpdate
+                0x0000000008049ecc                SemaphoreSyncCondition
+ *fill*         0x0000000008049ef3        0x1 
+ .text          0x0000000008049ef4       0x71 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+                0x0000000008049ef4                ResourceUpdate
+                0x0000000008049f1d                ResourceSyncCondition
+ *fill*         0x0000000008049f65        0x3 
+ .text          0x0000000008049f68      0x131 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+                0x0000000008049fda                L1_Trace_disableTracing
+                0x0000000008049ff2                L1_Trace_enableTracing
+                0x000000000804a00a                L1_Trace_getNextTraceLine
+                0x000000000804a014                L1_Trace_getOldestTraceLine
+                0x000000000804a01e                L1_Trace_getNumberOfAvailableTraceLines
+                0x000000000804a041                L1_Trace_insertMarker
+                0x000000000804a077                L1_Trace_insertMarkerIsrSafe
+ *fill*         0x000000000804a099        0x3 
+ .text          0x000000000804a09c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+ .text          0x000000000804a09c       0x98 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+                0x000000000804a09c                DataEventHub_Update
+                0x000000000804a0f1                DataEventHub_SyncCondition
+                0x000000000804a109                DataEventHub_Ioctl
+ .text          0x000000000804a134        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+ .text          0x000000000804a134       0x5e /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+                0x000000000804a134                L1_changeTaskPriority
+                0x000000000804a17a                L1_makeTaskReady
+ *fill*         0x000000000804a192        0x2 
+ .text          0x000000000804a194      0x122 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+                0x000000000804a1ff                L1_DescheduleKernel
+                0x000000000804a278                L1_Switch2Kernel
+ *fill*         0x000000000804a2b6        0x2 
+ .text          0x000000000804a2b8       0x59 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+                0x000000000804a2b8                L1_startTaskService
+ *fill*         0x000000000804a311        0x3 
+ .text          0x000000000804a314       0xc1 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+                0x000000000804a314                L1_stopTaskService
+ *fill*         0x000000000804a3d5        0x3 
+ .text          0x000000000804a3d8       0x3b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+                0x000000000804a3d8                L1_suspendTaskService
+ *fill*         0x000000000804a413        0x1 
+ .text          0x000000000804a414       0x3b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+                0x000000000804a414                L1_resumeTaskService
+ *fill*         0x000000000804a44f        0x1 
+ .text          0x000000000804a450       0xc3 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+                0x000000000804a450                inputPortService
+                0x000000000804a4ee                L1_anyPacketService
+ *fill*         0x000000000804a513        0x1 
+ .text          0x000000000804a514      0x2dd /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+                0x000000000804a514                L1_setTimer
+                0x000000000804a5d4                L1_resetTimer
+                0x000000000804a675                L1_timerPacketService
+ *fill*         0x000000000804a7f1        0x3 
+ .text          0x000000000804a7f4      0x10e /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+                0x000000000804a7f4                L1_TimerList_isEmpty
+                0x000000000804a803                L1_TimerList_HeadElement
+                0x000000000804a80e                L1_TimerList_getSentinel
+                0x000000000804a816                L1_TimerList_getHeadElement
+                0x000000000804a847                L1_TimerList_putHeadElement
+                0x000000000804a866                L1_TimerList_isMember
+                0x000000000804a882                L1_TimerList_insert
+                0x000000000804a8d2                L1_TimerList_remove
+ *fill*         0x000000000804a902        0x2 
+ .text          0x000000000804a904      0xce4 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+                0x000000000804a904                L1_Posix32_IsrEntryPoint
+                0x000000000804ab46                L1_Posix32_schedulerWaitForSuspendEvent
+                0x000000000804abbb                L1_Posix32_schedulerWaitForIsrSuspendEvent
+                0x000000000804ac18                L1_initializeContextOfTask
+                0x000000000804accc                L1_initializePlatform
+                0x000000000804aed8                L1_deinitializeContextOfTask
+                0x000000000804af2f                L1_startTasks
+                0x000000000804affc                L1_enterCriticalSection
+                0x000000000804b017                L1_leaveCriticalSection
+                0x000000000804b032                L1_switchContext
+                0x000000000804b384                L1_saveStatusRegister
+                0x000000000804b393                L1_restoreStatusRegister
+                0x000000000804b39c                L1_enterISR
+                0x000000000804b4ac                L1_leaveISR
+ .text          0x000000000804b5e8       0x5b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+                0x000000000804b5e8                L1_Trace_EnterTraceMode
+                0x000000000804b5f1                L1_Trace_LeaveTraceMode
+                0x000000000804b5fa                L1_Trace_getLowCounterFrequency
+                0x000000000804b603                L1_Trace_getHighCounterFrequency
+                0x000000000804b60c                L1_Trace_TimeStamp
+ *fill*         0x000000000804b643        0x1 
+ .text          0x000000000804b644      0x2ff /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+                0x000000000804b67e                L1_Timer_getHighCounterFrequency
+                0x000000000804b688                L1_Posix32_timerThreadProc
+                0x000000000804b752                L1_initTimer
+                0x000000000804b7df                L1_Timer_isTimerPacketBeingProcessed
+                0x000000000804b7ef                L1_Timer_setTimeout
+                0x000000000804b842                L1_Timer_cancelTimeout
+                0x000000000804b86f                L1_Timer_getRemainingTimeoutTicks
+                0x000000000804b8be                L1_msec2ticks
+                0x000000000804b8c6                L1_Timer_getCurrentTime
+                0x000000000804b8fc                L1_Timer_getTimeStamp
+                0x000000000804b93c                L1_Timer_getLowCounterFrequency
+ *fill*         0x000000000804b943        0x1 
+ .text          0x000000000804b944      0x2d5 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+                0x000000000804b944                ocr_pthread_attr_init
+                0x000000000804b955                ocr_pthread_attr_destroy
+                0x000000000804b966                ocr_pthread_attr_setdetachstate
+                0x000000000804b98d                ocr_pthread_attr_getdetachstate
+                0x000000000804b9bb                ocr_pthread_create
+                0x000000000804baab                ocr_pthread_join
+                0x000000000804bb28                ocr_pthread_detach
+                0x000000000804bb4b                ocr_pthread_self
+                0x000000000804bb7d                pthreadEP
+ *fill*         0x000000000804bc19        0x3 
+ .text          0x000000000804bc1c      0x14a /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+                0x000000000804bc1c                ocr_pthread_mutex_init
+                0x000000000804bc6f                ocr_pthread_mutex_destroy
+                0x000000000804bcc2                ocr_pthread_mutex_lock
+                0x000000000804bd14                ocr_pthread_mutex_unlock
+ *fill*         0x000000000804bd66        0x2 
+ .text          0x000000000804bd68      0x190 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+                0x000000000804bd68                ocr_pthread_cond_init
+                0x000000000804bdba                ocr_pthread_cond_destroy
+                0x000000000804bde7                ocr_pthread_cond_signal
+                0x000000000804be2e                ocr_pthread_cond_wait
+ .text          0x000000000804bef8      0x16b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+                0x000000000804bf76                L1_buildAndInsertPacket
+ *fill*         0x000000000804c063        0x1 
+ .text          0x000000000804c064       0x41 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+                0x000000000804c064                L1_runTask
+ *fill*         0x000000000804c0a5        0x3 
+ .text          0x000000000804c0a8       0xdd /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+                0x000000000804c0a8                L1_PutDataToHub
+                0x000000000804c11f                L1_GetDataFromHub
+ *fill*         0x000000000804c185        0xb 
+ .text          0x000000000804c190       0x72 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+                0x000000000804c190                __libc_csu_init
+                0x000000000804c200                __libc_csu_fini
+ .text          0x000000000804c202        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o
+ .text          0x000000000804c202        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+ *(.gnu.warning)
+
+.fini           0x000000000804c204       0x14
+ *(SORT(.fini))
+ .fini          0x000000000804c204        0xf /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o
+                0x000000000804c204                _fini
+ .fini          0x000000000804c213        0x5 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+                0x000000000804c218                PROVIDE (__etext, .)
+                0x000000000804c218                PROVIDE (_etext, .)
+                0x000000000804c218                PROVIDE (etext, .)
+
+.rodata         0x000000000804c218      0x2d7
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x000000000804c218        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x000000000804c218                _fp_hw
+ .rodata.cst4   0x000000000804c21c        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x000000000804c21c                _IO_stdin_used
+ .rodata        0x000000000804c220        0x4 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+                0x000000000804c220                L1_Trace_NumberOfTraceElements
+ .rodata.str1.1
+                0x000000000804c224      0x15d CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ *fill*         0x000000000804c381        0x3 
+ .rodata        0x000000000804c384       0x12 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ *fill*         0x000000000804c396        0x2 
+ .rodata        0x000000000804c398       0x28 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+ .rodata.str1.1
+                0x000000000804c3c0       0xbb /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+ *fill*         0x000000000804c47b        0x1 
+ .rodata        0x000000000804c47c       0x22 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+                0x000000000804c47c                L1_Time_MAX
+                0x000000000804c480                L1_Time_MIN
+                0x000000000804c484                L1_INT32_MAX
+                0x000000000804c488                L1_INT32_MIN
+                0x000000000804c48c                L1_INT16_MAX
+                0x000000000804c48e                L1_INT16_MIN
+                0x000000000804c490                L1_UINT32_MAX
+                0x000000000804c494                L1_UINT32_MIN
+                0x000000000804c498                L1_UINT16_MAX
+                0x000000000804c49a                L1_UINT16_MIN
+                0x000000000804c49c                L1_BYTE_MAX
+                0x000000000804c49d                L1_BYTE_MIN
+ .rodata.str1.1
+                0x000000000804c49e       0x51 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr   0x000000000804c4f0      0x3e4
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x000000000804c4f0      0x3e4 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+
+.eh_frame       0x000000000804c8d4     0x1b6c
+ *(.eh_frame)
+ .eh_frame      0x000000000804c8d4       0x3c /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                                         0x40 (size before relaxing)
+ .eh_frame      0x000000000804c910       0x48 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+                                         0x60 (size before relaxing)
+ .eh_frame      0x000000000804c958       0xcc CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+                                         0xe4 (size before relaxing)
+ .eh_frame      0x000000000804ca24       0x74 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+                                         0x8c (size before relaxing)
+ .eh_frame      0x000000000804ca98      0x108 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+                                        0x120 (size before relaxing)
+ .eh_frame      0x000000000804cba0      0x15c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+                                        0x174 (size before relaxing)
+ .eh_frame      0x000000000804ccfc       0x84 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+                                         0x9c (size before relaxing)
+ .eh_frame      0x000000000804cd80      0x1d0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+                                        0x1e8 (size before relaxing)
+ .eh_frame      0x000000000804cf50       0x40 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+                                         0x58 (size before relaxing)
+ .eh_frame      0x000000000804cf90       0x44 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+                                         0x5c (size before relaxing)
+ .eh_frame      0x000000000804cfd4      0x11c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+                                        0x134 (size before relaxing)
+ .eh_frame      0x000000000804d0f0       0x70 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+                                         0x88 (size before relaxing)
+ .eh_frame      0x000000000804d160       0x6c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+                                         0x84 (size before relaxing)
+ .eh_frame      0x000000000804d1cc       0xb0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+                                         0xc8 (size before relaxing)
+ .eh_frame      0x000000000804d27c       0x30 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+                                         0x48 (size before relaxing)
+ .eh_frame      0x000000000804d2ac       0x6c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+                                         0x84 (size before relaxing)
+ .eh_frame      0x000000000804d318       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+                                         0x38 (size before relaxing)
+ .eh_frame      0x000000000804d338       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+                                         0x38 (size before relaxing)
+ .eh_frame      0x000000000804d358       0x80 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+                                         0x98 (size before relaxing)
+ .eh_frame      0x000000000804d3d8      0x17c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+                                        0x194 (size before relaxing)
+ .eh_frame      0x000000000804d554      0x108 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+                                        0x120 (size before relaxing)
+ .eh_frame      0x000000000804d65c      0x624 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+                                        0x63c (size before relaxing)
+ .eh_frame      0x000000000804dc80       0xac /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+                                         0xc4 (size before relaxing)
+ .eh_frame      0x000000000804dd2c      0x238 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+                                        0x250 (size before relaxing)
+ .eh_frame      0x000000000804df64      0x1b0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+                                        0x1c8 (size before relaxing)
+ .eh_frame      0x000000000804e114       0xc8 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+                                         0xe0 (size before relaxing)
+ .eh_frame      0x000000000804e1dc       0xd0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+                                         0xe8 (size before relaxing)
+ .eh_frame      0x000000000804e2ac       0x90 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+                                         0xa8 (size before relaxing)
+ .eh_frame      0x000000000804e33c       0x38 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+                                         0x50 (size before relaxing)
+ .eh_frame      0x000000000804e374       0x78 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+                                         0x90 (size before relaxing)
+ .eh_frame      0x000000000804e3ec       0x50 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+                                         0x7c (size before relaxing)
+ .eh_frame      0x000000000804e43c        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+                0x000000000804e440                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x000000000804fee8                . = DATA_SEGMENT_ALIGN (0x1000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x000000000804fee8        0x0
+                0x000000000804fee8                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x000000000804fee8                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x000000000804fee8        0x4
+                0x000000000804fee8                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*) SORT(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+ .init_array    0x000000000804fee8        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+                0x000000000804feec                PROVIDE (__init_array_end, .)
+
+.fini_array     0x000000000804feec        0x4
+                0x000000000804feec                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*) SORT(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+ .fini_array    0x000000000804feec        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+                0x000000000804fef0                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr            0x000000000804fef0        0x4
+ *(.jcr)
+ .jcr           0x000000000804fef0        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+ .jcr           0x000000000804fef0        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x000000000804fef4      0x108
+ *(.dynamic)
+ .dynamic       0x000000000804fef4      0x108 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x000000000804fef4                _DYNAMIC
+
+.got            0x000000000804fffc        0x4
+ *(.got)
+ .got           0x000000000804fffc        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+ *(.igot)
+                0x0000000008050ff4                . = DATA_SEGMENT_RELRO_END (., (SIZEOF (.got.plt) >= 0xc)?0xc:0x0)
+
+.got.plt        0x0000000008050000       0xdc
+ *(.got.plt)
+ .got.plt       0x0000000008050000       0xdc /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x0000000008050000                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+ .igot.plt      0x0000000000000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+
+.data           0x00000000080500dc     0x3050
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00000000080500dc        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x00000000080500dc                data_start
+                0x00000000080500dc                __data_start
+ .data          0x00000000080500e0        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o
+ .data          0x00000000080500e0        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+                0x00000000080500e0                __dso_handle
+ .data          0x00000000080500e4     0x2bc0 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+                0x00000000080500e4                L1_LocalHubs
+                0x0000000008050264                threadpool_resource_3_HubState
+                0x0000000008050270                threadpool_resource_2_HubState
+                0x000000000805027c                threadpool_resource_1_HubState
+                0x0000000008050288                threadpool_resource_0_HubState
+                0x0000000008050294                L1_TaskControlBlock
+                0x000000000805041c                L1_NumberOfUsedResources
+                0x00000000080521fc                L1_TaskInputPorts
+                0x0000000008052250                L1_Posix32_ISRs
+                0x00000000080522b8                Pth_KeyPool_threadpool_threadpool_
+                0x000000000805235c                Pth_CondPool_threadpool_threadpool_
+                0x0000000008052450                Pth_MutexPool_threadpool_threadpool_
+                0x000000000805251c                Pth_ThreadPool_threadpool_threadpool_
+                0x0000000008052ca0                L1_Posix32_NbrOfIsrs
+ .data          0x0000000008052ca4        0x0 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+ .data          0x0000000008052ca4        0x0 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .data          0x0000000008052ca4        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+ .data          0x0000000008052ca4        0xc /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .data          0x0000000008052cb0        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+ .data          0x0000000008052cb0        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+ .data          0x0000000008052cb0        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .data          0x0000000008052cb0        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+ .data          0x0000000008052cb0        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+ .data          0x0000000008052cb0       0x2c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+                0x0000000008052cb0                L1_tracer_ServiceId2Name
+ .data          0x0000000008052cdc        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+ .data          0x0000000008052cdc        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+ .data          0x0000000008052cdc        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+ .data          0x0000000008052cdc        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+ .data          0x0000000008052cdc        0xc /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+                0x0000000008052cdc                L1_ReadyList
+ .data          0x0000000008052ce8        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+ .data          0x0000000008052ce8        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+ .data          0x0000000008052ce8        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+ .data          0x0000000008052ce8        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+ .data          0x0000000008052ce8        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .data          0x0000000008052ce8        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+ .data          0x0000000008052ce8        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+ .data          0x0000000008052ce8        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+ .data          0x0000000008052ce8        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+ .data          0x0000000008052ce8      0x444 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+ .data          0x000000000805312c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .data          0x000000000805312c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+ .data          0x000000000805312c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+ .data          0x000000000805312c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+ .data          0x000000000805312c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+ .data          0x000000000805312c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+ .data          0x000000000805312c        0x0 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .data          0x000000000805312c        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o
+ .data          0x000000000805312c        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+
+.tm_clone_table
+                0x000000000805312c        0x0
+ .tm_clone_table
+                0x000000000805312c        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+ .tm_clone_table
+                0x000000000805312c        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o
+
+.data1
+ *(.data1)
+                0x000000000805312c                _edata = .
+                0x000000000805312c                PROVIDE (edata, .)
+                0x000000000805312c                . = .
+                0x000000000805312c                __bss_start = .
+
+.bss            0x000000000805312c     0x52a8
+ *(.dynbss)
+ .dynbss        0x000000000805312c        0x4 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+                0x000000000805312c                stdin@@GLIBC_2.0
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000008053130        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o
+ .bss           0x0000000008053130        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o
+ .bss           0x0000000008053130        0x1 /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+ *fill*         0x0000000008053131        0x3 
+ .bss           0x0000000008053134     0x1028 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+                0x0000000008053134                threadpool_sem_3_HubState
+                0x0000000008053136                threadpool_sem_2_HubState
+                0x0000000008053138                threadpool_sem_1_HubState
+                0x000000000805313a                threadpool_sem_0_HubState
+                0x000000000805313c                threadpool_event_3_HubState
+                0x0000000008053544                threadpool_event_2_HubState
+                0x000000000805394c                threadpool_event_1_HubState
+                0x0000000008053d54                threadpool_event_0_HubState
+ .bss           0x000000000805415c        0x0 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+ .bss           0x000000000805415c        0x0 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .bss           0x000000000805415c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+ .bss           0x000000000805415c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .bss           0x000000000805415c        0x2 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+                0x000000000805415c                NodePacketCounter
+ *fill*         0x000000000805415e        0x2 
+ .bss           0x0000000008054160        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+ .bss           0x0000000008054160        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .bss           0x0000000008054160        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+ .bss           0x0000000008054160        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+ .bss           0x0000000008054160        0x9 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+                0x0000000008054160                oldestTraceLine
+                0x0000000008054164                nextTraceLine
+                0x0000000008054168                tracingDisabled
+ *fill*         0x0000000008054169        0x3 
+ .bss           0x000000000805416c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+ .bss           0x000000000805416c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+ .bss           0x000000000805416c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+ .bss           0x000000000805416c        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+ .bss           0x000000000805416c        0x4 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+                0x000000000805416c                L1_CurrentTaskCR
+ .bss           0x0000000008054170        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+ .bss           0x0000000008054170        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+ .bss           0x0000000008054170        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+ .bss           0x0000000008054170        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+ .bss           0x0000000008054170        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .bss           0x0000000008054170       0x14 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+                0x0000000008054170                L1_NodeTimerTimeoutList
+ .bss           0x0000000008054184        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+ .bss           0x0000000008054184      0x194 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+                0x0000000008054184                prevTask
+                0x0000000008054188                CriticalSetionEntryCount
+ .bss           0x0000000008054318        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+ .bss           0x0000000008054318       0x5c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+ .bss           0x0000000008054374        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .bss           0x0000000008054374        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+ .bss           0x0000000008054374        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+ .bss           0x0000000008054374        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+ .bss           0x0000000008054374        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+ .bss           0x0000000008054374        0x0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+ .bss           0x0000000008054374        0x0 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .bss           0x0000000008054374        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o
+ .bss           0x0000000008054374        0x0 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+ *(COMMON)
+ COMMON         0x0000000008054374     0x4040 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+                0x0000000008054374                L1_KeyListElements
+                0x00000000080543b4                L1_Trace_TraceBuffer
+ COMMON         0x00000000080583b4        0x2 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+                0x00000000080583b4                L1_ISRNesting
+ COMMON         0x00000000080583b6        0x1 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+                0x00000000080583b6                L1_ScheduleRequest
+ *fill*         0x00000000080583b7        0x1 
+ COMMON         0x00000000080583b8       0x1c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+                0x00000000080583b8                L1_Posix32_tracebufferMutexAttr
+                0x00000000080583bc                L1_Posix32_tracebufferMutex
+                0x00000000080583d4                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00000000080583d4                . = ALIGN (0x4)
+                0x00000000080583d4                . = SEGMENT_START ("ldata-segment", .)
+                0x00000000080583d4                . = ALIGN (0x4)
+                0x00000000080583d4                _end = .
+                0x00000000080583d4                PROVIDE (end, .)
+                0x00000000080583d4                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x4e
+ *(.comment)
+ .comment       0x0000000000000000       0x24 /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o
+                                         0x25 (size before relaxing)
+ .comment       0x0000000000000000       0x25 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+ .comment       0x0000000000000000       0x25 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+ .comment       0x0000000000000000       0x25 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .comment       0x0000000000000024       0x2a /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+                                         0x2b (size before relaxing)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+ .comment       0x0000000000000000       0x2b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+ .comment       0x0000000000000000       0x25 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .comment       0x0000000000000000       0x25 /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x3c0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x18 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+ .debug_aranges
+                0x0000000000000018       0x28 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+ .debug_aranges
+                0x0000000000000040       0x20 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .debug_aranges
+                0x0000000000000060       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+ .debug_aranges
+                0x0000000000000080       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .debug_aranges
+                0x00000000000000a0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+ .debug_aranges
+                0x00000000000000c0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+ .debug_aranges
+                0x00000000000000e0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .debug_aranges
+                0x0000000000000100       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+ .debug_aranges
+                0x0000000000000120       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+ .debug_aranges
+                0x0000000000000140       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+ .debug_aranges
+                0x0000000000000160       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+ .debug_aranges
+                0x0000000000000180       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+ .debug_aranges
+                0x00000000000001a0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+ .debug_aranges
+                0x00000000000001c0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+ .debug_aranges
+                0x00000000000001e0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+ .debug_aranges
+                0x0000000000000200       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+ .debug_aranges
+                0x0000000000000220       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+ .debug_aranges
+                0x0000000000000240       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .debug_aranges
+                0x0000000000000260       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+ .debug_aranges
+                0x0000000000000280       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+ .debug_aranges
+                0x00000000000002a0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+ .debug_aranges
+                0x00000000000002c0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+ .debug_aranges
+                0x00000000000002e0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+ .debug_aranges
+                0x0000000000000300       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .debug_aranges
+                0x0000000000000320       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+ .debug_aranges
+                0x0000000000000340       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+ .debug_aranges
+                0x0000000000000360       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+ .debug_aranges
+                0x0000000000000380       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+ .debug_aranges
+                0x00000000000003a0       0x20 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x1052f
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0xe43 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+ .debug_info    0x0000000000000e43      0x73d CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+ .debug_info    0x0000000000001580     0x16c2 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .debug_info    0x0000000000002c42      0x8eb /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+ .debug_info    0x000000000000352d      0x4af /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .debug_info    0x00000000000039dc      0x9f6 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+ .debug_info    0x00000000000043d2      0x267 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+ .debug_info    0x0000000000004639      0xf81 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .debug_info    0x00000000000055ba      0x533 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+ .debug_info    0x0000000000005aed      0x538 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+ .debug_info    0x0000000000006025      0x901 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+ .debug_info    0x0000000000006926      0x197 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+ .debug_info    0x0000000000006abd      0x5aa /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+ .debug_info    0x0000000000007067       0x8c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+ .debug_info    0x00000000000070f3      0x6f3 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+ .debug_info    0x00000000000077e6      0x8c6 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+ .debug_info    0x00000000000080ac      0x6e6 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+ .debug_info    0x0000000000008792      0x7a2 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+ .debug_info    0x0000000000008f34      0x6e6 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+ .debug_info    0x000000000000961a      0x6e6 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+ .debug_info    0x0000000000009d00      0x835 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .debug_info    0x000000000000a535      0x5ce /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+ .debug_info    0x000000000000ab03      0x32e /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+ .debug_info    0x000000000000ae31     0x1283 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+ .debug_info    0x000000000000c0b4      0x22d /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+ .debug_info    0x000000000000c2e1      0xdb6 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+ .debug_info    0x000000000000d097      0xcf1 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .debug_info    0x000000000000dd88      0x972 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+ .debug_info    0x000000000000e6fa      0x9b0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+ .debug_info    0x000000000000f0aa      0x8e3 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+ .debug_info    0x000000000000f98d      0x738 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+ .debug_info    0x00000000000100c5      0x46a /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+
+.debug_abbrev   0x0000000000000000     0x3813
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x191 CMakeFiles/posixnode.dir/L1_node_config.c.obj
+ .debug_abbrev  0x0000000000000191      0x1af CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+ .debug_abbrev  0x0000000000000340      0x3b6 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .debug_abbrev  0x00000000000006f6      0x1bd /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+ .debug_abbrev  0x00000000000008b3      0x1b0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .debug_abbrev  0x0000000000000a63      0x216 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+ .debug_abbrev  0x0000000000000c79       0xe0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+ .debug_abbrev  0x0000000000000d59      0x2f4 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .debug_abbrev  0x000000000000104d      0x178 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+ .debug_abbrev  0x00000000000011c5      0x156 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+ .debug_abbrev  0x000000000000131b      0x224 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+ .debug_abbrev  0x000000000000153f       0x4d /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+ .debug_abbrev  0x000000000000158c      0x17e /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+ .debug_abbrev  0x000000000000170a       0x46 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+ .debug_abbrev  0x0000000000001750      0x160 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+ .debug_abbrev  0x00000000000018b0      0x203 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+ .debug_abbrev  0x0000000000001ab3      0x174 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+ .debug_abbrev  0x0000000000001c27      0x1d3 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+ .debug_abbrev  0x0000000000001dfa      0x174 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+ .debug_abbrev  0x0000000000001f6e      0x174 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+ .debug_abbrev  0x00000000000020e2      0x203 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .debug_abbrev  0x00000000000022e5      0x1fe /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+ .debug_abbrev  0x00000000000024e3      0x13c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+ .debug_abbrev  0x000000000000261f      0x39e /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+ .debug_abbrev  0x00000000000029bd      0x113 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+ .debug_abbrev  0x0000000000002ad0      0x2ad /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+ .debug_abbrev  0x0000000000002d7d      0x214 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .debug_abbrev  0x0000000000002f91      0x1c5 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+ .debug_abbrev  0x0000000000003156      0x1dd /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+ .debug_abbrev  0x0000000000003333      0x22d /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+ .debug_abbrev  0x0000000000003560      0x198 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+ .debug_abbrev  0x00000000000036f8      0x11b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+
+.debug_line     0x0000000000000000     0x521c
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000      0x38d CMakeFiles/posixnode.dir/L1_node_config.c.obj
+ .debug_line    0x000000000000038d      0x261 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+ .debug_line    0x00000000000005ee      0x482 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .debug_line    0x0000000000000a70      0x2b9 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+ .debug_line    0x0000000000000d29      0x1f5 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .debug_line    0x0000000000000f1e      0x2b4 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+ .debug_line    0x00000000000011d2      0x18b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+ .debug_line    0x000000000000135d      0x408 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .debug_line    0x0000000000001765      0x1f3 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+ .debug_line    0x0000000000001958      0x200 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+ .debug_line    0x0000000000001b58      0x261 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+ .debug_line    0x0000000000001db9       0xb4 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+ .debug_line    0x0000000000001e6d      0x274 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+ .debug_line    0x00000000000020e1       0xba /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+ .debug_line    0x000000000000219b      0x227 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+ .debug_line    0x00000000000023c2      0x263 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+ .debug_line    0x0000000000002625      0x22a /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+ .debug_line    0x000000000000284f      0x25b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+ .debug_line    0x0000000000002aaa      0x228 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+ .debug_line    0x0000000000002cd2      0x227 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+ .debug_line    0x0000000000002ef9      0x258 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .debug_line    0x0000000000003151      0x24d /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+ .debug_line    0x000000000000339e      0x1b6 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+ .debug_line    0x0000000000003554      0x5ea /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+ .debug_line    0x0000000000003b3e      0x186 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+ .debug_line    0x0000000000003cc4      0x363 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+ .debug_line    0x0000000000004027      0x450 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .debug_line    0x0000000000004477      0x39b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+ .debug_line    0x0000000000004812      0x3a8 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+ .debug_line    0x0000000000004bba      0x291 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+ .debug_line    0x0000000000004e4b      0x227 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+ .debug_line    0x0000000000005072      0x1aa /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000     0x3428
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0xc9b CMakeFiles/posixnode.dir/L1_node_config.c.obj
+                                        0xde4 (size before relaxing)
+ .debug_str     0x0000000000000c9b       0x80 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+                                        0x74c (size before relaxing)
+ .debug_str     0x0000000000000d1b      0x5fd CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+                                        0xc4e (size before relaxing)
+ .debug_str     0x0000000000001318      0x11e /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+                                        0x82e (size before relaxing)
+ .debug_str     0x0000000000001436      0x17b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+                                        0x331 (size before relaxing)
+ .debug_str     0x00000000000015b1      0x159 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+                                        0x8e8 (size before relaxing)
+ .debug_str     0x000000000000170a       0xad /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+                                        0x20b (size before relaxing)
+ .debug_str     0x00000000000017b7      0x237 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+                                        0xc5a (size before relaxing)
+ .debug_str     0x00000000000019ee       0x9a /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+                                        0x552 (size before relaxing)
+ .debug_str     0x0000000000001a88       0x8b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+                                        0x576 (size before relaxing)
+ .debug_str     0x0000000000001b13      0x126 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+                                        0x7ba (size before relaxing)
+ .debug_str     0x0000000000001c39       0xd4 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_types.c.obj)
+                                        0x19c (size before relaxing)
+ .debug_str     0x0000000000001d0d       0x8d /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+                                        0x59e (size before relaxing)
+ .debug_str     0x0000000000001d9a       0x43 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_data.c.obj)
+                                         0xf0 (size before relaxing)
+ .debug_str     0x0000000000001ddd       0x75 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+                                        0x640 (size before relaxing)
+ .debug_str     0x0000000000001e52       0x8c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+                                        0x775 (size before relaxing)
+ .debug_str     0x0000000000001ede       0x7d /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+                                        0x63c (size before relaxing)
+ .debug_str     0x0000000000001f5b       0xab /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+                                        0x69e (size before relaxing)
+ .debug_str     0x0000000000002006       0x85 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+                                        0x644 (size before relaxing)
+ .debug_str     0x000000000000208b       0x81 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+                                        0x640 (size before relaxing)
+ .debug_str     0x000000000000210c       0xb3 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+                                        0x76d (size before relaxing)
+ .debug_str     0x00000000000021bf      0x110 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+                                        0x47d (size before relaxing)
+ .debug_str     0x00000000000022cf      0x14a /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+                                        0x2c3 (size before relaxing)
+ .debug_str     0x0000000000002419      0x680 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+                                        0xe46 (size before relaxing)
+ .debug_str     0x0000000000002a99      0x110 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+                                        0x28d (size before relaxing)
+ .debug_str     0x0000000000002ba9      0x316 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+                                        0xb61 (size before relaxing)
+ .debug_str     0x0000000000002ebf      0x1b8 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+                                        0xa36 (size before relaxing)
+ .debug_str     0x0000000000003077       0xea /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+                                        0x88b (size before relaxing)
+ .debug_str     0x0000000000003161       0xec /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+                                        0x8ad (size before relaxing)
+ .debug_str     0x000000000000324d       0x8c /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+                                        0x77d (size before relaxing)
+ .debug_str     0x00000000000032d9       0x59 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+                                        0x6dc (size before relaxing)
+ .debug_str     0x0000000000003332       0xf6 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+                                        0x441 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x3061
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x359 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .debug_loc     0x0000000000000359       0xad /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start.c.obj)
+ .debug_loc     0x0000000000000406      0x22d /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .debug_loc     0x0000000000000633      0x1ea /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_loop.c.obj)
+ .debug_loc     0x000000000000081d      0x148 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_list_api.c.obj)
+ .debug_loc     0x0000000000000965      0x463 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .debug_loc     0x0000000000000dc8       0x70 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_semaphore_service.c.obj)
+ .debug_loc     0x0000000000000e38       0x70 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resource_service.c.obj)
+ .debug_loc     0x0000000000000ea8      0x21b /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_trace.c.obj)
+ .debug_loc     0x00000000000010c3       0xc0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_event.c.obj)
+ .debug_loc     0x0000000000001183       0x88 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_make_task_ready.c.obj)
+ .debug_loc     0x000000000000120b      0x150 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_scheduler.c.obj)
+ .debug_loc     0x000000000000135b       0x71 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_start_task_service.c.obj)
+ .debug_loc     0x00000000000013cc       0xba /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_stop_task_service.c.obj)
+ .debug_loc     0x0000000000001486       0x62 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_suspend_task_service.c.obj)
+ .debug_loc     0x00000000000014e8       0x62 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_resume_task_service.c.obj)
+ .debug_loc     0x000000000000154a      0x13a /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .debug_loc     0x0000000000001684      0x2e9 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+ .debug_loc     0x000000000000196d      0x283 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_timerlist_api.c.obj)
+ .debug_loc     0x0000000000001bf0      0x858 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+ .debug_loc     0x0000000000002448      0x118 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_trace.c.obj)
+ .debug_loc     0x0000000000002560      0x2c3 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformDriver.a(wtimer.c.obj)
+ .debug_loc     0x0000000000002823      0x319 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .debug_loc     0x0000000000002b3c      0x180 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Mutex.c.obj)
+ .debug_loc     0x0000000000002cbc      0x1bf /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Cond.c.obj)
+ .debug_loc     0x0000000000002e7b       0xf0 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+ .debug_loc     0x0000000000002f6b       0x4f /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_task_api.c.obj)
+ .debug_loc     0x0000000000002fba       0xa7 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_hub_data_api.c.obj)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x360
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x18 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/posixnode/posixnode.c.obj
+ .debug_ranges  0x0000000000000018       0xc0 CMakeFiles/posixnode.dir/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/check_hrc/Source/check_hrc.c.obj
+ .debug_ranges  0x00000000000000d8       0x18 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_keylist_api.c.obj)
+ .debug_ranges  0x00000000000000f0       0x80 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_hub_service.c.obj)
+ .debug_ranges  0x0000000000000170       0x30 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_anypacket_service.c.obj)
+ .debug_ranges  0x00000000000001a0       0xc8 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_timerpacket_service.c.obj)
+ .debug_ranges  0x0000000000000268       0x90 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_PlatformKernel.a(L1_hal.c.obj)
+ .debug_ranges  0x00000000000002f8       0x28 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libPthreadAbstractionLayer_SP_COs_D2.a(Pth_Thread.c.obj)
+ .debug_ranges  0x0000000000000320       0x40 /mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS/posix32/lib/libOpenComRTOS_SP_COs_D2_Kernel.a(L1_kernel_request_service.c.obj)
+
+.debug_macro
+ *(.debug_macro)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(posixnode elf32-i386)

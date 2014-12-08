@@ -1,0 +1,163 @@
+/*******************************************************************************
+ * OpenComRTOS
+ * Copyright Altreonic NV, 2005-2013
+ * www.Altreonic.com
+ * Module name: UART_Client.h ($Path/$Filename)
+ * Synopsis: UART-Service Protocol definition.
+ *
+ * $LastChangedDate: 2013-02-28 16:58:32 +0100 (Thu, 28 Feb 2013) $
+ * $Revision: 3492 $
+ * $LastChangedBy: antonio.ramos $
+ *******************************************************************************/
+
+#ifndef _UART_PROTOCOL_H_
+#define _UART_PROTOCOL_H_
+
+#include <driver/linkcommunication.h>
+
+/*
+ * These Macros are used to calculate the correct Hub-ID based on the ID of the Input Port.
+ */
+#define UART_INPUT_PORT(id)    (id)
+#define UART_OUTPUT_PORT(id)   (id + 1)
+#define UART_RESOURCE(id)      (id + 2)
+
+
+#define UART_REPLY_OFFSET                            0
+#define UART_REPLY_CODE_OFFSET                       0
+#define UART_REPLY_TYPE                              L1_UINT32
+#define UART_REPLY_LENGTH                            sizeof(UART_REPLY_TYPE)
+#define UART_REPLY_NTOH(cmd)                         ntoh32(cmd)
+#define UART_REPLY_HTON(cmd)                         hton32(cmd)
+
+#define UART_REPLY_STATUS_OFFSET                     UART_REPLY_OFFSET + UART_REPLY_LENGTH
+#define UART_REPLY_STATUS_TYPE                       L1_UINT32
+#define UART_REPLY_STATUS_LENGTH                     sizeof(UART_REPLY_TYPE)
+#define UART_REPLY_STATUS_NTOH(cmd)                  ntoh32(cmd)
+#define UART_REPLY_STATUS_HTON(cmd)                  hton32(cmd)
+#define UART_REPLY_STATUS_HTON(cmd)                  hton32(cmd)
+
+
+
+#define UART_REPLY_PAYLOAD_OFFSET                    (UART_REPLY_STATUS_OFFSET + UART_REPLY_STATUS_LENGTH)
+
+
+/**UART Host Service Packet Data Offsets*/
+
+#define UART_COMMAND_OFFSET                          0
+#define UART_COMMAND_TYPE                            L1_UINT32
+#define UART_COMMAND_LENGTH                          sizeof(UART_COMMAND_TYPE)
+#define UART_COMMAND_NTOH(cmd)                       ntoh32(cmd)
+#define UART_COMMAND_HTON(cmd)                       hton32(cmd)
+
+#if 0
+#define UART_UART_PORT_NUMBER_OFFSET                 (UART_COMMAND_OFFSET + UART_COMMAND_LENGTH)
+#define UART_UART_PORT_NUMBER_TYPE                   L1_BYTE
+#define UART_UART_PORT_NUMBER_LENGTH                 sizeof(UART_UART_PORT_NUMBER_TYPE)
+#endif /* 0 */
+
+#define UART_COMMAND_PAYLOAD_OFFSET                  (UART_COMMAND_OFFSET + UART_COMMAND_LENGTH)
+
+/**
+ * UART Host Service Supported Commands -The simplified Interface
+ */
+
+/*
+ * Open Port Port Operation
+ */
+#define UART_OPEN_PORT                          0
+#define UART_OPEN_PORT_DIRECTION_OFFSET         UART_COMMAND_PAYLOAD_OFFSET
+#define UART_OPEN_PORT_DIRECTION_LENGTH         sizeof(L1_UINT32)
+
+#define UART_OPEN_PORT_PACKET_SIZE              UART_OPEN_PORT_DIRECTION_OFFSET + UART_OPEN_PORT_DIRECTION_LENGTH
+
+#define UART_OPEN_PORT_REPLY                    1
+#define UART_OPEN_PORT_REPLY_RX_EVENT_OFFSET    UART_REPLY_PAYLOAD_OFFSET
+#define UART_OPEN_PORT_REPLY_RX_EVENT_LENGTH    sizeof(L1_UINT32)
+
+#define UART_OPEN_PORT_REPLY_TX_EVENT_OFFSET    (UART_OPEN_PORT_REPLY_RX_EVENT_OFFSET + UART_OPEN_PORT_REPLY_RX_EVENT_LENGTH)
+#define UART_OPEN_PORT_REPLY_TX_EVENT_LENGTH    sizeof(L1_UINT32)
+
+#define UART_OPEN_PORT_REPLY_RX_PORT_OFFSET     (UART_OPEN_PORT_REPLY_TX_EVENT_OFFSET + UART_OPEN_PORT_REPLY_TX_EVENT_LENGTH)
+#define UART_OPEN_PORT_REPLY_RX_PORT_LENGTH     sizeof(L1_UINT32)
+
+#define UART_OPEN_PORT_REPLY_TX_PORT_OFFSET     (UART_OPEN_PORT_REPLY_RX_PORT_OFFSET + UART_OPEN_PORT_REPLY_RX_PORT_LENGTH)
+#define UART_OPEN_PORT_REPLY_TX_PORT_LENGTH     sizeof(L1_UINT32)
+
+#ifndef MP
+#define UART_OPEN_PORT_REPLY_PUART_OFFSET       (UART_OPEN_PORT_REPLY_TX_PORT_OFFSET + UART_OPEN_PORT_REPLY_TX_PORT_LENGTH)
+#define UART_OPEN_PORT_REPLY_PUART_LENGTH       sizeof(L1_UINT32)
+
+#define UART_OPEN_PORT_REPLY_PCHANNEL_OFFSET    (UART_OPEN_PORT_REPLY_PUART_OFFSET + UART_OPEN_PORT_REPLY_PUART_LENGTH)
+#define UART_OPEN_PORT_REPLY_PCHANNEL_LENGTH    sizeof(L1_UINT32)
+
+#define UART_OPEN_PORT_REPLY_PUART_EVENTS_OFFSET    (UART_OPEN_PORT_REPLY_PCHANNEL_OFFSET + UART_OPEN_PORT_REPLY_PCHANNEL_LENGTH)
+#define UART_OPEN_PORT_REPLY_PUART_EVENTS_LENGTH    sizeof(L1_UINT32)
+
+
+#define UART_OPEN_PORT_REPLY_PACKET_SIZE        (UART_OPEN_PORT_REPLY_PUART_EVENTS_OFFSET + UART_OPEN_PORT_REPLY_PUART_EVENTS_LENGTH)
+
+#else
+#define UART_OPEN_PORT_REPLY_PACKET_SIZE        (UART_OPEN_PORT_REPLY_TX_PORT_OFFSET + UART_OPEN_PORT_REPLY_TX_PORT_LENGTH)
+#endif /*!MP*/
+/*
+ * Close Port Operation
+ */
+#define UART_CLOSE_PORT                         2
+#define UART_CLOSE_PORT_DIRECTION_OFFSET        UART_COMMAND_PAYLOAD_OFFSET
+#define UART_CLOSE_PORT_DIRECTION_LENGTH        sizeof(L1_UINT32)
+#define UART_CLOSE_PORT_PACKET_SIZE             (UART_OPEN_PORT_DIRECTION_OFFSET + UART_OPEN_PORT_DIRECTION_LENGTH)
+
+#define UART_CLOSE_PORT_REPLY                   3
+#define UART_CLOSE_PORT_REPLY_PACKET_SIZE       UART_REPLY_PAYLOAD_OFFSET
+
+/*
+ * IsPortOpen Operation
+ */
+#define UART_IS_PORT_OPEN                       4
+#define UART_IS_PORT_OPEN_PACKET_SIZE           UART_COMMAND_LENGTH + 1
+
+#define UART_IS_PORT_OPEN_REPLY                 5
+#define UART_IS_PORT_OPEN_REPLY_RX_OPEN_OFFSET  UART_REPLY_PAYLOAD_OFFSET
+#define UART_IS_PORT_OPEN_REPLY_RX_OPEN_LENGTH  sizeof(L1_UINT8)
+
+#define UART_IS_PORT_OPEN_REPLY_TX_OPEN_OFFSET  (UART_IS_PORT_OPEN_REPLY_RX_OPEN_OFFSET + UART_IS_PORT_OPEN_REPLY_RX_OPEN_LENGTH)
+#define UART_IS_PORT_OPEN_REPLY_TX_OPEN_LENGTH  sizeof(L1_UINT8)
+
+#define UART_IS_PORT_OPEN_REPLY_PACKET_SIZE     (UART_IS_PORT_OPEN_REPLY_TX_OPEN_OFFSET + UART_IS_PORT_OPEN_REPLY_TX_OPEN_LENGTH)
+
+
+/*
+ * The Write Buffer Operation
+ */
+#define UART_WRITE                        10
+#define UART_WRITE_BUFFERSIZE_OFFSET      UART_COMMAND_PAYLOAD_OFFSET
+#define UART_WRITE_BUFFERSIZE_TYPE        L1_UINT32
+#define UART_WRITE_BUFFERSIZE_LENGTH      sizeof(UART_WRITE_BUFFERSIZE_TYPE)
+#define UART_WRITE_DATA_OFFSET            (UART_WRITE_BUFFERSIZE_OFFSET +  UART_WRITE_BUFFERSIZE_LENGTH)
+#define UART_WRITE_PACKET_SIZE            UART_WRITE_DATA_OFFSET
+
+#define UART_WRITE_REPLY                              11
+#define UART_WRITE_REPLY_BYTES_WRITTEN_OFFSET         (UART_REPLY_PAYLOAD_OFFSET)
+#define UART_WRITE_REPLY_BYTES_WRITTEN_TYPE           L1_UINT32
+#define UART_WRITE_REPLY_BYTES_WRITTEN_LENGTH         sizeof(UART_WRITE_REPLY_BYTES_WRITTEN_TYPE)
+#define UART_WRITE_REPLY_PACKET_SIZE                  (UART_WRITE_REPLY_BYTES_WRITTEN_OFFSET + UART_WRITE_REPLY_BYTES_WRITTEN_LENGTH)
+
+/*
+ * The Read Buffer Operation
+ */
+#define UART_READ                             12
+#define UART_READ_BYTECOUNT_OFFSET            UART_COMMAND_PAYLOAD_OFFSET
+#define UART_READ_BYTECOUNT_TYPE              L1_UINT32
+#define UART_READ_BYTECOUNT_LENGTH            sizeof(UART_READ_BYTECOUNT_TYPE)
+#define UART_READ_PACKET_SIZE                 (UART_READ_BYTECOUNT_OFFSET + UART_READ_BYTECOUNT_LENGTH)
+
+
+#define UART_READ_REPLY                       13
+#define UART_READ_REPLY_READ_BYTES_OFFSET     (UART_REPLY_PAYLOAD_OFFSET)
+#define UART_READ_REPLY_READ_BYTES_DATATYPE   L1_UINT32
+#define UART_READ_REPLY_READ_BYTES_LENGTH     sizeof(UART_READ_REPLY_READ_BYTES_DATATYPE)
+#define UART_READ_REPLY_DATA_OFFSET           (UART_REPLY_PAYLOAD_OFFSET + UART_READ_REPLY_READ_BYTES_LENGTH)
+#define UART_READ_REPLY_PACKET_SIZE           UART_READ_REPLY_DATA_OFFSET
+
+#endif

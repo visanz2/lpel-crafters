@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<metamodel version="1.4">
+    
+    <component name="PthreadAbstractionLayerComponent" svgPath="TaskPool.svg" iconPath="TaskPool.png" help="OpenVE::PthreadAbstractionLayer::Component">
+        <attribute name="name" type="string" unique="component" regexp="[A-Za-z0-9_]+" defaultValue="threadpool" notEmpty="true"/>
+        <attribute name="CeilingPriority" type="integer" min="0" max="255" defaultValue="32" notEmpty="true"/>
+        <code name="pthread">
+            <includeFile name="PthreadAbstractionLayer/Pth_Types.h"/>
+            <structure type="Pth_ThreadPool" label="">
+                <field name="nbrOfThreads" type="integer" value="4"/>
+                <field name="tasks" type="integer" value="{%name%_task_0, %name%_task_1, %name%_task_2, %name%_task_3}"/>
+                <field name="events" type="integer" value="{%name%_event_0, %name%_event_1, %name%_event_2, %name%_event_3}"/>
+                <field name="pthreads" type="integer" value="{{0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},
+                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},
+                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0},
+                 {0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},
+                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},
+                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0},
+             {0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},
+                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},
+                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0},
+                 {0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},
+                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},
+                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0}}"/>      
+            </structure>
+            
+            <structure type="Pth_MutexPool" label="">
+                <field name="nbrOfResources" type="integer" value="4"/>
+                <field name="resources" type="integer" value="{%name%_resource_0, %name%_resource_1, %name%_resource_2, %name%_resource_3}"/>
+                <field name="mutexes" type="integer" value="{{0,L1_FALSE,0,L1_FALSE},{0,L1_FALSE,0,L1_FALSE},{0,L1_FALSE,0,L1_FALSE},{0,L1_FALSE,0,L1_FALSE}}"/>    
+            </structure>
+            
+            <structure type="Pth_CondPool" label="">
+                <field name="nbrOfSemaphores" type="integer" value="4"/>
+                <field name="semaphores" type="integer" value="{%name%_sem_0, %name%_sem_1, %name%_sem_2, %name%_sem_3}"/>
+                <field name="condVariables" type="integer" value="{{0,L1_FALSE,0,0,0},{0,L1_FALSE,0,0,0},{0,L1_FALSE,0,0,0},{0,L1_FALSE,0,0,0}}"/>    
+            </structure>
+            
+            <structure type="Pth_KeyPool" label="">
+                <field name="nbrOfKeys" type="integer" value="4"/>
+                <field name="keys" type="integer" value="{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0}}"/>    
+            </structure>            
+            
+			<ocrLib name="PthreadAbstractionLayer"/>
+			
+			<task name="%name%_task_0">
+                <status value="L1_INACTIVE"/>
+                <priority value="128"/>
+                <arguments value="0"/>
+                <stackSize value="2048"/>
+                <entrypoint value="pthreadEP"/>
+                <sourceFile value=""/>
+            </task>
+            <task name="%name%_task_1">
+                <status value="L1_INACTIVE"/>
+                <priority value="128"/>
+                <arguments value="1"/>
+                <stackSize value="2048"/>
+                <entrypoint value="pthreadEP"/>
+                <sourceFile value=""/>
+            </task>
+            <task name="%name%_task_2">
+                <status value="L1_INACTIVE"/>
+                <priority value="128"/>
+                <arguments value="2"/>
+                <stackSize value="2048"/>
+                <entrypoint value="pthreadEP"/>
+                <sourceFile value=""/>
+            </task>
+            <task name="%name%_task_3">
+                <status value="L1_INACTIVE"/>
+                <priority value="128"/>
+                <arguments value="3"/>
+                <stackSize value="2048"/>
+                <entrypoint value="pthreadEP"/>
+                <sourceFile value=""/>
+            </task>	
+            <dataEvent name="%name%_event_0"/>
+            <dataEvent name="%name%_event_1"/>
+            <dataEvent name="%name%_event_2"/>
+            <dataEvent name="%name%_event_3"/>
+            
+            <resource name="%name%_resource_0">
+                <ceilingPriority value="%CeilingPriority%"/>
+            </resource>
+            <resource name="%name%_resource_1">
+                <ceilingPriority value="%CeilingPriority%"/>
+            </resource>
+            <resource name="%name%_resource_2">
+                <ceilingPriority value="%CeilingPriority%"/>
+            </resource>
+            <resource name="%name%_resource_3">
+                <ceilingPriority value="%CeilingPriority%"/>
+            </resource>
+            
+            <semaphore name="%name%_sem_0"/>
+            <semaphore name="%name%_sem_1"/>
+            <semaphore name="%name%_sem_2"/>
+            <semaphore name="%name%_sem_3"/>
+   		</code>
+    </component>
+</metamodel>
+

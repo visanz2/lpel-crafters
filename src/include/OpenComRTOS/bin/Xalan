@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xalan -out $2  -in $3  -xsl $4

@@ -1,0 +1,6 @@
+src/liblpel_la-lpelcfg.lo: src/lpelcfg.c /usr/include/stdc-predef.h \
+ include/lpel_common.h
+
+/usr/include/stdc-predef.h:
+
+include/lpel_common.h:

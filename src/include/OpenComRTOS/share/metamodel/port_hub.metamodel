@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<metamodel version="1.4">
+    <!-- Port related services -->
+    <interaction name="L1_PutDataToPort_W" subject="task" object="port" service="put"/>
+    <interaction name="L1_GetDataFromPort_W" subject="task" object="port" service="get"/>
+
+    <interaction name="L1_PutDataToPort_WT" subject="task" object="port" service="put"/>
+    <interaction name="L1_GetDataFromPort_WT" subject="task" object="port" service="get"/>
+
+    <interaction name="L1_PutDataToPort_NW" subject="task" object="port" service="put"/>
+    <interaction name="L1_GetDataFromPort_NW" subject="task" object="port" service="get"/>
+
+</metamodel>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<metamodel version="1.4">
+    <!-- Fifo related services -->
+    <interaction name="L1_PutDataToFifo_W" subject="task" object="fifo" service="put"/>
+    <interaction name="L1_GetDataFromFifo_W" subject="task" object="fifo" service="get"/>
+
+    <interaction name="L1_PutDataToFifo_WT" subject="task" object="fifo" service="put"/>
+    <interaction name="L1_GetDataFromFifo_WT" subject="task" object="fifo" service="get"/>
+
+    <interaction name="L1_PutDataToFifo_NW" subject="task" object="fifo" service="put"/>
+    <interaction name="L1_GetDataFromFifo_NW" subject="task" object="fifo" service="get"/>
+
+</metamodel>
+

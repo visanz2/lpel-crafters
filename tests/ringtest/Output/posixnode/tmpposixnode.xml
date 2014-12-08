@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<posixnode>
+
+  <system rtosDir="/mnt/OpenComRTOS/s-net_distribution/lpel-master/src/include/OpenComRTOS">
+    <node name="posixnode" type="posix32">
+      <resourceNumbers value="4"/>
+      <compiler value="gcc"/>
+      <compilerOptions value="Os"/>
+      <debugopt value="2"/>
+      <hostPlatform value="posix32"/>
+      <hubsNumber value="12"/>
+      <projectDir value="/mnt/OpenComRTOS/s-net_distribution/lpel-master/tests/ringtest/"/>
+      <tasksNumber value="7"/>
+      <traceBufferSize value="1024"/>
+      <nodeID value="0"/>
+      <rxPacketPoolSize value="21"/>
+      <kernelPacketPoolSize value="2"/>
+      <properties/>
+      <sourceFile value="Source/posixnode/posixnode.c"/>
+      <CFLAGS/>
+      <LDFLAGS/>
+      <lib name="rt"/>
+      <lib name="lpel_hrc"/>
+      <lib name="lpel_mon"/>
+      <task name="MainTask" origin="user" taskId="2">
+        <arguments value="NULL"/>
+        <entrypoint value="MainEP"/>
+        <priority value="128"/>
+        <sourceFile value="Source/ringtest.c"/>
+        <stackSize value="1024"/>
+        <status value="L1_STARTED"/>
+      </task>
+      <component componentType="PthreadAbstractionLayerComponent" name="threadpool">
+        <property name="CeilingPriority" value="32"/>
+        <includeFile name="PthreadAbstractionLayer/Pth_Types.h"/>
+        <structure label="" type="Pth_ThreadPool">
+                <field name="nbrOfThreads" type="integer" value="4"/>
+                <field name="tasks" type="integer" value="{threadpool_task_0, threadpool_task_1, threadpool_task_2, threadpool_task_3}"/>
+                <field name="events" type="integer" value="{threadpool_event_0, threadpool_event_1, threadpool_event_2, threadpool_event_3}"/>
+                <field name="pthreads" type="integer" value="{{0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xD;&#xA;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xD;&#xA;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0},&#xD;&#xA;                 {0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xD;&#xA;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xD;&#xA;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0},&#xD;&#xA;             {0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xD;&#xA;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xD;&#xA;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0},&#xD;&#xA;                 {0,0,0,0,{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xD;&#xA;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},&#xD;&#xA;                               {L1_FALSE,0,0,0},{L1_FALSE,0,0,0}},L1_FALSE,L1_FALSE,0}}"/>
+            </structure><structure label="" type="Pth_MutexPool">
+                <field name="nbrOfResources" type="integer" value="4"/>
+                <field name="resources" type="integer" value="{threadpool_resource_0, threadpool_resource_1, threadpool_resource_2, threadpool_resource_3}"/>
+                <field name="mutexes" type="integer" value="{{0,L1_FALSE,0,L1_FALSE},{0,L1_FALSE,0,L1_FALSE},{0,L1_FALSE,0,L1_FALSE},{0,L1_FALSE,0,L1_FALSE}}"/>
+            </structure><structure label="" type="Pth_CondPool">
+                <field name="nbrOfSemaphores" type="integer" value="4"/>
+                <field name="semaphores" type="integer" value="{threadpool_sem_0, threadpool_sem_1, threadpool_sem_2, threadpool_sem_3}"/>
+                <field name="condVariables" type="integer" value="{{0,L1_FALSE,0,0,0},{0,L1_FALSE,0,0,0},{0,L1_FALSE,0,0,0},{0,L1_FALSE,0,0,0}}"/>
+            </structure><structure label="" type="Pth_KeyPool">
+                <field name="nbrOfKeys" type="integer" value="4"/>
+                <field name="keys" type="integer" value="{{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0},{L1_FALSE,0,0,0}}"/>
+            </structure><ocrLib name="PthreadAbstractionLayer"/>
+        <task name="threadpool_task_0" origin="user" taskId="3">
+          <arguments value="0"/>
+          <entrypoint value="pthreadEP"/>
+          <priority value="128"/>
+          <sourceFile value=""/>
+          <stackSize value="2048"/>
+          <status value="L1_INACTIVE"/>
+        </task>
+        <task name="threadpool_task_1" origin="user" taskId="4">
+          <arguments value="1"/>
+          <entrypoint value="pthreadEP"/>
+          <priority value="128"/>
+          <sourceFile value=""/>
+          <stackSize value="2048"/>
+          <status value="L1_INACTIVE"/>
+        </task>
+        <task name="threadpool_task_2" origin="user" taskId="5">
+          <arguments value="2"/>
+          <entrypoint value="pthreadEP"/>
+          <priority value="128"/>
+          <sourceFile value=""/>
+          <stackSize value="2048"/>
+          <status value="L1_INACTIVE"/>
+        </task>
+        <task name="threadpool_task_3" origin="user" taskId="6">
+          <arguments value="3"/>
+          <entrypoint value="pthreadEP"/>
+          <priority value="128"/>
+          <sourceFile value=""/>
+          <stackSize value="2048"/>
+          <status value="L1_INACTIVE"/>
+        </task>
+        <dataEvent hubId="0" name="threadpool_event_0" origin="user"/>
+        <dataEvent hubId="1" name="threadpool_event_1" origin="user"/>
+        <dataEvent hubId="2" name="threadpool_event_2" origin="user"/>
+        <dataEvent hubId="3" name="threadpool_event_3" origin="user"/>
+        <resource hubId="4" name="threadpool_resource_0" origin="user">
+          <ceilingPriority value="32"/>
+        </resource>
+        <resource hubId="5" name="threadpool_resource_1" origin="user">
+          <ceilingPriority value="32"/>
+        </resource>
+        <resource hubId="6" name="threadpool_resource_2" origin="user">
+          <ceilingPriority value="32"/>
+        </resource>
+        <resource hubId="7" name="threadpool_resource_3" origin="user">
+          <ceilingPriority value="32"/>
+        </resource>
+        <semaphore hubId="8" name="threadpool_sem_0" origin="user"/>
+        <semaphore hubId="9" name="threadpool_sem_1" origin="user"/>
+        <semaphore hubId="10" name="threadpool_sem_2" origin="user"/>
+        <semaphore hubId="11" name="threadpool_sem_3" origin="user"/>
+      </component>
+      <task name="KernelTask" origin="system" taskId="0">
+        <arguments value="NULL"/>
+        <entrypoint value="L1_KernelEntryPoint"/>
+        <priority value="1"/>
+        <sourceFile value=""/>
+        <stackSize value="512"/>
+        <status value="L1_STARTED"/>
+      </task>
+      <task name="IdleTask" origin="system" taskId="1">
+        <arguments value="NULL"/>
+        <entrypoint value="L1_idleTask"/>
+        <priority value="255"/>
+        <sourceFile value=""/>
+        <stackSize value="512"/>
+        <status value="L1_STARTED"/>
+      </task>
+      <routingTable/>
+      <linkPortRoutingTable/>
+    </node>
+  </system>
+
+</posixnode>

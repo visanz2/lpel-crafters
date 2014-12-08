@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<metamodel version="1.4">
+    <entity name="blackBoard" svgPath="BlackBoard.svg" iconPath="BlackBoard.png" help="OpenVE::OpenComRTOS::BlackBoard">
+        <attribute name="name" type="string" unique="entity"  regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+    </entity>
+
+    <!-- Black Board related services -->
+    <interaction name="L1_WipeBoard_W" subject="task" object="blackBoard" service="put"/>
+    <interaction name="L1_WriteMessageOntoBoard_W" subject="task" object="blackBoard" service="put"/>
+    <interaction name="L1_CopyMessageFromBoard_W" subject="task" object="blackBoard" service="get"/>
+
+    <interaction name="L1_WipeBoard_WT" subject="task" object="blackBoard" service="put"/>
+    <interaction name="L1_WriteMessageOntoBoard_WT" subject="task" object="blackBoard" service="put"/>
+    <interaction name="L1_CopyMessageFromBoard_WT" subject="task" object="blackBoard" service="get"/>
+
+    <interaction name="L1_WipeBoard_NW" subject="task" object="blackBoard" service="put"/>
+    <interaction name="L1_WriteMessageOntoBoard_NW" subject="task" object="blackBoard" service="put"/>
+    <interaction name="L1_CopyMessageFromBoard_NW" subject="task" object="blackBoard" service="get"/>
+
+</metamodel>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<metamodel version="1.4">
+
+    <component name="StdioHostComponent" svgPath="StdioHostServerPort.svg" iconPath="StdioHostServerPort.png" help="OpenVE::StdioHostService::Component">
+        <attribute name="name" type="string" unique="component" regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+	<attribute name="SHSCeilingPriority" type="integer" min="0" max="255" defaultValue="32" notEmpty="true"/>
+		<code name="stdio">
+			<!-- <lib name="StdioHostServer"/> -->
+			<ocrLib name="StdioHostServer"/>
+			<ocrGlobalLib name="StdioHostClient"/>
+	                <task name="%name%_Task">
+	                    <status value="L1_STARTED"/>
+	                    <priority value="64"/>
+	                    <arguments value="%name%"/>
+	                    <stackSize value="170"/>
+	                    <entrypoint value="StdioHostServerEntryPoint"/>
+	                    <sourceFile value=""/>
+	                </task>
+	
+			<port name="%name%"/>
+			<port name="%name%_OUT"/>
+			<resource name="%name%_Resource">
+				<ceilingPriority value="%SHSCeilingPriority%"/>
+			</resource>
+		</code>
+    </component>
+
+    <!-- STDIO Host Server Metamodel -->    
+    <interaction name="Shs_putChar_W"       subject="task"  object="StdioHostComponent" service="put"/>
+    <interaction name="Shs_getChar_W"       subject="task"  object="StdioHostComponent" service="get"/>
+    <interaction name="Shs_putInt_W"        subject="task"  object="StdioHostComponent" service="put"/>
+    <interaction name="Shs_getInt_W"        subject="task"  object="StdioHostComponent" service="get"/>
+    <interaction name="Shs_putString_W"     subject="task"  object="StdioHostComponent" service="put"/>
+    <interaction name="Shs_getString_W"     subject="task"  object="StdioHostComponent" service="get"/>
+    <interaction name="Shs_openFile_W"      subject="task"  object="StdioHostComponent" service="put"/>
+    <interaction name="Shs_closeFile_W"     subject="task"  object="StdioHostComponent" service="put"/>
+    <interaction name="Shs_readFromFile_W"  subject="task"  object="StdioHostComponent" service="get"/>
+    <interaction name="Shs_writeToFile_W"   subject="task"  object="StdioHostComponent" service="put"/>
+    <interaction name="DumpTraceBuffer_W"   subject="task"  object="StdioHostComponent" service="put"/>
+
+</metamodel>
+

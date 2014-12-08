@@ -1,0 +1,24 @@
+<node name="posixnode" id="0" type="posix32">
+    <tasks>
+        <task name="KernelTask" id="0" type=""/>
+        <task name="IdleTask" id="1" type=""/>
+        <task name="MainTask" id="2" type=""/>
+        <task name="threadpool_task_0" id="3" type=""/>
+        <task name="threadpool_task_1" id="4" type=""/>
+        <task name="threadpool_task_2" id="5" type=""/>
+        <task name="threadpool_task_3" id="6" type=""/>
+    </tasks>
+    <hubs>
+        <hub name="threadpool_event_0" id="0" type="" hubType="dataEvent"/>
+        <hub name="threadpool_event_1" id="1" type="" hubType="dataEvent"/>
+        <hub name="threadpool_event_2" id="2" type="" hubType="dataEvent"/>
+        <hub name="threadpool_event_3" id="3" type="" hubType="dataEvent"/>
+        <hub name="threadpool_resource_0" id="4" type="" hubType="resource"/>
+        <hub name="threadpool_resource_1" id="5" type="" hubType="resource"/>
+        <hub name="threadpool_resource_2" id="6" type="" hubType="resource"/>
+        <hub name="threadpool_resource_3" id="7" type="" hubType="resource"/>
+        <hub name="threadpool_sem_0" id="8" type="" hubType="semaphore"/>
+        <hub name="threadpool_sem_1" id="9" type="" hubType="semaphore"/>
+        <hub name="threadpool_sem_2" id="10" type="" hubType="semaphore"/>
+        <hub name="threadpool_sem_3" id="11" type="" hubType="semaphore"/>
+    </hubs>

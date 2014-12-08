@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<metamodel version="1.4">
+    <component name="Posix32UartService" svgPath="UartHostService.svg" iconPath="UartHostService.png" help="OpenVE::UartService::Component">
+        <attribute name="name" type="string" unique="component" regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+        <attribute name="CeilingPriority" type="integer" min="10" max="255" defaultValue="32" notEmpty="true"/>
+        <attribute name="device" type="enum" values="ttyS0:ttyS1:ttyS2:ttyS3" defaultValue="ttyS0" unique="uartDev"/>       
+
+      	<!--  Generic config for UARTs following the new API -->	
+      	<attribute name="baudRate" type="enum" values="300:600:1200:2400:4800:7200:9600:19200:38400:57600:115200:230400:460800:921600" defaultValue="115200"/>
+      	<attribute name="byteLength" type="enum" values="eSerialDataLen5:eSerialDataLen6:eSerialDataLen7:eSerialDataLen8" defaultValue="eSerialDataLen8"/>    
+      	<attribute name="parity" type="enum" values="eSerialParityNone:eSerialParityOdd:eSerialParityEven" defaultValue="eSerialParityNone"/>    
+      	<attribute name="nbrOfStopBits" type="enum" values="eSerialStopBits1:eSerialStopBits2" defaultValue="eSerialStopBits1"/>    
+      	<!-- <attribute name="hardwareFlowControl" type="enum" values="L1_FALSE" defaultValue="L1_FALSE"/> -->    
+      	<!-- <attribute name="loopbackMode" type="enum" values="L1_TRUE:L1_FALSE" defaultValue="L1_FALSE"/>   -->
+      	<attribute name="portMode" type="enum" values="eEia232Mode" defaultValue="eEia232Mode"/>    
+        
+        <code name="UartServer">
+            <isr name="posix32UartDriver_rxIsrHandler">
+                <arguments value="&amp;L1_Drv_UART_%name%_%name%_"/> 
+            </isr>
+            <isr name="posix32UartDriver_txIsrHandler">
+                <arguments value="&amp;L1_Drv_UART_%name%_%name%_"/> 
+            </isr>
+
+            <includeFile name="driver/service/UartService/UartService_Server.h"/>
+            <includeFile name="driver/posix32UartDriver.h"/>
+
+            <structure type="Posix32UartDevice" label="">
+                <field name="deviceName" type="string" value="%device%" />
+                <field name="driverInitialised" type="integer" value="L1_FALSE" />
+            </structure>
+                     
+            <structure type="L1_Drv_UART" label="">
+                <field name="api" type="integer" value="&amp;POSIX32_UART_API" />
+                <field name="self" type="integer" value="&amp;Posix32UartDevice_%name%_%name%_" />
+            </structure>
+                     
+                     
+            <structure type="L1_UartEvents" label="">
+                <field name="rxEventID" type="integer" value="%name%_rxEvent" />
+                <field name="txEventID" type="integer" value="%name%_txEvent" />
+            </structure>
+
+            <structure type="L1_Drv_Uart_portConfig" label="">
+                <field name="baudRate" type="integer" value="%baudRate%" />
+                <field name="byteLength" type="integer" value="%byteLength%" />
+                <field name="parity" type="integer" value="%parity%" />
+                <field name="nbrOfStopBits" type="integer" value="%nbrOfStopBits%" />
+                <!-- <field name="hardwareFlowControl" type="integer" value="%hardwareFlowControl%" /> -->
+                <!-- <field name="loopbackMode" type="integer" value="%loopbackMode%" /> -->
+                <field name="portMode" type="integer" value="%portMode%" />
+            </structure>
+            
+            <structure type="UartService_Server" label="ServerConfig">
+                <field name="uart" type="integer" value="&amp;L1_Drv_UART_%name%_%name%_" />
+                <field name="inputPort" type="integer" value="%name%"/>
+                <field name="outputPort" type="integer" value="%name%_OUT"/>
+                <field name="rxOutputPort" type="integer" value="%name%_RXOUT"/>
+                <field name="txOutputPort" type="integer" value="%name%_TXOUT"/>
+                <field name="pPortConfig" type="integer" value="&amp;L1_Drv_Uart_portConfig_%name%_%name%_" />
+                <field name="uartEvents" type="integer" value="&amp;L1_UartEvents_%name%_%name%_" />
+                <field name="portNumber" type="integer" value="0"/>
+            </structure>
+
+
+            <task name="%name%_Task">
+                <status value="L1_STARTED"/>
+                <priority value="64"/>
+                <arguments value="&amp;UartService_Server_%name%_%name%_ServerConfig"/>
+                <stackSize value="2048"/>
+                <entrypoint value="UartService_ServerEntryPoint"/>
+                <sourceFile value=""/>
+            </task>
+    
+            <port name="%name%"/>
+            <port name="%name%_OUT"/>
+            <resource name="%name%_Resource">
+                <ceilingPriority value="%CeilingPriority%"/>
+            </resource>
+            <port name="%name%_RXOUT"/>
+            <port name="%name%_TXOUT"/>
+            <event name="%name%_rxEvent" />
+            <event name="%name%_txEvent" />
+        </code>
+    </component>
+
+    <interaction name="UartService_openPort_W"     subject="task"  object="Posix32UartService" service="get"/>
+    <interaction name="UartService_closePort_W"    subject="task"  object="Posix32UartService" service="put"/>
+    <interaction name="UartService_isPortOpen_W"   subject="task"  object="Posix32UartService" service="get"/>
+    <interaction name="UartService_writeByte_NB"   subject="task"  object="Posix32UartService" service="put"/>
+    <interaction name="UartService_readByte_NB"    subject="task"  object="Posix32UartService" service="get"/>
+    <interaction name="UartService_writeBuffer_W"  subject="task"  object="Posix32UartService" service="put"/>
+    <interaction name="UartService_readBuffer_W"   subject="task"  object="Posix32UartService" service="get"/>
+    <interaction name="UartService_writeBuffer_NB" subject="task"  object="Posix32UartService" service="put"/>
+    <interaction name="UartService_readBuffer_NB"  subject="task"  object="Posix32UartService" service="get"/>
+    <interaction name="UartService_waitForRxData_W"  subject="task"  object="Posix32UartService" service="get"/>
+</metamodel>
+

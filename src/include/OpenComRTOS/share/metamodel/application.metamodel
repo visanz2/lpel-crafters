@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<metamodel version="1.4">
+    <entity name="task" svgPath="Task.svg" iconPath="task.png" help="OpenVE::OpenComRTOS::Task">
+        <attribute name="name" type="string" unique="entity" regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+        <attribute name="priority" type="integer" min="2" max="254" defaultValue="128"/>
+        <attribute name="arguments" type="string" defaultValue="NULL" notEmpty="true"/>
+        <attribute name="status" type="enum" values="L1_INACTIVE:L1_STARTED" defaultValue="L1_STARTED" notEmpty="true"/>
+        <attribute name="stackSize" type="integer" notEmpty="true"/>
+  <!--      <attribute name="language" type="enum" values="C:CPP:Ada"/> -->
+        <function  name="entrypoint"/>
+    </entity>
+ 
+    <entity name="port" svgPath="Port.svg" iconPath="port.png" help="OpenVE::OpenComRTOS::Port">
+        <attribute name="name" type="string" unique="entity"  regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+    </entity>
+
+    <entity name="event" svgPath="Event.svg" iconPath="event.png" help="OpenVE::OpenComRTOS::Event">
+        <attribute name="name" type="string" unique="entity" regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+    </entity>
+
+    <entity name= "semaphore" svgPath="Semaphore.svg" iconPath="semaphore.png" help="OpenVE::OpenComRTOS::Semaphore">
+        <attribute name="name" type="string" unique="entity" regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+    </entity>
+
+    <entity name= "resource" svgPath="Resource.svg" iconPath="resource.png" help="OpenVE::OpenComRTOS::Resource">
+        <attribute name="name" type="string" unique="entity" regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+        <attribute name="ceilingPriority" type="integer" min="0" max="255" defaultValue="32"/>
+    </entity>
+
+    <entity name= "fifo" svgPath="Fifo.svg" iconPath="fifo.png" help="OpenVE::OpenComRTOS::Fifo">
+        <attribute name="name" type="string" unique="entity" regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+        <attribute name="size" type="integer" defaultValue="1"/>
+    </entity>
+
+    <entity name="memoryPool" svgPath="MemoryPool.svg" iconPath="memorypool.png" help="OpenVE::OpenComRTOS::MemoryPool">
+        <attribute name="name" type="string" unique="entity" regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+        <attribute name="numOfBlocks" type="integer" defaultValue="1"/>
+        <attribute name="sizeOfBlocks" type="integer" defaultValue="1024"/>
+    </entity>
+
+    <entity name="blackBoard" svgPath="BlackBoard.svg" iconPath="BlackBoard.png" help="OpenVE::OpenComRTOS::BlackBoard">
+        <attribute name="name" type="string" unique="entity"  regexp="[A-Za-z0-9_]+" notEmpty="true"/>
+    </entity>
+
+
+    <!-- task management -->
+    <interaction name="L1_StartTask_W" subject="task" object="task" service="put"/>
+    <interaction name="L1_StopTask_W" subject="task" object="task" service="put"/>
+    <interaction name="L1_SuspendTask_W" subject="task" object="task" service="put"/>
+    <interaction name="L1_ResumeTask_W" subject="task" object="task" service="put"/>
+
+    <!-- port based services -->
+    <interaction name="L1_PutPacketToPort_W" subject="task" object="port" service="put"/>
+    <interaction name="L1_GetPacketFromPort_W" subject="task" object="port" service="get"/>
+    <interaction name="L1_PutPacketToPort_NW" subject="task" object="port" service="put"/>
+    <interaction name="L1_GetPacketFromPort_NW" subject="task" object="port" service="get"/>
+    <interaction name="L1_PutPacketToPort_WT" subject="task" object="port" service="put"/>
+    <interaction name="L1_GetPacketFromPort_WT" subject="task" object="port" service="get"/>    
+
+    <!-- event based services -->
+    <interaction name="L1_RaiseEvent_W" subject="task" object="event" service="put"/>
+    <interaction name="L1_TestEvent_W" subject="task" object="event" service="get"/>
+    <interaction name="L1_RaiseEvent_NW" subject="task" object="event" service="put"/>
+    <interaction name="L1_TestEvent_NW" subject="task" object="event" service="get"/>
+    <interaction name="L1_RaiseEvent_WT" subject="task" object="event" service="put"/>
+    <interaction name="L1_TestEvent_WT" subject="task" object="event" service="get"/>
+
+    <!-- semaphore based services -->
+    <interaction name="L1_SignalSemaphore_W" subject="task" object="semaphore" service="put"/>
+    <interaction name="L1_TestSemaphore_W" subject="task" object="semaphore" service="get"/>
+    <interaction name="L1_SignalSemaphore_NW" subject="task" object="semaphore" service="put"/>
+    <interaction name="L1_TestSemaphore_NW" subject="task" object="semaphore" service="get"/>
+    <interaction name="L1_SignalSemaphore_WT" subject="task" object="semaphore" service="put"/>
+    <interaction name="L1_TestSemaphore_WT" subject="task" object="semaphore" service="get"/>
+
+    <!-- resource related services -->
+    <interaction name="L1_LockResource_W" subject="task" object="resource" service="get"/>
+    <interaction name="L1_UnlockResource_W" subject="task" object="resource" service="put"/>
+    <interaction name="L1_LockResource_NW" subject="task" object="resource" service="get"/>
+    <interaction name="L1_UnlockResource_NW" subject="task" object="resource" service="put"/>
+    <interaction name="L1_LockResource_WT" subject="task" object="resource" service="get"/>
+    <interaction name="L1_UnlockResource_WT" subject="task" object="resource" service="put"/>
+
+    <!-- fifo Queue related services -->
+    <interaction name="L1_EnqueueFifo_W" subject="task" object="fifo" service="put"/>
+    <interaction name="L1_DequeueFifo_W" subject="task" object="fifo" service="get"/>
+    <interaction name="L1_EnqueueFifo_NW" subject="task" object="fifo" service="put"/>
+    <interaction name="L1_DequeueFifo_NW" subject="task" object="fifo" service="get"/>
+    <interaction name="L1_EnqueueFifo_WT" subject="task" object="fifo" service="put"/>
+    <interaction name="L1_DequeueFifo_WT" subject="task" object="fifo" service="get"/>
+
+    <!-- Memory Pool related services -->
+    <interaction name="L1_AllocateMemoryBlock_W" subject="task" object="memoryPool" service="get"/>
+    <interaction name="L1_DeallocateMemoryBlock_W" subject="task" object="memoryPool" service="put"/>
+    <interaction name="L1_AllocateMemoryBlock_NW" subject="task" object="memoryPool" service="get"/>
+    <interaction name="L1_AllocateMemoryBlock_WT" subject="task" object="memoryPool" service="get"/>
+
+
+    <!--  File Templates -->
+    <template type="file" name="C File" extension=".c">
+<![CDATA[/* Created %1 */
+#include <L1_api.h>
+#include "L1_node_config.h"
+]]>
+</template>
+<template type="file" name="CPP File" extension=".cpp">
+<![CDATA[/* Created %1 */
+#include <L1_api.h>
+#include "L1_node_config.h"
+]]>
+    </template>
+    <template type="file" name="Header File" extension=".h">
+<![CDATA[/* Created %1 */
+]]>
+    </template>
+    
+    <template type="entrypoint" name="OpenComRTOS C Application task" extension="c">
+<![CDATA[/* Created %2 */
+#include <L1_api.h>
+#include <L1_nodes_data.h>
+
+void %1(L1_TaskArguments Arguments)
+{
+    while(1){
+        
+    }
+}
+]]>
+    </template>
+    
+    <template type="entrypoint" name="OpenComRTOS CPP Application task" extension="cpp">
+<![CDATA[/* Created %2 */
+#include <cpp/L1_CPP_Task.h>
+
+class %1_class : public L1_CPP_Task
+{
+   public: 
+     void run()
+     {
+        while(1){
+        
+        }
+     }
+};
+extern "C"
+{
+    void %1(L1_TaskArguments Arguments)
+    {
+        %1_class %1_obj;
+        %1_obj.run();    
+    }
+}
+]]>
+    </template>
+    
+    
+    
+    
+    
+</metamodel>
+

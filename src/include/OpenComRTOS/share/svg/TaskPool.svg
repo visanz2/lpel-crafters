@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   id="svg2159"
+   xml:space="preserve"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="ThreadPool.svg"><metadata
+   id="metadata3228"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1473"
+   inkscape:window-height="812"
+   id="namedview3226"
+   showgrid="false"
+   inkscape:zoom="9.8333333"
+   inkscape:cx="12"
+   inkscape:cy="12"
+   inkscape:window-x="65"
+   inkscape:window-y="24"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg2159" /><defs
+   id="defs2206"><linearGradient
+     x1="-871.21777"
+     y1="394.58691"
+     x2="-864.16351"
+     y2="386.67511"
+     id="XMLID_156_"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="matrix(0.8909007,0,0,-0.8909007,793.75355,358.71783)">
+					<stop
+   id="stop2167"
+   style="stop-color:#ffffff;stop-opacity:1"
+   offset="0.0056" />
+					<stop
+   id="stop2169"
+   style="stop-color:#d3e1f7;stop-opacity:1"
+   offset="1" />
+					<a:midPointStop
+   offset="0.0056"
+   style="stop-color:#FFFFFF" />
+					<a:midPointStop
+   offset="0.5"
+   style="stop-color:#FFFFFF" />
+					<a:midPointStop
+   offset="1"
+   style="stop-color:#D3E1F7" />
+				</linearGradient><linearGradient
+     x1="-871.21777"
+     y1="394.58691"
+     x2="-864.16351"
+     y2="386.67511"
+     id="linearGradient2225"
+     xlink:href="#XMLID_156_"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="matrix(0.9923764,0,0,-0.9923763,872.57483,407.57661)" /></defs>
+	
+		<text
+   x="1.0371585"
+   y="23.653631"
+   transform="scale(1.0284188,0.97236651)"
+   id="text2201"
+   style="font-size:9.78574657px"><tspan
+     x="1.0371585"
+     y="23.653631"
+     id="tspan2203"
+     style="font-size:9.78574657px;fill:#38516a;font-family:Arial-BoldMT">T</tspan></text>
+
+
+
+
+
+
+
+
+
+
+
+	<rect
+   width="2.1205413"
+   height="13.210674"
+   x="1.56475"
+   y="1.1049167"
+   id="rect3158"
+   style="fill:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" /><rect
+   width="14.903507"
+   height="14.903506"
+   x="0.5482465"
+   y="8.5482464"
+   transform="matrix(0,1,1,0,0,0)"
+   id="rect2171"
+   style="fill:url(#linearGradient2225);stroke:#38516a;stroke-width:1.09649301;stroke-miterlimit:4;stroke-dasharray:none" /><rect
+   width="1.1049166"
+   height="16"
+   x="5"
+   y="8"
+   transform="matrix(0,1,1,0,0,0)"
+   id="rect3169"
+   style="fill:#38516a;fill-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" /><rect
+   width="1.1049166"
+   height="16"
+   x="10"
+   y="8"
+   transform="matrix(0,1,1,0,0,0)"
+   id="rect4140"
+   style="fill:#38516a;fill-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" /><rect
+   width="1.1049166"
+   height="16"
+   x="18"
+   y="-16"
+   transform="scale(1,-1)"
+   id="rect4142"
+   style="fill:#38516a;fill-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" /><rect
+   width="1.1049166"
+   height="16"
+   x="13"
+   y="-16"
+   transform="scale(1,-1)"
+   id="rect4144"
+   style="fill:#38516a;fill-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" /></svg>
